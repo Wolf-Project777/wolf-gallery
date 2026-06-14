@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wizard_step_progress">Step %1$d of %2$d</string>
+    <string name="wizard_btn_back">Back</string>
+    <string name="wizard_btn_next">Next</string>
+    <string name="wizard_btn_done">Done</string>
+
+    <string name="wizard_welcome_title">Welcome to Wolf Gallery</string>
+    <string name="wizard_welcome_tagline">An offline encrypted photo gallery. Configured here, on your device — nowhere else.</string>
+    <string name="wizard_welcome_threat_note">Photo galleries are a worthwhile target — for data thieves, for forensic tools, and for anyone with brief access to your device. Encryption keeps the content yours.</string>
+
+    <string name="wizard_welcome_fact_offline">Works fully offline. The app declares no INTERNET permission.</string>
+    <string name="wizard_welcome_fact_no_account">No account, no sign-up, no cloud. The vault lives in app-private storage.</string>
+    <string name="wizard_welcome_fact_hwbacked">Master key is generated and held by your device’s secure hardware.</string>
+
+    <string name="wizard_welcome_tier_probing">Checking secure hardware…</string>
+    <string name="wizard_welcome_tier_probing_detail">Asking Android Keystore where it can place the master key.</string>
+
+    <string name="wizard_welcome_tier_strongbox">StrongBox available</string>
+    <string name="wizard_welcome_tier_strongbox_detail">Master key will live in a dedicated security chip — separate from the main processor. Best case for this device.</string>
+
+    <string name="wizard_welcome_tier_tee">TEE (Trusted Execution Environment)</string>
+    <string name="wizard_welcome_tier_tee_detail">Master key will live in TrustZone — isolated from normal OS memory, on the same chip as the main processor. Strong protection.</string>
+
+    <string name="wizard_welcome_tier_software">Software-backed key only</string>
+    <string name="wizard_welcome_tier_software_detail">This device has no secure hardware available. The key would be protected by the OS only. You can still proceed, but the threat model is weaker — physical access to an unlocked device is enough.</string>
+
+    <string name="wizard_welcome_tier_error">Hardware probe failed</string>
+    <string name="wizard_welcome_tier_error_detail">Couldn’t reach Android Keystore (%1$s). Setup will continue and try again when the master key is created. See logs in dev panel.</string>
+
+    <string name="wizard_crypto_title">Encryption</string>
+    <string name="wizard_crypto_intro">Here’s how your photos are protected on this device.</string>
+
+    <string name="wizard_crypto_aes_title">AES-256-GCM + Argon2id</string>
+    <string name="wizard_crypto_aes_subtitle">Industry standard with hardware acceleration on this device. Protects against all classical attacks — and is already quantum-resistant.</string>
+    <string name="wizard_crypto_aes_badge">QUANTUM-SAFE</string>
+
+    <string name="wizard_crypto_quantum_note">Your stack is already quantum-resistant. Data is AES-256-GCM, the password runs through Argon2id, and the key lives in the hardware StrongBox — all symmetric cryptography. Grover’s quantum algorithm only halves its strength, leaving AES-256 at ~128-bit, beyond any brute force. There is no quantum-vulnerable asymmetric cryptography (the kind Shor’s algorithm breaks) in the vault, so “harvest now, decrypt later” does not apply to a local vault.</string>
+
+    <string name="wizard_lock_title">Lock method</string>
+    <string name="wizard_lock_intro">How will you unlock the gallery?</string>
+
+    <string name="wizard_lock_password_title">Password</string>
+    <string name="wizard_lock_password_subtitle">Minimum 8 characters. Letters of any language, digits, symbols, mixed case — all fine. Highest entropy per character.</string>
+    <string name="wizard_lock_password_badge">DEFAULT</string>
+
+    <string name="wizard_lock_pin_title">PIN</string>
+    <string name="wizard_lock_pin_subtitle">6–12 digits. Faster to type one-handed. Smaller alphabet, compensated by stricter Argon2id at unlock time.</string>
+    <string name="wizard_lock_pin_badge">6-12 DIGITS</string>
+
+    <string name="wizard_lock_argon_note">Either choice is fine. PIN uses 128 MiB / 5 iterations of Argon2id, password mode uses 64 MiB / 3 iterations — so the KDF makes brute-force comparable across the two. What differs is your typing speed.</string>
+
+    <string name="wizard_set_title">Set your unlock</string>
+    <string name="wizard_set_intro_password">Pick a password — at least 8 characters. Letters of any language, digits, symbols, mixed case — all fine.</string>
+    <string name="wizard_set_intro_pin">Pick a PIN — 6 to 12 digits.</string>
+
+    <string name="wizard_set_field_password">Password</string>
+    <string name="wizard_set_field_pin">PIN</string>
+    <string name="wizard_set_field_confirm">Confirm</string>
+
+    <string name="wizard_set_show">Show</string>
+    <string name="wizard_set_hide">Hide</string>
+
+    <string name="wizard_set_btn_create">Create vault</string>
+    <string name="wizard_set_btn_creating">Creating…</string>
+
+    <string name="wizard_set_err_pin_digits">PIN must contain digits only</string>
+    <string name="wizard_set_err_pin_too_short">PIN must be at least 6 digits</string>
+    <string name="wizard_set_err_pin_too_long">PIN must be at most 12 digits</string>
+    <string name="wizard_set_err_password_too_short">Password must be at least 8 characters</string>
+    <string name="wizard_set_err_confirm_empty">Type your secret again to confirm</string>
+    <string name="wizard_set_err_confirm_mismatch">Confirmation doesn’t match</string>
+
+    <string name="wizard_unlock_title">Wolf Gallery</string>
+    <string name="wizard_unlock_label_pin">PIN:</string>
+    <string name="wizard_unlock_label_password">Password:</string>
+    <string name="wizard_unlock_show">Show</string>
+    <string name="wizard_unlock_hide">Hide</string>
+    <string name="wizard_unlock_btn_unlock">Unlock</string>
+    <string name="wizard_unlock_btn_unlocking">Unlocking…</string>
+    <string name="wizard_unlock_btn_locked">Locked (%1$s)</string>
+    <string name="wizard_unlock_err_wrong_pin">Incorrect PIN. Try again.</string>
+    <string name="wizard_unlock_err_wrong_password">Incorrect password. Try again.</string>
+    <string name="wizard_unlock_backoff_countdown">Try again in %1$s</string>
+    <string name="wizard_unlock_wipe_warning">%1$d more wrong attempts will wipe the vault.</string>
+    <string name="wizard_unlock_wipe_toast">Vault wiped. Setup will restart.</string>
+
+    <string name="wizard_set_backoff_info_title">Wait between wrong attempts</string>
+    <string name="wizard_set_backoff_info_subtitle">Always on. The wait grows with each failed attempt — typos cost a second, repeated guessing locks the app for half an hour.</string>
+
+    <string name="wizard_brute_wipe_heading">Paranoid mode</string>
+    <string name="wizard_brute_wipe_title">Wipe vault after wrong attempts</string>
+    <string name="wizard_brute_wipe_subtitle">Destroys the vault if too many guesses fail in a row.</string>
+    <string name="wizard_brute_wipe_warning">Wiping deletes ALL encrypted files and the master key. There is no recovery, even if you remember the secret afterwards.</string>
+    <string name="wizard_brute_wipe_threshold_label">Wipe after</string>
+    <string name="wizard_brute_wipe_after_n">After %1$d</string>
+    <string name="wizard_brute_wipe_custom">Custom…</string>
+    <string name="wizard_brute_wipe_custom_title">Custom wipe threshold</string>
+    <string name="wizard_brute_wipe_custom_subtitle">After how many consecutive wrong attempts should the vault be wiped? (1–999)</string>
+    <string name="wizard_brute_wipe_custom_label">Attempts</string>
+    <string name="wizard_brute_wipe_custom_confirm">Save</string>
+    <string name="wizard_brute_wipe_custom_cancel">Cancel</string>
+
+    <string name="wizard_done_title">All set</string>
+    <string name="wizard_done_intro">Your vault is ready. Here\'s what you chose:</string>
+
+    <string name="wizard_done_label_crypto">Encryption</string>
+    <string name="wizard_done_label_lock">Unlock method</string>
+    <string name="wizard_done_label_brute">Brute-force protection</string>
+    <string name="wizard_done_label_tier">Key protection</string>
+
+    <string name="wizard_done_value_crypto_aes">AES-256-GCM</string>
+
+    <string name="wizard_done_value_lock_pin">PIN</string>
+    <string name="wizard_done_value_lock_password">Password</string>
+
+    <string name="wizard_done_value_brute_backoff_only">Backoff between attempts</string>
+    <string name="wizard_done_value_brute_with_wipe">Backoff + wipe after %1$d attempts</string>
+
+    <string name="wizard_done_value_tier_probing">Checking…</string>
+    <string name="wizard_done_value_tier_strongbox">StrongBox (dedicated chip)</string>
+    <string name="wizard_done_value_tier_tee">TEE (TrustZone)</string>
+    <string name="wizard_done_value_tier_software">Software only</string>
+    <string name="wizard_done_value_tier_unknown">Unknown</string>
+
+    <string name="wizard_done_warning_software">This device exposes no secure hardware. The master key is protected by the OS only — physical access to an unlocked device is enough to compromise it.</string>
+</resources>

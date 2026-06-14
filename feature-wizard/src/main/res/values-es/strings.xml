@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wizard_step_progress">Paso %1$d de %2$d</string>
+    <string name="wizard_btn_back">Atrás</string>
+    <string name="wizard_btn_next">Siguiente</string>
+    <string name="wizard_btn_done">Listo</string>
+
+    <string name="wizard_welcome_title">Te damos la bienvenida a Wolf Gallery</string>
+    <string name="wizard_welcome_tagline">Una galería de fotos cifrada y sin conexión. Se configura aquí, en tu dispositivo, en ningún otro lugar.</string>
+    <string name="wizard_welcome_threat_note">Las galerías de fotos son un objetivo valioso: para los ladrones de datos, para las herramientas forenses y para cualquiera con acceso breve a tu dispositivo. El cifrado mantiene el contenido tuyo.</string>
+
+    <string name="wizard_welcome_fact_offline">Funciona totalmente sin conexión. La app no declara el permiso de INTERNET.</string>
+    <string name="wizard_welcome_fact_no_account">Sin cuenta, sin registro, sin nube. La caja fuerte vive en el almacenamiento privado de la app.</string>
+    <string name="wizard_welcome_fact_hwbacked">La clave maestra la genera y la guarda el hardware seguro de tu dispositivo.</string>
+
+    <string name="wizard_welcome_tier_probing">Comprobando el hardware seguro…</string>
+    <string name="wizard_welcome_tier_probing_detail">Preguntando a Android Keystore dónde puede colocar la clave maestra.</string>
+
+    <string name="wizard_welcome_tier_strongbox">StrongBox disponible</string>
+    <string name="wizard_welcome_tier_strongbox_detail">La clave maestra vivirá en un chip de seguridad dedicado, separado del procesador principal. El mejor caso para este dispositivo.</string>
+
+    <string name="wizard_welcome_tier_tee">TEE (entorno de ejecución confiable)</string>
+    <string name="wizard_welcome_tier_tee_detail">La clave maestra vivirá en TrustZone, aislada de la memoria normal del sistema, en el mismo chip que el procesador principal. Protección fuerte.</string>
+
+    <string name="wizard_welcome_tier_software">Solo clave por software</string>
+    <string name="wizard_welcome_tier_software_detail">Este dispositivo no tiene hardware seguro disponible. La clave estaría protegida solo por el sistema operativo. Puedes continuar, pero el modelo de amenaza es más débil: basta con el acceso físico a un dispositivo desbloqueado.</string>
+
+    <string name="wizard_welcome_tier_error">Falló la comprobación del hardware</string>
+    <string name="wizard_welcome_tier_error_detail">No se pudo contactar con Android Keystore (%1$s). La configuración continuará y lo intentará de nuevo al crear la clave maestra. Consulta los registros en el panel de desarrollo.</string>
+
+    <string name="wizard_crypto_title">Cifrado</string>
+    <string name="wizard_crypto_intro">Así se protegen tus fotos en este dispositivo.</string>
+
+    <string name="wizard_crypto_aes_title">AES-256-GCM + Argon2id</string>
+    <string name="wizard_crypto_aes_subtitle">Estándar del sector con aceleración por hardware en este dispositivo. Protege contra todos los ataques clásicos y ya es resistente a la computación cuántica.</string>
+    <string name="wizard_crypto_aes_badge">RESISTENTE A LA CUÁNTICA</string>
+
+    <string name="wizard_crypto_quantum_note">Tu configuración ya es resistente a la computación cuántica. Los datos usan AES-256-GCM, la contraseña pasa por Argon2id y la clave vive en el StrongBox por hardware: todo es criptografía simétrica. El algoritmo cuántico de Grover solo reduce su fuerza a la mitad, dejando AES-256 en ~128 bits, fuera del alcance de cualquier fuerza bruta. No hay criptografía asimétrica vulnerable a la cuántica (la que rompe el algoritmo de Shor) en la caja fuerte, así que «recolectar ahora, descifrar después» no se aplica a una caja fuerte local.</string>
+
+    <string name="wizard_lock_title">Método de bloqueo</string>
+    <string name="wizard_lock_intro">¿Cómo desbloquearás la galería?</string>
+
+    <string name="wizard_lock_password_title">Contraseña</string>
+    <string name="wizard_lock_password_subtitle">Mínimo 8 caracteres. Letras de cualquier idioma, dígitos, símbolos, mayúsculas y minúsculas: todo vale. Máxima entropía por carácter.</string>
+    <string name="wizard_lock_password_badge">PREDETERMINADO</string>
+
+    <string name="wizard_lock_pin_title">PIN</string>
+    <string name="wizard_lock_pin_subtitle">6 a 12 dígitos. Más rápido de escribir con una mano. Alfabeto más pequeño, compensado con un Argon2id más estricto al desbloquear.</string>
+    <string name="wizard_lock_pin_badge">6-12 DÍGITOS</string>
+
+    <string name="wizard_lock_argon_note">Cualquier opción es válida. El PIN usa 128 MiB / 5 iteraciones de Argon2id; el modo contraseña usa 64 MiB / 3 iteraciones, de modo que la KDF hace la fuerza bruta comparable entre ambos. Lo que cambia es tu velocidad al escribir.</string>
+
+    <string name="wizard_set_title">Define tu desbloqueo</string>
+    <string name="wizard_set_intro_password">Elige una contraseña: al menos 8 caracteres. Letras de cualquier idioma, dígitos, símbolos, mayúsculas y minúsculas: todo vale.</string>
+    <string name="wizard_set_intro_pin">Elige un PIN: de 6 a 12 dígitos.</string>
+
+    <string name="wizard_set_field_password">Contraseña</string>
+    <string name="wizard_set_field_pin">PIN</string>
+    <string name="wizard_set_field_confirm">Confirmar</string>
+
+    <string name="wizard_set_show">Mostrar</string>
+    <string name="wizard_set_hide">Ocultar</string>
+
+    <string name="wizard_set_btn_create">Crear caja fuerte</string>
+    <string name="wizard_set_btn_creating">Creando…</string>
+
+    <string name="wizard_set_err_pin_digits">El PIN solo puede contener dígitos</string>
+    <string name="wizard_set_err_pin_too_short">El PIN debe tener al menos 6 dígitos</string>
+    <string name="wizard_set_err_pin_too_long">El PIN debe tener como máximo 12 dígitos</string>
+    <string name="wizard_set_err_password_too_short">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="wizard_set_err_confirm_empty">Escribe tu secreto de nuevo para confirmar</string>
+    <string name="wizard_set_err_confirm_mismatch">La confirmación no coincide</string>
+
+    <string name="wizard_unlock_title">Wolf Gallery</string>
+    <string name="wizard_unlock_label_pin">PIN:</string>
+    <string name="wizard_unlock_label_password">Contraseña:</string>
+    <string name="wizard_unlock_show">Mostrar</string>
+    <string name="wizard_unlock_hide">Ocultar</string>
+    <string name="wizard_unlock_btn_unlock">Desbloquear</string>
+    <string name="wizard_unlock_btn_unlocking">Desbloqueando…</string>
+    <string name="wizard_unlock_btn_locked">Bloqueado (%1$s)</string>
+    <string name="wizard_unlock_err_wrong_pin">PIN incorrecto. Inténtalo de nuevo.</string>
+    <string name="wizard_unlock_err_wrong_password">Contraseña incorrecta. Inténtalo de nuevo.</string>
+    <string name="wizard_unlock_backoff_countdown">Inténtalo de nuevo en %1$s</string>
+    <string name="wizard_unlock_wipe_warning">%1$d intentos incorrectos más borrarán la caja fuerte.</string>
+    <string name="wizard_unlock_wipe_toast">Caja fuerte borrada. La configuración se reiniciará.</string>
+
+    <string name="wizard_set_backoff_info_title">Espera entre intentos incorrectos</string>
+    <string name="wizard_set_backoff_info_subtitle">Siempre activa. La espera crece con cada intento fallido: un error de escritura cuesta un segundo; adivinar repetidamente bloquea la app durante media hora.</string>
+
+    <string name="wizard_brute_wipe_heading">Modo paranoico</string>
+    <string name="wizard_brute_wipe_title">Borrar la caja fuerte tras intentos incorrectos</string>
+    <string name="wizard_brute_wipe_subtitle">Destruye la caja fuerte si fallan demasiados intentos seguidos.</string>
+    <string name="wizard_brute_wipe_warning">El borrado elimina TODOS los archivos cifrados y la clave maestra. No hay recuperación, ni siquiera si recuerdas el secreto después.</string>
+    <string name="wizard_brute_wipe_threshold_label">Borrar tras</string>
+    <string name="wizard_brute_wipe_after_n">Tras %1$d</string>
+    <string name="wizard_brute_wipe_custom">Personalizado…</string>
+    <string name="wizard_brute_wipe_custom_title">Umbral de borrado personalizado</string>
+    <string name="wizard_brute_wipe_custom_subtitle">¿Tras cuántos intentos incorrectos seguidos debe borrarse la caja fuerte? (1–999)</string>
+    <string name="wizard_brute_wipe_custom_label">Intentos</string>
+    <string name="wizard_brute_wipe_custom_confirm">Guardar</string>
+    <string name="wizard_brute_wipe_custom_cancel">Cancelar</string>
+
+    <string name="wizard_done_title">Todo listo</string>
+    <string name="wizard_done_intro">Tu caja fuerte está lista. Esto es lo que elegiste:</string>
+
+    <string name="wizard_done_label_crypto">Cifrado</string>
+    <string name="wizard_done_label_lock">Método de desbloqueo</string>
+    <string name="wizard_done_label_brute">Protección contra fuerza bruta</string>
+    <string name="wizard_done_label_tier">Protección de la clave</string>
+
+    <string name="wizard_done_value_crypto_aes">AES-256-GCM</string>
+
+    <string name="wizard_done_value_lock_pin">PIN</string>
+    <string name="wizard_done_value_lock_password">Contraseña</string>
+
+    <string name="wizard_done_value_brute_backoff_only">Espera entre intentos</string>
+    <string name="wizard_done_value_brute_with_wipe">Espera + borrado tras %1$d intentos</string>
+
+    <string name="wizard_done_value_tier_probing">Comprobando…</string>
+    <string name="wizard_done_value_tier_strongbox">StrongBox (chip dedicado)</string>
+    <string name="wizard_done_value_tier_tee">TEE (TrustZone)</string>
+    <string name="wizard_done_value_tier_software">Solo software</string>
+    <string name="wizard_done_value_tier_unknown">Desconocido</string>
+
+    <string name="wizard_done_warning_software">Este dispositivo no expone hardware seguro. La clave maestra está protegida solo por el sistema operativo: el acceso físico a un dispositivo desbloqueado basta para comprometerla.</string>
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_back">Atrás</string>
+    <string name="settings_open">Abrir ajustes</string>
+
+    <string name="settings_cat_security_title">Seguridad</string>
+    <string name="settings_cat_security_subtitle">Bloqueo automático, capturas de pantalla</string>
+    <string name="settings_cat_appearance_title">Apariencia</string>
+    <string name="settings_cat_appearance_subtitle">Tema</string>
+    <string name="settings_cat_language_title">Idioma</string>
+    <string name="settings_cat_language_subtitle">Idioma de la interfaz</string>
+    <string name="settings_language_header">Idioma de la interfaz</string>
+    <string name="settings_language_system">Predeterminado del sistema</string>
+    <string name="settings_cat_tests_logs_title">Pruebas y registros</string>
+    <string name="settings_cat_tests_logs_subtitle">Autopruebas, visor de registros, exportar</string>
+    <string name="settings_cat_trash_title">Papelera</string>
+    <string name="settings_cat_trash_subtitle">Ajustes de borrado suave. El contenido de la papelera está en el menú de la galería.</string>
+    <string name="settings_cat_app_icon_title">Icono de la app</string>
+    <string name="settings_cat_app_icon_subtitle">Elegir el icono del lanzador</string>
+    <string name="settings_cat_support_title">Apoyar el desarrollo</string>
+    <string name="settings_cat_support_subtitle">Dona con Monero o Zcash</string>
+
+    <string name="settings_security_screenshots_title">Permitir capturas de pantalla</string>
+    <string name="settings_security_screenshots_subtitle">Desactivado bloquea la grabación de pantalla y la vista previa en Recientes (recomendado).</string>
+    <string name="settings_security_autolock_title">Bloquear al minimizar</string>
+    <string name="settings_security_autolock_subtitle">Bloquea la app tras el tiempo de inactividad elegido. Los cambios breves no cuentan. Desactivado = sin bloqueo automático.</string>
+    <string name="settings_security_autolock_off">Desactivado</string>
+    <string name="settings_security_autolock_minutes">%1$d min</string>
+    <string name="settings_security_autolock_custom">Personalizado…</string>
+    <string name="settings_security_autolock_custom_title">Duración personalizada del bloqueo</string>
+    <string name="settings_security_autolock_custom_subtitle">Introduce un número de minutos (1 a 1440 = hasta 24 horas).</string>
+    <string name="settings_security_autolock_custom_label">Minutos</string>
+    <string name="settings_security_autolock_custom_confirm">Guardar</string>
+    <string name="settings_security_autolock_custom_cancel">Cancelar</string>
+
+    <string name="settings_appearance_themes_header">Temas</string>
+    <string name="settings_appearance_theme_light">Tema claro</string>
+    <string name="settings_appearance_theme_dark">Tema oscuro</string>
+
+    <string name="settings_appearance_variant_light">Claro</string>
+    <string name="settings_appearance_variant_dark_default">Oscuro estándar</string>
+    <string name="settings_appearance_variant_hacker">Hacker</string>
+    <string name="settings_appearance_variant_bloody">Bloody</string>
+    <string name="settings_appearance_variant_medieval">Medieval</string>
+    <string name="settings_appearance_accent_header">Color principal</string>
+    <string name="settings_appearance_accent_preview_album_name">Álbum</string>
+    <string name="settings_appearance_accent_preview_album_count">12 fotos</string>
+    <string name="settings_appearance_accent_green">Verde</string>
+    <string name="settings_appearance_accent_blue">Azul</string>
+    <string name="settings_appearance_accent_yellow">Amarillo</string>
+    <string name="settings_appearance_accent_magenta">Magenta</string>
+    <string name="settings_appearance_accent_violet">Violeta</string>
+    <string name="settings_appearance_accent_orange">Naranja</string>
+    <string name="settings_appearance_accent_coral">Coral</string>
+    <string name="settings_appearance_accent_teal">Verde azulado</string>
+    <string name="settings_appearance_accent_lime">Lima</string>
+    <string name="settings_appearance_accent_cyan">Cian</string>
+    <string name="settings_appearance_accent_indigo">Índigo</string>
+    <string name="settings_appearance_accent_purple">Púrpura</string>
+    <string name="settings_appearance_accent_red">Rojo</string>
+    <string name="settings_appearance_accent_amber">Ámbar</string>
+    <string name="settings_appearance_accent_olive">Oliva</string>
+    <string name="settings_appearance_accent_brown">Marrón</string>
+    <string name="settings_appearance_tab_position_title">Posición de la barra de pestañas</string>
+    <string name="settings_appearance_tab_position_subtitle">Dónde mostrar las pestañas Todo y Álbumes. Los botones de acción (crear, buscar, papelera, más) siempre quedan arriba.</string>
+    <string name="settings_appearance_tab_pos_top">Arriba</string>
+    <string name="settings_appearance_tab_pos_top_desc">Pestañas sobre la galería: la ubicación habitual.</string>
+    <string name="settings_appearance_tab_pos_bottom">Abajo</string>
+    <string name="settings_appearance_tab_pos_bottom_desc">Pestañas bajo la galería: más fáciles de alcanzar con una mano.</string>
+
+    <string name="settings_appearance_grid_header">Cuadrícula de álbumes</string>
+    <string name="settings_appearance_grid_columns_title">Álbumes por fila</string>
+    <string name="settings_appearance_grid_columns_subtitle">Cuántas miniaturas de álbumes y grupos caben en una fila. Menos columnas agrandan cada miniatura.</string>
+    <string name="settings_appearance_tile_shape_title">Forma de las miniaturas</string>
+    <string name="settings_appearance_tile_shape_subtitle">Esquinas redondeadas o rectas para las miniaturas de álbumes y grupos.</string>
+    <string name="settings_appearance_tile_shape_rounded">Redondeadas</string>
+    <string name="settings_appearance_tile_shape_square">Rectas</string>
+    <string name="settings_appearance_photo_grid_header">Cuadrícula de fotos</string>
+    <string name="settings_appearance_photo_layout_title">Vista de fotos</string>
+    <string name="settings_appearance_photo_layout_subtitle">Cuadrícula cuadrada estándar, o un mosaico ampliado que conserva las proporciones de cada foto (estilo Samsung).</string>
+    <string name="settings_appearance_photo_layout_standard">3 por fila</string>
+    <string name="settings_appearance_photo_layout_enlarged">Mosaico</string>
+
+    <string name="settings_trash_enabled_title">Activar la papelera</string>
+    <string name="settings_trash_on_desc">Los álbumes, grupos y fotos eliminados van a la papelera y se pueden restaurar durante 30 días. Activado por defecto.</string>
+    <string name="settings_trash_off_title">Desactivar la papelera</string>
+    <string name="settings_trash_off_desc">Los borrados son permanentes e inmediatos. Los elementos que ya están en la papelera no se ven afectados.</string>
+
+    <string name="settings_logs_logging_title">Registro</string>
+    <string name="settings_logs_logging_subtitle">Escribe los eventos de la app en un archivo de registro rotativo. Activado por defecto para que los informes de errores incluyan diagnósticos. Desactívalo para deshabilitarlo por completo.</string>
+
+    <string name="support_intro">Si Wolf Gallery te gusta y la encuentras útil y necesaria, puedes apoyar su desarrollo con una donación privada. ¡Gracias! 🐺</string>
+    <string name="support_xmr_subtitle">Privada por defecto</string>
+    <string name="support_zec_subtitle">Dirección blindada (shielded)</string>
+    <string name="support_copy">Copiar</string>
+    <string name="support_address_copied">Dirección copiada</string>
+    <string name="support_qr_cd">Código QR de la dirección de donación de %1$s</string>
+    <string name="support_privacy_note">Solo direcciones, sin seguimiento ni intermediarios. Las donaciones van directas a la cartera no custodial del desarrollador.</string>
+
+    <string name="settings_cat_about_title">Acerca de Wolf Gallery</string>
+    <string name="settings_cat_about_subtitle">Versión, licencia, contacto</string>
+    <string name="about_version">Versión %1$s</string>
+    <string name="about_license">Código abierto · GPL-3.0</string>
+    <string name="about_developed_by">Desarrollado por Wolf Project</string>
+    <string name="about_feedback_header">Comentarios</string>
+    <string name="about_feedback_subtitle">¿Preguntas o sugerencias? Toca para copiar la dirección.</string>
+    <string name="about_email_copied">Correo copiado</string>
+</resources>

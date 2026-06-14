@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="gallery_import_header">استيراد: صور · رسوم متحركة · فيديو</string>
+    <string name="gallery_import_subtitle">اختر من معرضك عبر مُنتقي صور Android؛ يُشفَّر كل ملف بمفتاحك الرئيسي، ويُنشأ له مصغّر بحجم 384 بكسل، ويُحفظ في الخزنة بالأسفل. لا تُحذف النسخ الأصلية على الجهاز بعد — يتطلب ذلك تأكيدًا صريحًا وسيأتي في الخطوة التالية.</string>
+    <string name="gallery_import_supported">المقبول: JPEG، PNG، HEIC/HEIF، WEBP، AVIF، GIF، BMP / MP4، MKV، WebM، 3GP. تُرفض الملفات بالصيغ الأخرى التي تظهر في المنتقي عند الاستيراد لإبقاء مساحة المحلّل صغيرة.</string>
+
+    <string name="gallery_import_btn_pick">اختيار الملفات…</string>
+    <string name="gallery_import_btn_gallery">من المعرض</string>
+    <string name="gallery_import_btn_files">من تطبيق…</string>
+    <string name="gallery_import_chooser_title">الاستيراد عبر…</string>
+    <string name="gallery_import_btn_busy">جارٍ الاستيراد…</string>
+
+    <string name="gallery_import_progress_line">(%1$d/%2$d) %3$s</string>
+    <string name="gallery_import_done_ok">تم استيراد %1$d من %2$d</string>
+    <string name="gallery_import_done_partial">تم استيراد %1$d من %2$d — فشل %3$d (راجع السجل)</string>
+    <string name="gallery_import_done_all_failed">فشل استيراد كل الـ %1$d (راجع السجل)</string>
+
+    <string name="gallery_grid_header">محتوى الخزنة (%1$d)</string>
+    <string name="gallery_empty">الخزنة فارغة. استورد صورًا أو مقاطع فيديو من الأعلى.</string>
+
+    <string name="gallery_action_title">عنصر الخزنة</string>
+    <string name="gallery_action_size_line">الحجم المشفّر: %1$d كيبي بايت</string>
+    <string name="gallery_action_delete_warning">سيُنقل إلى المهملات؛ قابل للاستعادة لمدة 30 يومًا.</string>
+    <string name="gallery_action_delete_warning_permanent">سيُحذف نهائيًا. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+    <string name="gallery_action_btn_delete">حذف</string>
+    <string name="gallery_action_btn_close">إغلاق</string>
+    <string name="gallery_action_btn_move">نقل…</string>
+    <string name="gallery_action_btn_copy">نسخ…</string>
+
+    <string name="gallery_action_picker_move_title">النقل إلى ألبوم</string>
+    <string name="gallery_action_picker_copy_title">النسخ إلى ألبوم</string>
+    <string name="gallery_action_picker_no_other_albums">لا توجد ألبومات أخرى متاحة. أنشئ ألبومًا آخر أولًا.</string>
+    <string name="gallery_action_move_failed">فشل النقل (راجع السجل)</string>
+    <string name="gallery_action_copy_failed">فشل النسخ (راجع السجل)</string>
+
+    <string name="selection_count">محدّد: %1$d</string>
+    <string name="selection_cancel">إلغاء التحديد</string>
+    <string name="selection_btn_share">مشاركة</string>
+    <string name="selection_btn_delete">حذف</string>
+    <string name="selection_btn_options">خيارات</string>
+    <string name="selection_opt_copy">النسخ إلى ألبوم</string>
+    <string name="selection_opt_move">النقل إلى ألبوم</string>
+    <string name="selection_opt_select_all">تحديد الكل</string>
+    <string name="selection_opt_rename">إعادة تسمية</string>
+    <string name="selection_opt_wallpaper">تعيين كخلفية</string>
+    <string name="selection_opt_wallpaper_unavailable">قريبًا</string>
+    <string name="selection_opt_export">تصدير إلى الجهاز</string>
+    <string name="export_done_single">تم التصدير إلى الجهاز</string>
+    <string name="export_done_multi">تم تصدير %1$d من %2$d</string>
+    <string name="export_failed">تعذّر التصدير إلى الجهاز</string>
+    <string name="entry_rename_dialog_title">إعادة تسمية الملف</string>
+    <string name="entry_rename_field_label">اسم الملف</string>
+    <string name="entry_rename_btn_save">حفظ</string>
+    <string name="selection_opt_single_select_only">فقط عند تحديد عنصر واحد</string>
+    <string name="selection_delete_dialog_title">حذف %1$d عناصر؟</string>
+    <string name="selection_delete_dialog_body">ستُنقل العناصر إلى المهملات ويمكن استعادتها خلال 30 يومًا.</string>
+    <string name="selection_delete_dialog_body_permanent">ستُحذف العناصر نهائيًا. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+
+    <string name="dest_picker_title_move">النقل إلى ألبوم</string>
+    <string name="dest_picker_title_copy">النسخ إلى ألبوم</string>
+    <string name="dest_picker_cancel">إلغاء</string>
+    <string name="dest_picker_op_move">جارٍ النقل</string>
+    <string name="dest_picker_op_copy">جارٍ النسخ</string>
+    <string name="dest_picker_empty">لا توجد ألبومات متاحة. أنشئ ألبومًا أولًا.</string>
+    <plurals name="dest_picker_subtitle_count">
+        <item quantity="zero">%d عنصر</item>
+        <item quantity="one">عنصر واحد</item>
+        <item quantity="two">عنصران</item>
+        <item quantity="few">%d عناصر</item>
+        <item quantity="many">%d عنصرًا</item>
+        <item quantity="other">%d عنصر</item>
+    </plurals>
+
+    <string name="op_progress_title_move">نقل الوسائط إلى «%1$s»</string>
+    <string name="op_progress_title_copy">نسخ الوسائط إلى «%1$s»</string>
+    <string name="op_progress_title_trash">النقل إلى المهملات</string>
+    <string name="op_progress_title_restore">جارٍ الاستعادة</string>
+
+    <string name="src_picker_title">اختيار الصور</string>
+    <string name="src_picker_subtitle_dest">الإضافة إلى: %1$s</string>
+    <string name="src_picker_action_select">تحديد</string>
+    <string name="src_picker_close">إغلاق</string>
+    <string name="src_picker_empty_albums">لا توجد ألبومات أخرى للاختيار منها.</string>
+    <string name="src_picker_empty_album">هذا الألبوم فارغ.</string>
+    <string name="src_picker_commit_title">ماذا تريد أن تفعل بالصور المحددة؟</string>
+    <string name="src_picker_commit_copy">نسخ</string>
+    <string name="src_picker_commit_move">نقل</string>
+    <string name="src_picker_commit_cancel">إلغاء</string>
+    <plurals name="src_picker_action_select_count">
+        <item quantity="zero">تحديد (%d)</item>
+        <item quantity="one">تحديد (%d)</item>
+        <item quantity="two">تحديد (%d)</item>
+        <item quantity="few">تحديد (%d)</item>
+        <item quantity="many">تحديد (%d)</item>
+        <item quantity="other">تحديد (%d)</item>
+    </plurals>
+
+    <string name="albums_groups_section">المجموعات</string>
+    <string name="albums_top_level_section">الألبومات</string>
+    <plurals name="group_album_count">
+        <item quantity="zero">%d ألبوم</item>
+        <item quantity="one">ألبوم واحد</item>
+        <item quantity="two">ألبومان</item>
+        <item quantity="few">%d ألبومات</item>
+        <item quantity="many">%d ألبومًا</item>
+        <item quantity="other">%d ألبوم</item>
+    </plurals>
+
+    <string name="album_sel_count">محدّد: %1$d</string>
+    <string name="album_sel_cancel">إلغاء التحديد</string>
+    <string name="album_sel_btn_group">تجميع</string>
+    <string name="album_sel_btn_move">نقل</string>
+    <string name="album_sel_btn_share">مشاركة</string>
+    <string name="album_sel_btn_delete">حذف</string>
+    <string name="album_sel_btn_options">خيارات</string>
+    <string name="album_sel_share_unavailable">قريبًا</string>
+    <string name="album_sel_opt_rename">إعادة تسمية</string>
+    <string name="album_sel_opt_change_cover">تغيير الغلاف</string>
+    <string name="album_sel_opt_pin">تثبيت</string>
+    <string name="album_sel_opt_unpin">إلغاء التثبيت</string>
+    <string name="album_sel_opt_select_all">تحديد الكل</string>
+    <string name="album_pin_badge_desc">مثبّت</string>
+
+    <string name="group_create_dialog_title">مجموعة جديدة</string>
+    <string name="group_create_name_label">اسم المجموعة</string>
+    <string name="group_create_btn_save">إنشاء</string>
+
+    <string name="group_picker_title_move">النقل إلى مجموعة</string>
+    <string name="group_picker_cancel">إلغاء</string>
+    <string name="group_picker_empty">لا توجد مجموعات بعد. انقر أيقونة التجميع لإنشاء واحدة من الألبومات المحددة.</string>
+    <string name="group_picker_top_level">إلى المستوى الرئيسي</string>
+    <string name="group_picker_top_level_subtitle">الإخراج من أي مجموعة</string>
+    <plurals name="group_picker_subtitle_count">
+        <item quantity="zero">%d ألبوم</item>
+        <item quantity="one">ألبوم واحد</item>
+        <item quantity="two">ألبومان</item>
+        <item quantity="few">%d ألبومات</item>
+        <item quantity="many">%d ألبومًا</item>
+        <item quantity="other">%d ألبوم</item>
+    </plurals>
+
+    <string name="album_multi_delete_dialog_title">حذف %1$d ألبومات؟</string>
+    <string name="album_multi_delete_dialog_body">ستُنقل الألبومات المحددة إلى المهملات مع كل صورها. يمكنك استعادتها خلال 30 يومًا.</string>
+    <string name="album_multi_delete_dialog_body_permanent">ستُحذف الألبومات المحددة وكل صورها نهائيًا. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+
+    <string name="group_drilldown_back">العودة إلى الألبومات</string>
+    <plurals name="group_drilldown_subtitle">
+        <item quantity="zero">%d ألبوم في المجموعة</item>
+        <item quantity="one">ألبوم واحد في المجموعة</item>
+        <item quantity="two">ألبومان في المجموعة</item>
+        <item quantity="few">%d ألبومات في المجموعة</item>
+        <item quantity="many">%d ألبومًا في المجموعة</item>
+        <item quantity="other">%d ألبوم في المجموعة</item>
+    </plurals>
+
+    <string name="group_action_rename">إعادة تسمية</string>
+    <string name="group_action_delete">حذف</string>
+    <string name="group_action_pin">تثبيت</string>
+    <string name="group_action_unpin">إلغاء التثبيت</string>
+    <string name="group_rename_dialog_title">إعادة تسمية المجموعة</string>
+    <string name="group_delete_dialog_title">حذف المجموعة؟</string>
+    <string name="group_delete_dialog_body_empty">ستُنقل المجموعة الفارغة إلى المهملات. قابلة للاستعادة خلال 30 يومًا.</string>
+    <string name="group_delete_dialog_body_empty_permanent">ستُحذف المجموعة الفارغة نهائيًا. المجموعة فارغة فلا تتأثّر أي ألبومات. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+    <string name="group_delete_dialog_body_with_albums">ستُنقل المجموعة وكل الألبومات الـ %1$d بداخلها (مع صورها) إلى المهملات معًا. قابلة للاستعادة خلال 30 يومًا.</string>
+    <string name="group_delete_dialog_body_with_albums_permanent">ستُحذف المجموعة نهائيًا. الألبومات الـ %1$d بداخلها لن تُحذف — ستعود إلى قائمة ألبومات المستوى الرئيسي. (المهملات معطّلة في الإعدادات.)</string>
+    <string name="group_delete_btn_confirm">حذف المجموعة</string>
+
+    <string name="fab_choose_title">إنشاء / استيراد</string>
+    <string name="fab_choose_album">ألبوم</string>
+    <string name="fab_choose_album_desc">استيراد أو نقل أو نسخ الصور والرسوم المتحركة ومقاطع الفيديو</string>
+    <string name="fab_choose_group">مجموعة</string>
+    <string name="fab_choose_group_desc">إنشاء ونقل وترتيب الألبومات حسب الموضوع</string>
+    <string name="fab_choose_import">استيراد</string>
+    <string name="fab_choose_import_desc">استيراد مجلد من الجهاز كألبوم جديد</string>
+    <string name="import_folder_default_name">استيراد</string>
+    <string name="import_folder_empty">لا توجد صور أو مقاطع فيديو مدعومة في هذا المجلد</string>
+    <string name="import_folder_progress_title">الاستيراد إلى «%1$s»</string>
+    <string name="import_folder_done">تم استيراد %1$d من %2$d</string>
+    <string name="import_picker_title">الاستيراد من الجهاز</string>
+    <string name="import_picker_back">رجوع</string>
+    <string name="import_picker_selected">المحدّد: %1$d</string>
+    <string name="import_picker_empty">لا توجد صور أو مقاطع فيديو على الجهاز</string>
+    <string name="import_picker_btn">استيراد (%1$d)</string>
+    <string name="import_picker_count">%1$d عناصر</string>
+
+    <string name="viewer_video_title">معاينة الفيديو غير مدعومة بعد</string>
+    <string name="viewer_video_body">تشغيل الفيديو يأتي في الخطوة الفرعية التالية (5.4b) — يتطلب دمج ExoPlayer في المعرض، إضافةً إلى مصدر بيانات مخصّص يبثّ من ملف مؤقت مفكوك التشفير.</string>
+    <string name="viewer_video_play">تشغيل</string>
+    <string name="viewer_video_pause">إيقاف مؤقت</string>
+    <string name="viewer_video_seek">تقديم</string>
+    <string name="viewer_failed_title">تعذّر فتح هذا العنصر</string>
+    <string name="viewer_failed_body">فشل فك التشفير أو فك الترميز. قد يكون البلوب تالفًا، أو ربما مُحي المفتاح الرئيسي. راجع السجل للتفاصيل.</string>
+    <string name="viewer_tap_to_close">انقر زر ✕ أو اضغط رجوع للإغلاق.</string>
+
+    <string name="viewer_btn_close">إغلاق</string>
+    <string name="viewer_btn_share">مشاركة</string>
+    <string name="viewer_btn_info">معلومات</string>
+    <string name="viewer_btn_delete">حذف</string>
+    <string name="viewer_btn_more">المزيد</string>
+
+    <string name="viewer_menu_copy">النسخ إلى ألبوم</string>
+    <string name="viewer_menu_move">النقل إلى ألبوم</string>
+    <string name="viewer_menu_rename">إعادة تسمية</string>
+    <string name="viewer_menu_wallpaper">تعيين كخلفية</string>
+    <string name="viewer_menu_export">تصدير إلى الجهاز</string>
+
+    <string name="viewer_rename_title">إعادة تسمية الملف</string>
+    <string name="viewer_rename_hint">اسم الملف</string>
+    <string name="viewer_rename_save">حفظ</string>
+    <string name="viewer_rename_cancel">إلغاء</string>
+
+    <string name="viewer_wallpaper_title">تعيين كخلفية</string>
+    <string name="viewer_wallpaper_target_home">الشاشة الرئيسية</string>
+    <string name="viewer_wallpaper_target_lock">شاشة القفل</string>
+    <string name="viewer_wallpaper_target_both">كلاهما</string>
+    <string name="viewer_wallpaper_cancel">إلغاء</string>
+    <string name="viewer_wallpaper_done">تم تعيين الخلفية</string>
+    <string name="viewer_wallpaper_failed">تعذّر تعيين الخلفية</string>
+
+    <string name="wallpaper_crop_title">اختيار الإطار</string>
+    <string name="wallpaper_crop_subtitle_home">الشاشة الرئيسية</string>
+    <string name="wallpaper_crop_subtitle_lock">شاشة القفل</string>
+    <string name="wallpaper_crop_subtitle_both">الرئيسية + القفل</string>
+    <string name="wallpaper_crop_btn_cancel">إلغاء</string>
+    <string name="wallpaper_crop_btn_save">تعيين</string>
+    <string name="wallpaper_crop_loading">جارٍ التحميل…</string>
+
+    <string name="viewer_info_dialog_title">تفاصيل العنصر</string>
+    <string name="viewer_info_label_filename">اسم الملف</string>
+    <string name="viewer_info_value_no_filename">— (مستورد قبل 5.5e.5)</string>
+    <string name="viewer_info_label_added">أُضيف إلى الخزنة</string>
+    <string name="viewer_info_label_enc_size">الحجم المشفّر</string>
+    <string name="viewer_info_label_format">الصيغة</string>
+    <string name="viewer_info_label_dimensions">الأبعاد</string>
+    <string name="viewer_info_label_uuid">معرّف الخزنة</string>
+    <string name="viewer_info_value_probing">جارٍ الفحص…</string>
+    <string name="viewer_info_value_unknown">غير معروف</string>
+    <string name="viewer_info_privacy_note">يُحفظ اسم الملف الأصلي في entrymeta المشفّر (5.5e.5+)؛ ويظل البلوب على القرص يستخدم UUID عشوائيًا، فلا تظهر الأسماء كنص صريح في نظام الملفات أبدًا. أما بيانات EXIF/IPTC/XMP/MakerNotes داخل الملف فتُحفظ بايتًا ببايت داخل البلوب المشفّر — وتعود عند مشاركة الملف للخارج. وإزالة البيانات الوصفية عند الاستيراد (مفعّلة افتراضيًا مع إمكان الإيقاف) خطوة مخطّطة.</string>
+
+    <string name="viewer_share_chooser">المشاركة عبر…</string>
+
+    <string name="viewer_delete_dialog_title">حذف هذا العنصر؟</string>
+
+    <string name="search_field_hint">بحث</string>
+    <string name="search_close">إغلاق البحث</string>
+    <string name="search_clear">مسح النص</string>
+    <string name="search_no_results">لا توجد نتائج لـ «%1$s»</string>
+    <string name="search_no_results_unnamed_hint">الملفات المستوردة قبل هذا الإصدار ليس لها اسم محفوظ ولا تظهر هنا. أعد استيرادها لتصبح قابلة للبحث.</string>
+
+    <string name="albums_empty_state">لا توجد ألبومات بعد. انقر + لإنشاء واحد.</string>
+    <string name="albums_create_fab">إنشاء ألبوم</string>
+
+    <string name="album_create_dialog_title">ألبوم جديد</string>
+    <string name="album_create_name_label">اسم الألبوم</string>
+    <string name="album_create_btn_save">إنشاء</string>
+    <string name="album_create_btn_cancel">إلغاء</string>
+    <string name="album_dup_in_section">يحتوي القسم العام بالفعل على ألبوم باسم «%1$s»</string>
+    <string name="album_dup_in_group">تحتوي هذه المجموعة بالفعل على ألبوم باسم «%1$s»</string>
+    <string name="group_dup_in_section">يحتوي القسم العام بالفعل على مجموعة باسم «%1$s»</string>
+    <string name="file_conflict_title">إجراء على الملف</string>
+    <string name="file_conflict_subtitle">إعادة تسمية أم استبدال الموجود؟</string>
+    <string name="file_conflict_body">يحتوي الألبوم المحدد بالفعل على ملف باسم: «%1$s»</string>
+    <string name="file_conflict_apply_all">تطبيق على كل الملفات</string>
+    <string name="file_conflict_skip">تخطٍّ</string>
+    <string name="file_conflict_replace">استبدال</string>
+    <string name="file_conflict_rename">إعادة تسمية</string>
+    <string name="file_rename_taken">يوجد ملف بهذا الاسم بالفعل</string>
+    <string name="entry_dup_in_album">يوجد ملف بهذا الاسم في هذا الألبوم بالفعل</string>
+    <string name="album_conflict_title">إجراء على الألبوم</string>
+    <string name="album_conflict_apply_all">تطبيق على كل الألبومات</string>
+
+    <string name="album_rename_dialog_title">إعادة تسمية الألبوم</string>
+    <string name="album_rename_btn_save">حفظ</string>
+
+    <string name="album_delete_dialog_title">حذف الألبوم؟</string>
+    <string name="album_delete_dialog_body_empty">سيُنقل الألبوم الفارغ إلى المهملات. قابل للاستعادة خلال 30 يومًا.</string>
+    <string name="album_delete_dialog_body_empty_permanent">سيُحذف الألبوم الفارغ نهائيًا. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+    <string name="album_delete_dialog_body_with_entries">سيُنقل الألبوم وكل الملفات الـ %1$d بداخله إلى المهملات. قابل للاستعادة خلال 30 يومًا.</string>
+    <string name="album_delete_dialog_body_with_entries_permanent">سيُحذف الألبوم وكل الملفات الـ %1$d بداخله نهائيًا. لا يمكن التراجع عن ذلك. (المهملات معطّلة في الإعدادات.)</string>
+    <string name="album_delete_btn_confirm">حذف</string>
+
+    <string name="album_action_rename">إعادة تسمية</string>
+    <string name="album_action_change_cover">تغيير الغلاف</string>
+    <string name="album_action_delete">حذف</string>
+    <string name="album_action_cancel">إلغاء</string>
+
+    <string name="cover_picker_title">اختيار الغلاف</string>
+    <string name="cover_picker_empty">الألبوم فارغ — أضف صورًا قبل اختيار غلاف.</string>
+    <string name="cover_picker_back">رجوع</string>
+    <string name="cover_crop_title">اقتصاص الغلاف</string>
+    <string name="cover_crop_btn_save">حفظ</string>
+    <string name="cover_crop_btn_cancel">إلغاء</string>
+    <string name="cover_crop_loading">جارٍ فك التشفير…</string>
+    <string name="cover_save_failed">تعذّر حفظ الغلاف (راجع السجل)</string>
+
+    <string name="album_detail_back">العودة إلى الألبومات</string>
+    <string name="album_detail_empty">هذا الألبوم فارغ.</string>
+
+    <plurals name="album_photo_count">
+        <item quantity="zero">%d صورة</item>
+        <item quantity="one">صورة واحدة</item>
+        <item quantity="two">صورتان</item>
+        <item quantity="few">%d صور</item>
+        <item quantity="many">%d صورة</item>
+        <item quantity="other">%d صورة</item>
+    </plurals>
+
+    <string name="trash_screen_title">المهملات</string>
+    <string name="trash_screen_back">رجوع</string>
+    <string name="trash_screen_empty">المهملات فارغة</string>
+    <string name="trash_expired">منتهٍ</string>
+    <plurals name="trash_screen_count">
+        <item quantity="zero">%d عنصر في المهملات</item>
+        <item quantity="one">عنصر واحد في المهملات</item>
+        <item quantity="two">عنصران في المهملات</item>
+        <item quantity="few">%d عناصر في المهملات</item>
+        <item quantity="many">%d عنصرًا في المهملات</item>
+        <item quantity="other">%d عنصر في المهملات</item>
+    </plurals>
+    <plurals name="trash_days_remaining">
+        <item quantity="zero">%d ي</item>
+        <item quantity="one">%d ي</item>
+        <item quantity="two">%d ي</item>
+        <item quantity="few">%d ي</item>
+        <item quantity="many">%d ي</item>
+        <item quantity="other">%d ي</item>
+    </plurals>
+
+    <string name="trash_sel_cancel">إلغاء التحديد</string>
+    <string name="trash_sel_count">محدّد: %1$d</string>
+    <string name="trash_action_restore">استعادة</string>
+
+    <string name="trash_action_delete_forever">حذف نهائي</string>
+    <string name="trash_action_empty">تفريغ المهملات</string>
+
+    <string name="trash_delete_forever_dialog_title">حذف نهائي؟</string>
+    <plurals name="trash_delete_forever_dialog_body">
+        <item quantity="zero">سيُحذف %d عنصر نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="one">سيُحذف عنصر واحد نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="two">سيُحذف عنصران نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="few">ستُحذف %d عناصر نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="many">سيُحذف %d عنصرًا نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="other">سيُحذف %d عنصر نهائيًا. لا يمكن التراجع عن ذلك.</item>
+    </plurals>
+    <string name="trash_delete_forever_btn_confirm">حذف</string>
+
+    <string name="trash_empty_dialog_title">تفريغ المهملات؟</string>
+    <plurals name="trash_empty_dialog_body">
+        <item quantity="zero">ستُحذف جميع العناصر (%d) في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="one">سيُحذف العنصر الوحيد في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="two">سيُحذف العنصران في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="few">ستُحذف %d عناصر في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="many">سيُحذف %d عنصرًا في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+        <item quantity="other">ستُحذف جميع العناصر (%d) في المهملات نهائيًا. لا يمكن التراجع عن ذلك.</item>
+    </plurals>
+    <string name="trash_empty_btn_confirm">تفريغ</string>
+
+    <string name="trash_dialog_btn_cancel">إلغاء</string>
+
+    <plurals name="trash_album_entry_count">
+        <item quantity="zero">%d صورة</item>
+        <item quantity="one">صورة واحدة</item>
+        <item quantity="two">صورتان</item>
+        <item quantity="few">%d صور</item>
+        <item quantity="many">%d صورة</item>
+        <item quantity="other">%d صورة</item>
+    </plurals>
+    <plurals name="trash_group_album_count">
+        <item quantity="zero">%d ألبوم</item>
+        <item quantity="one">ألبوم واحد</item>
+        <item quantity="two">ألبومان</item>
+        <item quantity="few">%d ألبومات</item>
+        <item quantity="many">%d ألبومًا</item>
+        <item quantity="other">%d ألبوم</item>
+    </plurals>
+    <string name="trash_album_unnamed">ألبوم بلا اسم</string>
+    <string name="trash_group_unnamed">مجموعة بلا اسم</string>
+</resources>

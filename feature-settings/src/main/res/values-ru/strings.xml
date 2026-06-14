@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_back">Назад</string>
+    <string name="settings_open">Открыть настройки</string>
+
+    <string name="settings_cat_security_title">Безопасность</string>
+    <string name="settings_cat_security_subtitle">Автоблокировка, скриншоты</string>
+    <string name="settings_cat_appearance_title">Внешний вид</string>
+    <string name="settings_cat_appearance_subtitle">Тема</string>
+    <string name="settings_cat_language_title">Язык</string>
+    <string name="settings_cat_language_subtitle">Язык интерфейса приложения</string>
+    <string name="settings_language_header">Язык интерфейса</string>
+    <string name="settings_language_system">Системный</string>
+    <string name="settings_cat_tests_logs_title">Тесты и логи</string>
+    <string name="settings_cat_tests_logs_subtitle">Самотесты, просмотр и отправка логов</string>
+    <string name="settings_cat_trash_title">Корзина</string>
+    <string name="settings_cat_trash_subtitle">Настройки мягкого удаления. Содержимое корзины — в меню галереи.</string>
+    <string name="settings_cat_app_icon_title">Иконка приложения</string>
+    <string name="settings_cat_app_icon_subtitle">Выбор иконки на главном экране</string>
+    <string name="settings_cat_support_title">Поддержать разработку</string>
+    <string name="settings_cat_support_subtitle">Донат через Monero или Zcash</string>
+
+    <string name="settings_security_screenshots_title">Разрешить скриншоты</string>
+    <string name="settings_security_screenshots_subtitle">Если выключено — запись экрана и превью в недавних приложениях заблокированы (рекомендуется).</string>
+    <string name="settings_security_autolock_title">Автоблокировка в фоне</string>
+    <string name="settings_security_autolock_subtitle">Заблокировать приложение после простоя в фоне на выбранное количество минут. Кратковременные переключения не учитываются. Выкл — нет автоблокировки.</string>
+    <string name="settings_security_autolock_off">Выкл</string>
+    <string name="settings_security_autolock_minutes">%1$d мин</string>
+    <string name="settings_security_autolock_custom">Свой…</string>
+    <string name="settings_security_autolock_custom_title">Своя длительность</string>
+    <string name="settings_security_autolock_custom_subtitle">Введите количество минут (от 1 до 1440 = до 24 часов).</string>
+    <string name="settings_security_autolock_custom_label">Минуты</string>
+    <string name="settings_security_autolock_custom_confirm">Сохранить</string>
+    <string name="settings_security_autolock_custom_cancel">Отмена</string>
+
+    <string name="settings_appearance_themes_header">Темы</string>
+    <string name="settings_appearance_theme_light">Светлая тема</string>
+    <string name="settings_appearance_theme_dark">Тёмная тема</string>
+
+    <string name="settings_appearance_variant_light">Светлая</string>
+    <string name="settings_appearance_variant_dark_default">Тёмная</string>
+    <string name="settings_appearance_variant_hacker">Hacker</string>
+    <string name="settings_appearance_variant_bloody">Bloody</string>
+    <string name="settings_appearance_variant_medieval">Medieval</string>
+    <string name="settings_appearance_accent_header">Основной цвет</string>
+    <string name="settings_appearance_accent_preview_album_name">Альбом</string>
+    <string name="settings_appearance_accent_preview_album_count">12 фото</string>
+
+    <string name="settings_appearance_accent_green">Зелёный</string>
+    <string name="settings_appearance_accent_blue">Синий</string>
+    <string name="settings_appearance_accent_yellow">Жёлтый</string>
+    <string name="settings_appearance_accent_magenta">Розовый</string>
+    <string name="settings_appearance_accent_violet">Фиолетовый</string>
+    <string name="settings_appearance_accent_orange">Оранжевый</string>
+    <string name="settings_appearance_accent_coral">Коралловый</string>
+    <string name="settings_appearance_accent_teal">Бирюзовый</string>
+    <string name="settings_appearance_accent_lime">Лаймовый</string>
+    <string name="settings_appearance_accent_cyan">Голубой</string>
+    <string name="settings_appearance_accent_indigo">Индиго</string>
+    <string name="settings_appearance_accent_purple">Пурпурный</string>
+    <string name="settings_appearance_accent_red">Красный</string>
+    <string name="settings_appearance_accent_amber">Янтарный</string>
+    <string name="settings_appearance_accent_olive">Оливковый</string>
+    <string name="settings_appearance_accent_brown">Коричневый</string>
+    <string name="settings_appearance_tab_position_title">Расположение вкладок</string>
+    <string name="settings_appearance_tab_position_subtitle">Где показывать вкладки «Все» и «Альбомы». Кнопки действий (создать, поиск, корзина, ещё) всегда остаются вверху.</string>
+    <string name="settings_appearance_tab_pos_top">Сверху</string>
+    <string name="settings_appearance_tab_pos_top_desc">Вкладки над галереей — как обычно.</string>
+    <string name="settings_appearance_tab_pos_bottom">Снизу</string>
+    <string name="settings_appearance_tab_pos_bottom_desc">Вкладки под галереей — удобнее доставать большим пальцем одной рукой.</string>
+
+    <string name="settings_appearance_grid_header">Сетка альбомов</string>
+    <string name="settings_appearance_grid_columns_title">Альбомов в строке</string>
+    <string name="settings_appearance_grid_columns_subtitle">Сколько плиток альбомов и групп помещается в одну строку. Меньше столбцов — крупнее плитки.</string>
+    <string name="settings_appearance_tile_shape_title">Форма плиток</string>
+    <string name="settings_appearance_tile_shape_subtitle">Немного скруглённые или острые квадратные углы у плиток альбомов и групп.</string>
+    <string name="settings_appearance_tile_shape_rounded">Немного скруглённые</string>
+    <string name="settings_appearance_tile_shape_square">Квадратные</string>
+    <string name="settings_appearance_photo_grid_header">Сетка фото</string>
+    <string name="settings_appearance_photo_layout_title">Вид фото</string>
+    <string name="settings_appearance_photo_layout_subtitle">Обычная квадратная сетка или крупная мозаика с сохранением пропорций фото.</string>
+    <string name="settings_appearance_photo_layout_standard">3 в ряд</string>
+    <string name="settings_appearance_photo_layout_enlarged">Мозаика</string>
+
+    <string name="settings_trash_enabled_title">Включить корзину</string>
+    <string name="settings_trash_on_desc">Удалённые альбомы, группы и фото попадают в корзину и восстановимы в течение 30 дней. Включено по умолчанию.</string>
+    <string name="settings_trash_off_title">Выключить корзину</string>
+    <string name="settings_trash_off_desc">Удаление сразу безвозвратное. Уже находящиеся в корзине элементы не затрагиваются.</string>
+
+    <string name="settings_logs_logging_title">Логирование</string>
+    <string name="settings_logs_logging_subtitle">Запись событий приложения в ротируемый лог-файл. По умолчанию включено, чтобы баг-репорты содержали диагностику. Выключите, чтобы отключить полностью.</string>
+
+    <string name="support_intro">Если Wolf Gallery вам понравилась, полезна и необходима, то вы можете поддержать её развитие приватным донатом. Спасибо! 🐺</string>
+    <string name="support_xmr_subtitle">Приватная по умолчанию</string>
+    <string name="support_zec_subtitle">Экранированный (shielded) адрес</string>
+    <string name="support_copy">Копировать</string>
+    <string name="support_address_copied">Адрес скопирован</string>
+    <string name="support_qr_cd">QR-код адреса для доната %1$s</string>
+    <string name="support_privacy_note">Только адреса — без трекинга и посредников. Переводы идут напрямую в некастодиальный кошелёк разработчика.</string>
+
+    <string name="settings_cat_about_title">О Wolf Gallery</string>
+    <string name="settings_cat_about_subtitle">Версия, лицензия, обратная связь</string>
+    <string name="about_version">Версия %1$s</string>
+    <string name="about_license">Открытый код · GPL-3.0</string>
+    <string name="about_developed_by">Разработано Wolf Project</string>
+    <string name="about_feedback_header">Обратная связь</string>
+    <string name="about_feedback_subtitle">Вопросы или предложения? Нажмите, чтобы скопировать адрес.</string>
+    <string name="about_email_copied">Email скопирован</string>
+</resources>

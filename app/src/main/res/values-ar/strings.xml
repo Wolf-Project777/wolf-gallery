@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="settings_open">فتح الإعدادات</string>
+
+    <string name="settings_app_icon_apply_title">تطبيق الأيقونة؟</string>
+    <string name="settings_app_icon_apply_subtitle">ستتبدّل أيقونة المشغّل خلال الثواني القليلة القادمة. تحتاج بعض المشغّلات إلى تحديث درج التطبيقات؛ قد لا ترى أيقونة Wolf Gallery للحظة ريثما يُحدّث النظام.</string>
+    <string name="settings_app_icon_apply_confirm">تطبيق</string>
+    <string name="settings_app_icon_apply_cancel">إلغاء</string>
+    <string name="settings_app_icon_variant">النسخة %1$d</string>
+
+    <string name="menu_open">القائمة</string>
+    <string name="menu_item_lock">قفل</string>
+    <string name="menu_item_trash">المهملات</string>
+    <string name="menu_item_settings">الإعدادات</string>
+    <string name="menu_item_edit">تعديل</string>
+    <string name="menu_item_select_all">تحديد الكل</string>
+    <string name="menu_item_sort">ترتيب</string>
+    <string name="menu_item_coming_soon">قريبًا</string>
+    <string name="top_bar_add">إنشاء ألبوم أو مجموعة</string>
+    <string name="top_bar_search">بحث</string>
+    <string name="top_bar_trash">فتح المهملات</string>
+    <string name="search_field_hint">بحث</string>
+    <string name="search_close">إغلاق البحث</string>
+    <string name="search_clear">مسح النص</string>
+
+    <string name="sort_dialog_title_root">ترتيب المجموعات والألبومات</string>
+    <string name="sort_dialog_title_albums">ترتيب الألبومات</string>
+    <string name="sort_dialog_title_entries">ترتيب الوسائط</string>
+    <string name="sort_option_date_desc">التاريخ (الأحدث أولًا)</string>
+    <string name="sort_option_date_asc">التاريخ (الأقدم أولًا)</string>
+    <string name="sort_option_name_az">الاسم (أ–ي)</string>
+    <string name="sort_option_name_za">الاسم (ي–أ)</string>
+    <string name="sort_dialog_btn_close">إغلاق</string>
+
+    <string name="selection_count">محدّد: %1$d</string>
+    <string name="selection_cancel">إلغاء التحديد</string>
+
+    <string name="album_default_imported_name">المستوردة</string>
+
+    <string name="tab_all">الكل</string>
+    <string name="tab_albums">الألبومات</string>
+
+    <string name="trash_open">فتح المهملات</string>
+
+    <string name="op_progress_title_move">نقل الوسائط إلى «%1$s»</string>
+    <string name="op_progress_title_copy">نسخ الوسائط إلى «%1$s»</string>
+    <string name="op_progress_title_trash">النقل إلى المهملات</string>
+
+    <string name="file_rename_taken">يوجد ملف بهذا الاسم بالفعل</string>
+    <string name="entry_dup_in_album">يوجد ملف بهذا الاسم في هذا الألبوم بالفعل</string>
+    <string name="album_dup_in_group">تحتوي هذه المجموعة بالفعل على ألبوم باسم «%1$s»</string>
+    <string name="album_dup_in_section">يحتوي القسم العام بالفعل على ألبوم باسم «%1$s»</string>
+
+    <string name="viewer_wallpaper_done">تم تعيين الخلفية</string>
+    <string name="viewer_wallpaper_failed">تعذّر تعيين الخلفية</string>
+
+    <string name="export_done_single">تم التصدير إلى الجهاز</string>
+    <string name="export_done_multi">تم تصدير %1$d من %2$d</string>
+    <string name="export_failed">تعذّر التصدير إلى الجهاز</string>
+
+    <string name="import_folder_default_name">استيراد</string>
+    <string name="import_folder_empty">لا توجد صور أو مقاطع فيديو مدعومة في هذا المجلد</string>
+    <string name="import_folder_progress_title">الاستيراد إلى «%1$s»</string>
+    <string name="import_folder_done">تم استيراد %1$d من %2$d</string>
+    <string name="import_perm_denied">يلزم الوصول إلى الوسائط للاستيراد من الجهاز</string>
+
+    <string name="app_name">Wolf Gallery</string>
+    <string name="welcome_placeholder">Wolf Gallery — لوحة المطوّر (بعد المعالج)</string>
+
+    <string name="albums_test_header">اختبار ذاتي لمستودع الألبومات</string>
+    <string name="albums_test_subtitle">يُنشئ ألبومًا مؤقتًا باسم بالحروف السيريلية ورمز تعبيري، ويسرده، ويعيد تسميته، ويعيّن غلافًا وهميًا بمستطيل قصّ مُطبَّع، ثم يسرده مرة أخرى للتحقق من الدورة الكاملة، ثم يحذف الألبوم. لا يُمَسّ ألبوم «المستوردة» الافتراضي.</string>
+    <string name="btn_run_albums_test">تشغيل الاختبار الذاتي للألبومات</string>
+    <string name="albums_running">جارٍ التشغيل…</string>
+    <string name="toast_albums_pass">نجح الاختبار الذاتي للألبومات</string>
+    <string name="toast_albums_fail">فشل الاختبار الذاتي للألبومات — راجع السجل</string>
+
+    <string name="trash_test_header">اختبار ذاتي لمستودع المهملات</string>
+    <string name="trash_test_subtitle">يُنشئ ألبومًا مؤقتًا ومدخلًا اصطناعيًا في الخزنة، وينقله إلى المهملات، ويسرد المهملات ويتحقق من دورة البيانات الوصفية ومن حقل الألبوم الأصلي، ثم يستعيد المدخل، وينقله إلى المهملات مجددًا، ثم يحذفه نهائيًا ويُشغّل purgeOlderThan بفترة احتفاظ ضئيلة للتحقق من الحذف التلقائي. لا يُمَسّ ألبوم «المستوردة» الافتراضي.</string>
+    <string name="btn_run_trash_test">تشغيل الاختبار الذاتي للمهملات</string>
+    <string name="trash_running">جارٍ التشغيل…</string>
+    <string name="toast_trash_pass">نجح الاختبار الذاتي للمهملات</string>
+    <string name="toast_trash_fail">فشل الاختبار الذاتي للمهملات — راجع السجل</string>
+
+    <string name="log_status_header">حالة التسجيل (مطوّر)</string>
+    <string name="log_size_bytes">حجم ملف السجل: %1$d بايت</string>
+    <string name="log_tail_header">آخر %1$d سطر:</string>
+    <string name="log_empty">(ملف السجل فارغ أو غير مُهيّأ)</string>
+
+    <string name="settings_header">الإعدادات (مطوّر)</string>
+    <string name="setting_logging_title">التسجيل</string>
+    <string name="setting_logging_subtitle">كتابة الأحداث في ملف السجل (يُعاد تعيينه عند التبديل)</string>
+    <string name="setting_screenshots_title">السماح بلقطات الشاشة</string>
+    <string name="setting_screenshots_subtitle">عند الإيقاف، يُحظر تسجيل الشاشة ومعاينة التطبيقات الأخيرة (مُستحسَن)</string>
+    <string name="setting_force_dark_title">فرض السمة الداكنة</string>
+    <string name="setting_force_dark_subtitle">عند التفعيل، يستخدم التطبيق السمة الداكنة بغضّ النظر عن إعداد النظام. عند الإيقاف، يتبع التطبيق سمة النظام.</string>
+
+    <string name="setting_autolock_title">القفل التلقائي عند التصغير</string>
+    <string name="setting_autolock_subtitle">يقفل التطبيق بعد بقائه في الخلفية لعدد الدقائق المحدّد. لا تُفعّله عمليات التبديل القصيرة إلى تطبيقات أخرى. الإيقاف = لا قفل تلقائي أبدًا (يُعاد القفل فقط عند الإغلاق الكامل).</string>
+    <string name="setting_autolock_off">إيقاف</string>
+    <string name="setting_autolock_minutes">%1$d دقيقة</string>
+    <string name="setting_autolock_custom">مخصّص…</string>
+    <string name="setting_autolock_custom_title">مدة قفل تلقائي مخصّصة</string>
+    <string name="setting_autolock_custom_subtitle">أدخل عدد الدقائق (من 1 إلى 1440 = حتى 24 ساعة).</string>
+    <string name="setting_autolock_custom_label">الدقائق</string>
+    <string name="setting_autolock_custom_confirm">حفظ</string>
+    <string name="setting_autolock_custom_cancel">إلغاء</string>
+
+    <string name="btn_copy_log">نسخ السجل</string>
+    <string name="btn_share_log">مشاركة السجل</string>
+    <string name="btn_clear_log">مسح جميع ملفات السجل</string>
+    <string name="share_log_chooser">مشاركة السجل عبر…</string>
+
+    <string name="toast_log_copied">تم نسخ السجل إلى الحافظة</string>
+    <string name="toast_log_empty">السجل فارغ — لا شيء لنسخه</string>
+    <string name="toast_log_cleared">تم مسح جميع ملفات السجل</string>
+
+    <string name="native_header">اختبار ذاتي أصلي (NDK)</string>
+    <string name="native_subtitle">يستدعي libencnative.so::secureZero على مخزن مؤقت بحجم 64 بايت مملوء مسبقًا بـ 0xAA ويتحقق من أن كل بايت يساوي 0x00 عند العودة.</string>
+    <string name="btn_run_native_test">تشغيل الاختبار الذاتي لـ secureZero</string>
+    <string name="toast_native_pass">نجح secureZero — مُسحت كل الـ 64 بايت</string>
+    <string name="toast_native_fail">فشل secureZero — راجع السجل</string>
+
+    <string name="aesgcm_header">اختبار ذاتي لـ AES-256-GCM عبر StrongBox</string>
+    <string name="aesgcm_subtitle">يولّد مفتاح AES-256 مدعومًا بالعتاد تحت اسم مستعار للاختبار (لا يُمَسّ مفتاح الإنتاج إطلاقًا)، ويفضّل StrongBox (Knox Vault على A14 5G). يتحقق من: مستوى العتاد، دورتين كاملتين (UTF-8 قصير + 1 كيبي عشوائي)، النص المشفّر ≠ النص الصريح، تفرّد الـ IV، رفض العبث بالنص المشفّر، رفض العبث بالـ IV. يُحذف الاسم المستعار للاختبار بعد ذلك.</string>
+    <string name="btn_run_aesgcm_test">تشغيل اختبار AES-GCM/StrongBox</string>
+    <string name="aesgcm_running">جارٍ التشغيل على العتاد…</string>
+    <string name="toast_aesgcm_pass">نجح AES-GCM/StrongBox — راجع السجل لمعرفة مستوى العتاد</string>
+    <string name="toast_aesgcm_fail">فشل AES-GCM/StrongBox — راجع السجل</string>
+
+    <string name="securebytes_header">اختبار ذاتي لـ SecureBytes (المستوى 2)</string>
+    <string name="securebytes_subtitle">يغلّف 32 بايت في ذاكرة مُقنّعة بـ XOR مع قناع دوّار لكل قراءة. يتحقق من: مسح مخزن المُستدعي، التخزين المُقنّع ≠ النص الصريح، قراءة الدورة تعيد الأصل، دوران القناع فعليًا، أن close() يمسح كل شيء، أن القراءة بعد الإغلاق تُطلق استثناءً، أن close غير حسّاس للتكرار.</string>
+    <string name="btn_run_securebytes_test">تشغيل الاختبار الذاتي لـ SecureBytes</string>
+    <string name="toast_securebytes_pass">نجح SecureBytes — تم التحقق من الخصائص السبع</string>
+    <string name="toast_securebytes_fail">فشل SecureBytes — راجع السجل</string>
+
+    <string name="argon2_header">اختبار ذاتي لـ Argon2id (دالة اشتقاق مفاتيح كثيفة الذاكرة)</string>
+    <string name="argon2_subtitle">يشتقّ مفتاحًا بحجم 32 بايت من \"password\"+\"somesalt12345678\" مرتين بالمعاملات نفسها (يجب أن يتطابقا)، ثم مرة بملح مختلف (يجب أن يختلف). يستخدم 4 ميبي / تكرارين / خيط واحد للتحقق السريع أثناء التطوير؛ معاملات الإنتاج هي 64 ميبي / 3 / 4.</string>
+    <string name="btn_run_argon2_test">تشغيل الاختبار الذاتي لـ Argon2id</string>
+    <string name="argon2_running">جارٍ الحساب…</string>
+    <string name="toast_argon2_pass">نجح Argon2id — تم التحقق من الحتمية والحساسية للملح</string>
+    <string name="toast_argon2_fail">فشل Argon2id — راجع السجل</string>
+
+    <string name="blob_header">اختبار ذاتي لكتلة ملف مشفّرة (تشفير لكل ملف)</string>
+    <string name="blob_subtitle">يمرّر 2 ميبي من النص الصريح العشوائي عبر CipherOutputStream، ويتحقق من البنية على القرص (magic + الإصدار + ترويسة IV، +36 بايت إضافية)، ويؤكّد أن بايتات النص المشفّر ≠ بايتات النص الصريح عند الإزاحة نفسها، ويُجري دورة كاملة للملف عبر فكّ التشفير ويطابق SHA-256، ويتحقق من رفض النص المشفّر المُعبَث به والـ magic الخاطئ والإصدار الخاطئ. يستخدم اسمًا مستعارًا للاختبار في Keystore؛ لا يُمَسّ المفتاح الرئيسي للإنتاج.</string>
+    <string name="btn_run_blob_test">تشغيل الاختبار الذاتي لدورة الكتلة</string>
+    <string name="blob_running">جارٍ التشفير وفكّ التشفير لـ 2 ميبي…</string>
+    <string name="toast_blob_pass">نجحت دورة الكتلة — تم التحقق من الخصائص الست</string>
+    <string name="toast_blob_fail">فشلت دورة الكتلة — راجع السجل</string>
+</resources>

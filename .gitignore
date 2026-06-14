@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+/.kotlin
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/release
+*.keystore
+*.jks
+
+# Local icon-generation workshop (holds absolute dev paths) — kept on disk, not published
+/tools/

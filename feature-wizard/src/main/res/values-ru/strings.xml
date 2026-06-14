@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wizard_step_progress">Шаг %1$d из %2$d</string>
+    <string name="wizard_btn_back">Назад</string>
+    <string name="wizard_btn_next">Далее</string>
+    <string name="wizard_btn_done">Готово</string>
+
+    <string name="wizard_welcome_title">Добро пожаловать в Wolf Gallery</string>
+    <string name="wizard_welcome_tagline">Зашифрованная офлайн-галерея. Настраивается здесь, на вашем устройстве — нигде больше.</string>
+    <string name="wizard_welcome_threat_note">Фотогалереи — ценная цель: для воров данных, для криминалистических инструментов, для любого, у кого появится недолгий доступ к устройству. Шифрование оставляет содержимое вашим.</string>
+
+    <string name="wizard_welcome_fact_offline">Работает полностью офлайн. Приложение не запрашивает разрешение INTERNET.</string>
+    <string name="wizard_welcome_fact_no_account">Без аккаунтов, без регистрации, без облака. Сами файлы — уже зашифрованные — лежат в приватной памяти приложения, недоступной другим приложениям.</string>
+    <string name="wizard_welcome_fact_hwbacked">Ключ от этих файлов хранится отдельно — в самом защищённом месте, какое есть на вашем устройстве (см. ниже). Без этого ключа файлы остаются бессмысленным набором байтов.</string>
+
+    <string name="wizard_welcome_tier_probing">Проверка защищённого железа…</string>
+    <string name="wizard_welcome_tier_probing_detail">Узнаём у Android Keystore, где можно разместить мастер-ключ.</string>
+
+    <string name="wizard_welcome_tier_strongbox">StrongBox доступен</string>
+    <string name="wizard_welcome_tier_strongbox_detail">Мастер-ключ будет жить в выделенном чипе безопасности — отдельно от основного процессора. Лучший случай для этого устройства.</string>
+
+    <string name="wizard_welcome_tier_tee">TEE (Trusted Execution Environment)</string>
+    <string name="wizard_welcome_tier_tee_detail">Мастер-ключ будет жить в TrustZone — отдельной защищённой зоне того же чипа, изолированной от Android и его памяти. Наружу ключ не извлекается.</string>
+
+    <string name="wizard_welcome_tier_software">Только программная защита ключа</string>
+    <string name="wizard_welcome_tier_software_detail">На этом устройстве нет защищённого железа. Ключ был бы защищён только средствами ОС. Продолжить можно, но модель угроз слабее — физический доступ к разблокированному устройству достаточен для компрометации.</string>
+
+    <string name="wizard_welcome_tier_error">Ошибка проверки железа</string>
+    <string name="wizard_welcome_tier_error_detail">Не удалось обратиться к Android Keystore (%1$s). Настройка продолжится, повторная попытка будет при создании мастер-ключа. См. логи в dev-панели.</string>
+
+    <string name="wizard_crypto_title">Шифрование</string>
+    <string name="wizard_crypto_intro">Ваши медиа и личные данные защищены квантово-устойчивой связкой AES-256-GCM + Argon2id.</string>
+
+    <string name="wizard_crypto_aes_title">AES-256-GCM + Argon2id</string>
+    <string name="wizard_crypto_aes_subtitle">Промышленный стандарт с аппаратным ускорением. Защищает от всех классических атак — и уже устойчив к квантовым.</string>
+    <string name="wizard_crypto_aes_badge">КВАНТ-СТОЙКО</string>
+
+    <string name="wizard_crypto_quantum_note">Как работает это шифрование: данные — AES-256-GCM, пароль проходит через Argon2id, ключ хранится в защищённом железе устройства — всё это симметричная криптография. Взлом квантовым алгоритмом Гровера лишь вдвое снижает её стойкость: AES-256 остаётся на уровне ~128 бит, что недостижимо для перебора. Уязвимой к квантовому компьютеру асимметрии (её ломает алгоритм Шора) в сейфе галереи нет, поэтому угроза «собрать сейчас — расшифровать потом квантовым компьютером» к сейфу этой галереи не относится.</string>
+
+    <string name="wizard_lock_title">Способ блокировки</string>
+    <string name="wizard_lock_intro">Чем вы будете разблокировать галерею?</string>
+
+    <string name="wizard_lock_password_title">Пароль</string>
+    <string name="wizard_lock_password_subtitle">Минимум 8 символов. Буквы любого языка (маленькие и большие), цифры, знаки, смешанный регистр — всё подходит. Максимальная энтропия на символ.</string>
+    <string name="wizard_lock_password_badge">ПО УМОЛЧАНИЮ</string>
+
+    <string name="wizard_lock_pin_title">PIN</string>
+    <string name="wizard_lock_pin_subtitle">6–12 цифр. Быстрее набрать одной рукой. Вариантов у цифр меньше, чем у пароля, — но проверка PIN при разблокировке намеренно сделана медленнее и тяжелее, так что перебор всё равно невыгоден.</string>
+    <string name="wizard_lock_pin_badge">6-12 ЦИФР</string>
+
+    <string name="wizard_lock_argon_note">Оба варианта надёжны. PIN использует 128 МиБ / 5 итераций Argon2id, режим пароля — 64 МиБ / 3 итерации. Настройки разные намеренно: чем они тяжелее, тем больше памяти и времени уходит на каждую проверку секрета. У PIN вариантов мало (только цифры), поэтому KDF для него специально утяжелён — чтобы каждая попытка перебора стоила дороже. У пароля вариантов и так несоизмеримо больше, ему хватает более лёгкого KDF: разблокировка не тормозит, не давит на память и не растягивает расшифровку.\n\nТак стоимость перебора выравнивается — но лишь до предела. KDF добавляет только постоянный множитель к цене одной попытки и не заменяет собой богатство самого секрета: число PIN-комбинаций ограничено сверху (6–12 цифр), а длину пароля можно наращивать без предела, и каждый новый символ умножает пространство перебора. Поэтому PIN — это про удобство (и его дополнительно прикрывают задержка между попытками и стирание), а длинный пароль — единственный способ поднять стойкость выше потолка, доступного PIN.</string>
+
+    <string name="wizard_set_title">Установите блокировку</string>
+    <string name="wizard_set_intro_password">Придумайте пароль — минимум 8 символов. Буквы любого языка (большие и маленькие), цифры, знаки, смешанный регистр — всё подходит.</string>
+    <string name="wizard_set_intro_pin">Придумайте PIN — от 6 до 12 цифр.</string>
+
+    <string name="wizard_set_field_password">Пароль</string>
+    <string name="wizard_set_field_pin">PIN</string>
+    <string name="wizard_set_field_confirm">Подтвердите</string>
+
+    <string name="wizard_set_show">Показать</string>
+    <string name="wizard_set_hide">Скрыть</string>
+
+    <string name="wizard_set_btn_create">Создать хранилище</string>
+    <string name="wizard_set_btn_creating">Создание…</string>
+
+    <string name="wizard_set_err_pin_digits">PIN должен состоять только из цифр</string>
+    <string name="wizard_set_err_pin_too_short">PIN должен быть минимум 6 цифр</string>
+    <string name="wizard_set_err_pin_too_long">PIN должен быть максимум 12 цифр</string>
+    <string name="wizard_set_err_password_too_short">Пароль должен быть минимум 8 символов</string>
+    <string name="wizard_set_err_confirm_empty">Введите секрет ещё раз для подтверждения</string>
+    <string name="wizard_set_err_confirm_mismatch">Подтверждение не совпадает</string>
+
+    <string name="wizard_unlock_title">Wolf Gallery</string>
+    <string name="wizard_unlock_label_pin">PIN:</string>
+    <string name="wizard_unlock_label_password">Пароль:</string>
+    <string name="wizard_unlock_show">Показать</string>
+    <string name="wizard_unlock_hide">Скрыть</string>
+    <string name="wizard_unlock_btn_unlock">Разблокировать</string>
+    <string name="wizard_unlock_btn_unlocking">Разблокировка…</string>
+    <string name="wizard_unlock_btn_locked">Заблокировано (%1$s)</string>
+    <string name="wizard_unlock_err_wrong_pin">Неверный PIN. Попробуйте снова.</string>
+    <string name="wizard_unlock_err_wrong_password">Неверный пароль. Попробуйте снова.</string>
+    <string name="wizard_unlock_backoff_countdown">Повторить через %1$s</string>
+    <string name="wizard_unlock_wipe_warning">Ещё %1$d неверных попыток — и хранилище будет стёрто.</string>
+    <string name="wizard_unlock_wipe_toast">Хранилище стёрто. Настройка начнётся заново.</string>
+
+    <string name="wizard_set_backoff_info_title">Ожидание между неверными попытками</string>
+    <string name="wizard_set_backoff_info_subtitle">Всегда включено. Задержка растёт с каждой неудачной попыткой — за опечатку секунда, за упорное угадывание — полчаса.</string>
+
+    <string name="wizard_brute_wipe_heading">Режим паранойи</string>
+    <string name="wizard_brute_wipe_title">Стереть хранилище после неверных попыток</string>
+    <string name="wizard_brute_wipe_subtitle">Уничтожает хранилище, если подряд провалено слишком много попыток.</string>
+    <string name="wizard_brute_wipe_warning">Стирание удаляет ВСЕ зашифрованные файлы и мастер-ключ. Восстановления нет, даже если вы потом вспомните секрет.</string>
+    <string name="wizard_brute_wipe_threshold_label">Стереть после</string>
+    <string name="wizard_brute_wipe_after_n">После %1$d</string>
+    <string name="wizard_brute_wipe_custom">Свой…</string>
+    <string name="wizard_brute_wipe_custom_title">Свой порог стирания</string>
+    <string name="wizard_brute_wipe_custom_subtitle">После скольких неверных попыток подряд стирать хранилище? (1–999)</string>
+    <string name="wizard_brute_wipe_custom_label">Попыток</string>
+    <string name="wizard_brute_wipe_custom_confirm">Сохранить</string>
+    <string name="wizard_brute_wipe_custom_cancel">Отмена</string>
+
+    <string name="wizard_done_title">Всё готово</string>
+    <string name="wizard_done_intro">Хранилище создано. Вот что вы выбрали:</string>
+
+    <string name="wizard_done_label_crypto">Шифрование</string>
+    <string name="wizard_done_label_lock">Разблокировка</string>
+    <string name="wizard_done_label_brute">Защита от перебора</string>
+    <string name="wizard_done_label_tier">Защита ключа</string>
+
+    <string name="wizard_done_value_crypto_aes">AES-256-GCM</string>
+
+    <string name="wizard_done_value_lock_pin">PIN</string>
+    <string name="wizard_done_value_lock_password">Пароль</string>
+
+    <string name="wizard_done_value_brute_backoff_only">Задержка между попытками</string>
+    <string name="wizard_done_value_brute_with_wipe">Задержка + стирание после %1$d попыток</string>
+
+    <string name="wizard_done_value_tier_probing">Проверка…</string>
+    <string name="wizard_done_value_tier_strongbox">StrongBox (выделенный чип)</string>
+    <string name="wizard_done_value_tier_tee">TEE (TrustZone)</string>
+    <string name="wizard_done_value_tier_software">Только программная</string>
+    <string name="wizard_done_value_tier_unknown">Неизвестно</string>
+
+    <string name="wizard_done_warning_software">Это устройство не предоставляет защищённое железо. Мастер-ключ защищён только средствами ОС — физический доступ к разблокированному устройству достаточен для компрометации.</string>
+</resources>

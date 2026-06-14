@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wolf Gallery</string>
+    <string name="welcome_placeholder">Wolf Gallery — dev-панель (после wizard)</string>
+
+    <string name="settings_open">Открыть настройки</string>
+
+    <string name="settings_app_icon_apply_title">Сменить иконку?</string>
+    <string name="settings_app_icon_apply_subtitle">Иконка на главном экране обновится в течение нескольких секунд. Некоторым лаунчерам нужно обновить ящик приложений; на короткое время значок может пропасть.</string>
+    <string name="settings_app_icon_apply_confirm">Применить</string>
+    <string name="settings_app_icon_apply_cancel">Отмена</string>
+    <string name="settings_app_icon_variant">Вариант %1$d</string>
+
+    <string name="menu_open">Меню</string>
+    <string name="menu_item_lock">Заблокировать</string>
+    <string name="menu_item_trash">Корзина</string>
+    <string name="menu_item_settings">Настройки</string>
+    <string name="menu_item_edit">Изменить</string>
+    <string name="menu_item_select_all">Выбрать всё</string>
+    <string name="menu_item_sort">Сортировать</string>
+    <string name="menu_item_coming_soon">Скоро будет</string>
+    <string name="top_bar_add">Создать альбом или группу</string>
+    <string name="top_bar_search">Поиск</string>
+    <string name="top_bar_trash">Открыть Корзину</string>
+
+    <string name="search_field_hint">Поиск</string>
+    <string name="search_close">Закрыть поиск</string>
+    <string name="search_clear">Очистить запрос</string>
+
+    <string name="sort_dialog_title_root">Сортировка групп и альбомов</string>
+    <string name="sort_dialog_title_albums">Сортировка альбомов</string>
+    <string name="sort_dialog_title_entries">Сортировка медиафайлов</string>
+    <string name="sort_option_date_desc">По дате (по убыванию)</string>
+    <string name="sort_option_date_asc">По дате (по возрастанию)</string>
+    <string name="sort_option_name_az">По имени (А—Я)</string>
+    <string name="sort_option_name_za">По имени (Я—А)</string>
+    <string name="sort_dialog_btn_close">Закрыть</string>
+
+    <string name="selection_count">Выбрано: %1$d</string>
+    <string name="selection_cancel">Отменить выбор</string>
+
+    <string name="album_default_imported_name">Загрузки</string>
+
+    <string name="tab_all">Все</string>
+    <string name="tab_albums">Альбомы</string>
+
+    <string name="albums_test_header">Самотест AlbumsRepository</string>
+    <string name="albums_test_subtitle">Создаёт временный альбом с кириллическим именем и эмодзи, находит его в списке, переименовывает, ставит тестовую обложку с областью кадрирования, перечитывает с диска для проверки сохранности и удаляет. Дефолтный альбом «Загрузки» не затрагивается.</string>
+    <string name="btn_run_albums_test">Запустить самотест Альбомов</string>
+    <string name="albums_running">Идёт…</string>
+    <string name="toast_albums_pass">Самотест Альбомов ПРОЙДЕН</string>
+    <string name="toast_albums_fail">Самотест Альбомов ПРОВАЛЕН — см. лог</string>
+
+    <string name="trash_test_header">Самотест TrashRepository</string>
+    <string name="trash_test_subtitle">Создаёт временный альбом и тестовую запись, перемещает её в корзину, открывает список корзины и проверяет сохранность данных записи и поля «исходный альбом», восстанавливает запись обратно, снова отправляет в корзину, удаляет окончательно и запускает авто-очистку по сроку хранения (с минимальным сроком, чтобы проверить сам механизм). Альбом «Загрузки» не затрагивается.</string>
+    <string name="btn_run_trash_test">Запустить самотест Корзины</string>
+    <string name="trash_running">Идёт…</string>
+    <string name="toast_trash_pass">Самотест Корзины ПРОЙДЕН</string>
+    <string name="toast_trash_fail">Самотест Корзины ПРОВАЛЕН — см. лог</string>
+
+    <string name="log_status_header">Статус логирования (dev)</string>
+    <string name="log_size_bytes">Размер файла лога: %1$d байт</string>
+    <string name="log_tail_header">Последние %1$d строк:</string>
+    <string name="log_empty">(файл лога пуст или не инициализирован)</string>
+
+    <string name="settings_header">Настройки (dev)</string>
+    <string name="setting_logging_title">Логирование</string>
+    <string name="setting_logging_subtitle">Записывать события в файл лога</string>
+    <string name="setting_screenshots_title">Разрешить скриншоты</string>
+    <string name="setting_screenshots_subtitle">Если выключено — запись экрана и превью в Недавних блокируются (рекомендуется)</string>
+    <string name="setting_force_dark_title">Принудительно тёмная тема</string>
+    <string name="setting_force_dark_subtitle">Если включено — приложение использует тёмную тему независимо от системы. Если выключено — следует системной теме.</string>
+
+    <string name="setting_autolock_title">Авто-блокировка при сворачивании</string>
+    <string name="setting_autolock_subtitle">Блокировать приложение после того, как оно было в фоне указанное количество минут. Кратковременные переключения на другие приложения не срабатывают. Выкл = никогда (блокируется только при полном закрытии).</string>
+    <string name="setting_autolock_off">Выкл</string>
+    <string name="setting_autolock_minutes">%1$d мин</string>
+    <string name="setting_autolock_custom">Свой…</string>
+    <string name="setting_autolock_custom_title">Свой таймер авто-блокировки</string>
+    <string name="setting_autolock_custom_subtitle">Введите количество минут (от 1 до 1440 = до 24 часов).</string>
+    <string name="setting_autolock_custom_label">Минут</string>
+    <string name="setting_autolock_custom_confirm">Сохранить</string>
+    <string name="setting_autolock_custom_cancel">Отмена</string>
+
+    <string name="btn_copy_log">Копировать лог</string>
+    <string name="btn_share_log">Поделиться логом</string>
+    <string name="btn_clear_log">Очистить все файлы лога</string>
+    <string name="share_log_chooser">Поделиться логом через…</string>
+
+    <string name="toast_log_copied">Лог скопирован в буфер обмена</string>
+    <string name="toast_log_empty">Лог пуст — копировать нечего</string>
+    <string name="toast_log_cleared">Все файлы лога очищены</string>
+
+    <string name="native_header">Самопроверка нативного модуля (NDK)</string>
+    <string name="native_subtitle">Заполняет буфер из 64 байт значением 0xAA, вызывает нативную функцию обнуления памяти (secureZero из libencnative.so) и проверяет, что все байты стали нулевыми.</string>
+    <string name="btn_run_native_test">Запустить самопроверку secureZero</string>
+    <string name="toast_native_pass">secureZero ПРОЙДЕН — все 64 байта обнулены</string>
+    <string name="toast_native_fail">secureZero ПРОВАЛЕН — см. лог</string>
+
+    <string name="aesgcm_header">Самопроверка AES-256-GCM через StrongBox</string>
+    <string name="aesgcm_subtitle">Создаёт тестовый аппаратный ключ AES-256 (рабочий ключ не затрагивается), по возможности в StrongBox (Knox Vault на A14 5G). Проверяет: уровень защиты железа, шифрование и расшифровку двух образцов (текст в UTF-8 и 1 КиБ случайных данных), что зашифрованные данные отличаются от исходных, уникальность вектора инициализации (IV) и что подделанные данные отвергаются. Тестовый ключ удаляется в конце.</string>
+    <string name="btn_run_aesgcm_test">Запустить самопроверку AES-GCM/StrongBox</string>
+    <string name="aesgcm_running">Работает с железом…</string>
+    <string name="toast_aesgcm_pass">AES-GCM/StrongBox ПРОЙДЕН — уровень железа в логе</string>
+    <string name="toast_aesgcm_fail">AES-GCM/StrongBox ПРОВАЛЕН — см. лог</string>
+
+    <string name="securebytes_header">Самопроверка SecureBytes (Tier 2)</string>
+    <string name="securebytes_subtitle">Хранит 32 байта в оперативной памяти под XOR-маской, которая меняется при каждом чтении. Проверяет: исходный буфер обнулён, в памяти лежат не открытые данные, чтение возвращает оригинал, маска действительно меняется, закрытие всё обнуляет, чтение после закрытия выдаёт ошибку, повторное закрытие безопасно.</string>
+    <string name="btn_run_securebytes_test">Запустить самопроверку SecureBytes</string>
+    <string name="toast_securebytes_pass">SecureBytes ПРОЙДЕН — все 7 свойств подтверждены</string>
+    <string name="toast_securebytes_fail">SecureBytes ПРОВАЛЕН — см. лог</string>
+
+    <string name="argon2_header">Самопроверка Argon2id (память-затратная KDF)</string>
+    <string name="argon2_subtitle">Дважды выводит 32-байтный ключ из пароля «password» и соли «somesalt12345678» с одинаковыми параметрами (ключи должны совпасть), затем ещё раз с другой солью (ключ должен отличаться). Для скорости отладки берутся параметры 4 МиБ / 2 прохода / 1 поток; в рабочем режиме — 64 МиБ / 3 / 4.</string>
+    <string name="btn_run_argon2_test">Запустить самопроверку Argon2id</string>
+    <string name="argon2_running">Вычисляем…</string>
+    <string name="toast_argon2_pass">Argon2id ПРОЙДЕН — детерминизм и чувствительность к соли подтверждены</string>
+    <string name="toast_argon2_fail">Argon2id ПРОВАЛЕН — см. лог</string>
+
+    <string name="blob_header">Самопроверка зашифрованного blob\'а (per-file крипто)</string>
+    <string name="blob_subtitle">Шифрует 2 МиБ случайных данных в файл, проверяет его формат на диске (сигнатура, версия и заголовок с вектором инициализации — около 36 байт служебных данных), что зашифрованные байты на диске отличаются от исходных на том же месте, расшифровывает обратно и сверяет контрольную сумму SHA-256, а также что файл с испорченными данными, неверной сигнатурой или версией отвергается. Использует тестовый ключ Keystore; рабочий мастер-ключ не затрагивается.</string>
+    <string name="btn_run_blob_test">Запустить round-trip blob\'а</string>
+    <string name="blob_running">Шифруем + расшифровываем 2 МиБ…</string>
+    <string name="toast_blob_pass">Blob round-trip ПРОЙДЕН — все 6 свойств подтверждены</string>
+    <string name="toast_blob_fail">Blob round-trip ПРОВАЛЕН — см. лог</string>
+
+    <string name="op_progress_title_move">Перенос медиа в \"%1$s\"</string>
+    <string name="op_progress_title_copy">Копирование медиа в \"%1$s\"</string>
+    <string name="op_progress_title_trash">Перемещение в Корзину</string>
+
+    <string name="file_rename_taken">Файл с таким именем уже есть</string>
+    <string name="entry_dup_in_album">Файл с таким именем уже есть в этом альбоме</string>
+
+    <string name="album_dup_in_group">В этой группе уже есть альбом с именем: \"%1$s\"</string>
+    <string name="album_dup_in_section">В общем разделе уже есть альбом с именем: \"%1$s\"</string>
+
+    <string name="trash_open">Открыть Корзину</string>
+
+    <string name="viewer_wallpaper_done">Обои установлены</string>
+    <string name="viewer_wallpaper_failed">Не удалось установить обои</string>
+
+    <string name="export_done_single">Экспортировано на устройство</string>
+    <string name="export_done_multi">Экспортировано %1$d из %2$d</string>
+    <string name="export_failed">Не удалось экспортировать на устройство</string>
+
+    <string name="import_folder_default_name">Импорт</string>
+    <string name="import_folder_empty">В папке нет поддерживаемых фото или видео</string>
+    <string name="import_folder_progress_title">Импорт в «%1$s»</string>
+    <string name="import_folder_done">Импортировано %1$d из %2$d</string>
+    <string name="import_perm_denied">Для импорта нужен доступ к фото и видео на устройстве</string>
+</resources>

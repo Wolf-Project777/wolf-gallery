@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_back">Back</string>
+    <string name="settings_open">Open settings</string>
+
+    <string name="settings_cat_security_title">Security</string>
+    <string name="settings_cat_security_subtitle">Auto-lock, screenshot policy</string>
+    <string name="settings_cat_appearance_title">Appearance</string>
+    <string name="settings_cat_appearance_subtitle">Theme</string>
+    <string name="settings_cat_language_title">Language</string>
+    <string name="settings_cat_language_subtitle">App interface language</string>
+    <string name="settings_language_header">Interface language</string>
+    <string name="settings_language_system">System default</string>
+    <string name="settings_cat_tests_logs_title">Tests &amp; logs</string>
+    <string name="settings_cat_tests_logs_subtitle">Self-tests, log viewer, export</string>
+    <string name="settings_cat_trash_title">Trash</string>
+    <string name="settings_cat_trash_subtitle">Soft-delete settings. Trash content is in the gallery menu.</string>
+    <string name="settings_cat_app_icon_title">App icon</string>
+    <string name="settings_cat_app_icon_subtitle">Choose the launcher icon</string>
+    <string name="settings_cat_support_title">Support development</string>
+    <string name="settings_cat_support_subtitle">Donate via Monero or Zcash</string>
+
+    <string name="settings_security_screenshots_title">Allow screenshots</string>
+    <string name="settings_security_screenshots_subtitle">Off blocks screen recording and the Recents preview (recommended).</string>
+    <string name="settings_security_autolock_title">Auto-lock when minimized</string>
+    <string name="settings_security_autolock_subtitle">Lock the app after the chosen idle interval. Brief switches don\'t count. Off = no auto-lock.</string>
+    <string name="settings_security_autolock_off">Off</string>
+    <string name="settings_security_autolock_minutes">%1$d min</string>
+    <string name="settings_security_autolock_custom">Custom…</string>
+    <string name="settings_security_autolock_custom_title">Custom auto-lock duration</string>
+    <string name="settings_security_autolock_custom_subtitle">Enter a number of minutes (1 to 1440 = up to 24 hours).</string>
+    <string name="settings_security_autolock_custom_label">Minutes</string>
+    <string name="settings_security_autolock_custom_confirm">Save</string>
+    <string name="settings_security_autolock_custom_cancel">Cancel</string>
+
+    <string name="settings_appearance_themes_header">Themes</string>
+    <string name="settings_appearance_theme_light">Light theme</string>
+    <string name="settings_appearance_theme_dark">Dark theme</string>
+
+    <string name="settings_appearance_variant_light">Light</string>
+    <string name="settings_appearance_variant_dark_default">Standard dark</string>
+    <string name="settings_appearance_variant_hacker">Hacker</string>
+    <string name="settings_appearance_variant_bloody">Bloody</string>
+    <string name="settings_appearance_variant_medieval">Medieval</string>
+    <string name="settings_appearance_accent_header">Primary color</string>
+    <string name="settings_appearance_accent_preview_album_name">Album</string>
+    <string name="settings_appearance_accent_preview_album_count">12 photos</string>
+    <string name="settings_appearance_accent_green">Green</string>
+    <string name="settings_appearance_accent_blue">Blue</string>
+    <string name="settings_appearance_accent_yellow">Yellow</string>
+    <string name="settings_appearance_accent_magenta">Magenta</string>
+    <string name="settings_appearance_accent_violet">Violet</string>
+    <string name="settings_appearance_accent_orange">Orange</string>
+    <string name="settings_appearance_accent_coral">Coral</string>
+    <string name="settings_appearance_accent_teal">Teal</string>
+    <string name="settings_appearance_accent_lime">Lime</string>
+    <string name="settings_appearance_accent_cyan">Cyan</string>
+    <string name="settings_appearance_accent_indigo">Indigo</string>
+    <string name="settings_appearance_accent_purple">Purple</string>
+    <string name="settings_appearance_accent_red">Red</string>
+    <string name="settings_appearance_accent_amber">Amber</string>
+    <string name="settings_appearance_accent_olive">Olive</string>
+    <string name="settings_appearance_accent_brown">Brown</string>
+    <string name="settings_appearance_tab_position_title">Tab bar position</string>
+    <string name="settings_appearance_tab_position_subtitle">Where to show the All and Albums tabs. Action buttons (create, search, trash, more) always stay at the top.</string>
+    <string name="settings_appearance_tab_pos_top">Top</string>
+    <string name="settings_appearance_tab_pos_top_desc">Tabs above the gallery — the usual placement.</string>
+    <string name="settings_appearance_tab_pos_bottom">Bottom</string>
+    <string name="settings_appearance_tab_pos_bottom_desc">Tabs below the gallery — easier to reach one-handed.</string>
+
+    <string name="settings_appearance_grid_header">Album grid</string>
+    <string name="settings_appearance_grid_columns_title">Albums per row</string>
+    <string name="settings_appearance_grid_columns_subtitle">How many album and group tiles fit on one row. Fewer columns make each tile larger.</string>
+    <string name="settings_appearance_tile_shape_title">Tile shape</string>
+    <string name="settings_appearance_tile_shape_subtitle">Rounded corners or sharp square corners for album and group tiles.</string>
+    <string name="settings_appearance_tile_shape_rounded">Rounded</string>
+    <string name="settings_appearance_tile_shape_square">Square</string>
+    <string name="settings_appearance_photo_grid_header">Photo grid</string>
+    <string name="settings_appearance_photo_layout_title">Photo view</string>
+    <string name="settings_appearance_photo_layout_subtitle">Standard square grid, or an enlarged mosaic that keeps each photo\'s proportions (Samsung-style).</string>
+    <string name="settings_appearance_photo_layout_standard">3 per row</string>
+    <string name="settings_appearance_photo_layout_enlarged">Mosaic</string>
+
+    <string name="settings_trash_enabled_title">Enable Trash</string>
+    <string name="settings_trash_on_desc">Deleted albums, groups and photos move to Trash and stay restorable for 30 days. Enabled by default.</string>
+    <string name="settings_trash_off_title">Disable Trash</string>
+    <string name="settings_trash_off_desc">Deletes are permanent and immediate. Items already in Trash are unaffected.</string>
+
+    <string name="settings_logs_logging_title">Logging</string>
+    <string name="settings_logs_logging_subtitle">Write app events to a rotating log file. Default on so bug reports include diagnostics. Off to disable entirely.</string>
+
+    <string name="support_intro">If you like Wolf Gallery and find it useful and necessary, you can support its development with a private donation. Thank you! 🐺</string>
+    <string name="support_xmr_subtitle">Private by default</string>
+    <string name="support_zec_subtitle">Shielded address</string>
+    <string name="support_copy">Copy</string>
+    <string name="support_address_copied">Address copied</string>
+    <string name="support_qr_cd">QR code of the %1$s donation address</string>
+    <string name="support_privacy_note">Addresses only — no tracking and no intermediaries. Donations go straight to the developer\'s non-custodial wallet.</string>
+
+    <string name="settings_cat_about_title">About Wolf Gallery</string>
+    <string name="settings_cat_about_subtitle">Version, license, feedback</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_license">Open source · GPL-3.0</string>
+    <string name="about_developed_by">Developed by Wolf Project</string>
+    <string name="about_feedback_header">Feedback</string>
+    <string name="about_feedback_subtitle">Questions or suggestions? Tap to copy the address.</string>
+    <string name="about_email_copied">Email copied</string>
+</resources>

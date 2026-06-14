@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_back">رجوع</string>
+    <string name="settings_open">فتح الإعدادات</string>
+
+    <string name="settings_cat_security_title">الأمان</string>
+    <string name="settings_cat_security_subtitle">القفل التلقائي، سياسة لقطات الشاشة</string>
+    <string name="settings_cat_appearance_title">المظهر</string>
+    <string name="settings_cat_appearance_subtitle">السمة</string>
+    <string name="settings_cat_language_title">اللغة</string>
+    <string name="settings_cat_language_subtitle">لغة واجهة التطبيق</string>
+    <string name="settings_language_header">لغة الواجهة</string>
+    <string name="settings_language_system">لغة النظام الافتراضية</string>
+    <string name="settings_cat_tests_logs_title">الاختبارات والسجلات</string>
+    <string name="settings_cat_tests_logs_subtitle">الاختبارات الذاتية، عارض السجل، التصدير</string>
+    <string name="settings_cat_trash_title">المهملات</string>
+    <string name="settings_cat_trash_subtitle">إعدادات الحذف المؤقت. محتوى المهملات موجود في قائمة المعرض.</string>
+    <string name="settings_cat_app_icon_title">أيقونة التطبيق</string>
+    <string name="settings_cat_app_icon_subtitle">اختيار أيقونة المشغّل</string>
+    <string name="settings_cat_support_title">دعم التطوير</string>
+    <string name="settings_cat_support_subtitle">تبرّع عبر Monero أو Zcash</string>
+
+    <string name="settings_security_screenshots_title">السماح بلقطات الشاشة</string>
+    <string name="settings_security_screenshots_subtitle">إيقافها يمنع تسجيل الشاشة والمعاينة في قائمة التطبيقات الأخيرة (مُستحسَن).</string>
+    <string name="settings_security_autolock_title">القفل عند التصغير</string>
+    <string name="settings_security_autolock_subtitle">يقفل التطبيق بعد مدة الخمول المختارة. التبديل السريع لا يُحتسَب. إيقاف = بلا قفل تلقائي.</string>
+    <string name="settings_security_autolock_off">إيقاف</string>
+    <string name="settings_security_autolock_minutes">%1$d دقيقة</string>
+    <string name="settings_security_autolock_custom">مخصّص…</string>
+    <string name="settings_security_autolock_custom_title">مدة قفل تلقائي مخصّصة</string>
+    <string name="settings_security_autolock_custom_subtitle">أدخل عدد الدقائق (من 1 إلى 1440 = حتى 24 ساعة).</string>
+    <string name="settings_security_autolock_custom_label">الدقائق</string>
+    <string name="settings_security_autolock_custom_confirm">حفظ</string>
+    <string name="settings_security_autolock_custom_cancel">إلغاء</string>
+
+    <string name="settings_appearance_themes_header">السمات</string>
+    <string name="settings_appearance_theme_light">السمة الفاتحة</string>
+    <string name="settings_appearance_theme_dark">السمة الداكنة</string>
+
+    <string name="settings_appearance_variant_light">فاتحة</string>
+    <string name="settings_appearance_variant_dark_default">داكنة قياسية</string>
+    <string name="settings_appearance_variant_hacker">Hacker</string>
+    <string name="settings_appearance_variant_bloody">Bloody</string>
+    <string name="settings_appearance_variant_medieval">Medieval</string>
+    <string name="settings_appearance_accent_header">اللون الأساسي</string>
+    <string name="settings_appearance_accent_preview_album_name">ألبوم</string>
+    <string name="settings_appearance_accent_preview_album_count">12 صورة</string>
+    <string name="settings_appearance_accent_green">أخضر</string>
+    <string name="settings_appearance_accent_blue">أزرق</string>
+    <string name="settings_appearance_accent_yellow">أصفر</string>
+    <string name="settings_appearance_accent_magenta">ماجنتا</string>
+    <string name="settings_appearance_accent_violet">بنفسجي</string>
+    <string name="settings_appearance_accent_orange">برتقالي</string>
+    <string name="settings_appearance_accent_coral">مرجاني</string>
+    <string name="settings_appearance_accent_teal">أزرق مخضر</string>
+    <string name="settings_appearance_accent_lime">ليموني</string>
+    <string name="settings_appearance_accent_cyan">سماوي</string>
+    <string name="settings_appearance_accent_indigo">نيلي</string>
+    <string name="settings_appearance_accent_purple">أرجواني</string>
+    <string name="settings_appearance_accent_red">أحمر</string>
+    <string name="settings_appearance_accent_amber">كهرماني</string>
+    <string name="settings_appearance_accent_olive">زيتوني</string>
+    <string name="settings_appearance_accent_brown">بنّي</string>
+    <string name="settings_appearance_tab_position_title">موضع شريط التبويبات</string>
+    <string name="settings_appearance_tab_position_subtitle">مكان عرض تبويبَي الكل والألبومات. تبقى أزرار الإجراءات (إنشاء، بحث، مهملات، المزيد) في الأعلى دائمًا.</string>
+    <string name="settings_appearance_tab_pos_top">أعلى</string>
+    <string name="settings_appearance_tab_pos_top_desc">التبويبات فوق المعرض — الموضع المعتاد.</string>
+    <string name="settings_appearance_tab_pos_bottom">أسفل</string>
+    <string name="settings_appearance_tab_pos_bottom_desc">التبويبات أسفل المعرض — أسهل للوصول بيد واحدة.</string>
+
+    <string name="settings_appearance_grid_header">شبكة الألبومات</string>
+    <string name="settings_appearance_grid_columns_title">عدد الألبومات في الصف</string>
+    <string name="settings_appearance_grid_columns_subtitle">كم مربّع ألبوم ومجموعة يتّسع في صف واحد. أعمدة أقل تجعل كل مربّع أكبر.</string>
+    <string name="settings_appearance_tile_shape_title">شكل المربّعات</string>
+    <string name="settings_appearance_tile_shape_subtitle">زوايا مستديرة أو زوايا قائمة حادّة لمربّعات الألبومات والمجموعات.</string>
+    <string name="settings_appearance_tile_shape_rounded">مستديرة</string>
+    <string name="settings_appearance_tile_shape_square">قائمة</string>
+    <string name="settings_appearance_photo_grid_header">شبكة الصور</string>
+    <string name="settings_appearance_photo_layout_title">عرض الصور</string>
+    <string name="settings_appearance_photo_layout_subtitle">شبكة مربّعة قياسية، أو فسيفساء مكبّرة تحافظ على أبعاد كل صورة (بأسلوب سامسونج).</string>
+    <string name="settings_appearance_photo_layout_standard">3 في الصف</string>
+    <string name="settings_appearance_photo_layout_enlarged">فسيفساء</string>
+
+    <string name="settings_trash_enabled_title">تفعيل المهملات</string>
+    <string name="settings_trash_on_desc">تنتقل الألبومات والمجموعات والصور المحذوفة إلى المهملات وتبقى قابلة للاستعادة لمدة 30 يومًا. مُفعّل افتراضيًا.</string>
+    <string name="settings_trash_off_title">تعطيل المهملات</string>
+    <string name="settings_trash_off_desc">عمليات الحذف نهائية وفورية. العناصر الموجودة في المهملات لا تتأثّر.</string>
+
+    <string name="settings_logs_logging_title">التسجيل</string>
+    <string name="settings_logs_logging_subtitle">يكتب أحداث التطبيق في ملف سجل دوّار. مُفعّل افتراضيًا كي تتضمّن بلاغات الأخطاء معلومات تشخيصية. أوقفه لتعطيله تمامًا.</string>
+
+    <string name="support_intro">إذا أعجبك تطبيق Wolf Gallery ووجدته مفيدًا وضروريًا، فيمكنك دعم تطويره بتبرّع خاص. شكرًا لك! 🐺</string>
+    <string name="support_xmr_subtitle">خاصة افتراضيًا</string>
+    <string name="support_zec_subtitle">عنوان محمي (shielded)</string>
+    <string name="support_copy">نسخ</string>
+    <string name="support_address_copied">تم نسخ العنوان</string>
+    <string name="support_qr_cd">رمز QR لعنوان التبرّع %1$s</string>
+    <string name="support_privacy_note">عناوين فقط — بلا تتبّع ولا وسطاء. تذهب التبرّعات مباشرة إلى محفظة المطوّر غير الحاضنة.</string>
+
+    <string name="settings_cat_about_title">حول Wolf Gallery</string>
+    <string name="settings_cat_about_subtitle">الإصدار، الترخيص، الملاحظات</string>
+    <string name="about_version">الإصدار %1$s</string>
+    <string name="about_license">مفتوح المصدر · GPL-3.0</string>
+    <string name="about_developed_by">تطوير Wolf Project</string>
+    <string name="about_feedback_header">الملاحظات</string>
+    <string name="about_feedback_subtitle">أسئلة أو اقتراحات؟ اضغط لنسخ العنوان.</string>
+    <string name="about_email_copied">تم نسخ البريد الإلكتروني</string>
+</resources>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="gallery_import_header">Importar: fotos · animaciones · vídeo</string>
+    <string name="gallery_import_subtitle">Elige desde tu galería con el selector de fotos de Android; cada archivo se cifra con tu clave maestra, recibe una miniatura de 384 px y se guarda en la caja fuerte de abajo. Los originales en el dispositivo aún NO se eliminan: eso requiere una confirmación explícita y llegará en el siguiente paso.</string>
+    <string name="gallery_import_supported">Aceptados: JPEG, PNG, HEIC/HEIF, WEBP, AVIF, GIF, BMP / MP4, MKV, WebM, 3GP. Los archivos de otros formatos que aparezcan en el selector se rechazan al importar para mantener pequeña la superficie del analizador.</string>
+
+    <string name="gallery_import_btn_pick">Elegir archivos…</string>
+    <string name="gallery_import_btn_gallery">Desde la galería</string>
+    <string name="gallery_import_btn_files">Desde una app…</string>
+    <string name="gallery_import_chooser_title">Importar mediante…</string>
+    <string name="gallery_import_btn_busy">Importando…</string>
+
+    <string name="gallery_import_progress_line">(%1$d/%2$d) %3$s</string>
+    <string name="gallery_import_done_ok">Importados %1$d de %2$d</string>
+    <string name="gallery_import_done_partial">Importados %1$d de %2$d — %3$d fallaron (ver registro)</string>
+    <string name="gallery_import_done_all_failed">Fallaron las %1$d importaciones (ver registro)</string>
+
+    <string name="gallery_grid_header">Contenido de la caja fuerte (%1$d)</string>
+    <string name="gallery_empty">La caja fuerte está vacía. Importa fotos o vídeos arriba.</string>
+
+    <string name="gallery_action_title">Entrada de la caja fuerte</string>
+    <string name="gallery_action_size_line">Tamaño cifrado: %1$d KiB</string>
+    <string name="gallery_action_delete_warning">Se moverá a la papelera; restaurable durante 30 días.</string>
+    <string name="gallery_action_delete_warning_permanent">Se eliminará de forma permanente. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+    <string name="gallery_action_btn_delete">Eliminar</string>
+    <string name="gallery_action_btn_close">Cerrar</string>
+    <string name="gallery_action_btn_move">Mover…</string>
+    <string name="gallery_action_btn_copy">Copiar…</string>
+
+    <string name="gallery_action_picker_move_title">Mover al álbum</string>
+    <string name="gallery_action_picker_copy_title">Copiar al álbum</string>
+    <string name="gallery_action_picker_no_other_albums">No hay otros álbumes disponibles. Crea otro álbum primero.</string>
+    <string name="gallery_action_move_failed">Error al mover (ver registro)</string>
+    <string name="gallery_action_copy_failed">Error al copiar (ver registro)</string>
+
+    <string name="selection_count">%1$d seleccionados</string>
+    <string name="selection_cancel">Cancelar selección</string>
+    <string name="selection_btn_share">Compartir</string>
+    <string name="selection_btn_delete">Eliminar</string>
+    <string name="selection_btn_options">Opciones</string>
+    <string name="selection_opt_copy">Copiar al álbum</string>
+    <string name="selection_opt_move">Mover al álbum</string>
+    <string name="selection_opt_select_all">Seleccionar todo</string>
+    <string name="selection_opt_rename">Renombrar</string>
+    <string name="selection_opt_wallpaper">Establecer como fondo</string>
+    <string name="selection_opt_wallpaper_unavailable">Próximamente</string>
+    <string name="selection_opt_export">Exportar al dispositivo</string>
+    <string name="export_done_single">Exportado al dispositivo</string>
+    <string name="export_done_multi">Exportados %1$d de %2$d</string>
+    <string name="export_failed">No se pudo exportar al dispositivo</string>
+    <string name="entry_rename_dialog_title">Renombrar archivo</string>
+    <string name="entry_rename_field_label">Nombre del archivo</string>
+    <string name="entry_rename_btn_save">Guardar</string>
+    <string name="selection_opt_single_select_only">Solo con un elemento seleccionado</string>
+    <string name="selection_delete_dialog_title">¿Eliminar %1$d elementos?</string>
+    <string name="selection_delete_dialog_body">Los elementos se moverán a la papelera y se pueden restaurar durante 30 días.</string>
+    <string name="selection_delete_dialog_body_permanent">Los elementos se eliminarán de forma permanente. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+
+    <string name="dest_picker_title_move">Mover al álbum</string>
+    <string name="dest_picker_title_copy">Copiar al álbum</string>
+    <string name="dest_picker_cancel">Cancelar</string>
+    <string name="dest_picker_op_move">Moviendo</string>
+    <string name="dest_picker_op_copy">Copiando</string>
+    <string name="dest_picker_empty">No hay álbumes disponibles. Crea un álbum primero.</string>
+    <plurals name="dest_picker_subtitle_count">
+        <item quantity="one">%d elemento</item>
+        <item quantity="other">%d elementos</item>
+    </plurals>
+
+    <string name="op_progress_title_move">Moviendo medios a «%1$s»</string>
+    <string name="op_progress_title_copy">Copiando medios a «%1$s»</string>
+    <string name="op_progress_title_trash">Moviendo a la papelera</string>
+    <string name="op_progress_title_restore">Restaurando</string>
+
+    <string name="src_picker_title">Elegir fotos</string>
+    <string name="src_picker_subtitle_dest">Añadir a: %1$s</string>
+    <string name="src_picker_action_select">Seleccionar</string>
+    <string name="src_picker_close">Cerrar</string>
+    <string name="src_picker_empty_albums">No hay otros álbumes de los que elegir.</string>
+    <string name="src_picker_empty_album">Este álbum está vacío.</string>
+    <string name="src_picker_commit_title">¿Qué hacer con las fotos seleccionadas?</string>
+    <string name="src_picker_commit_copy">Copiar</string>
+    <string name="src_picker_commit_move">Mover</string>
+    <string name="src_picker_commit_cancel">Cancelar</string>
+    <plurals name="src_picker_action_select_count">
+        <item quantity="one">Seleccionar (%d)</item>
+        <item quantity="other">Seleccionar (%d)</item>
+    </plurals>
+
+    <string name="albums_groups_section">Grupos</string>
+    <string name="albums_top_level_section">Álbumes</string>
+    <plurals name="group_album_count">
+        <item quantity="one">%d álbum</item>
+        <item quantity="other">%d álbumes</item>
+    </plurals>
+
+    <string name="album_sel_count">%1$d seleccionados</string>
+    <string name="album_sel_cancel">Cancelar selección</string>
+    <string name="album_sel_btn_group">Agrupar</string>
+    <string name="album_sel_btn_move">Mover</string>
+    <string name="album_sel_btn_share">Compartir</string>
+    <string name="album_sel_btn_delete">Eliminar</string>
+    <string name="album_sel_btn_options">Opciones</string>
+    <string name="album_sel_share_unavailable">Próximamente</string>
+    <string name="album_sel_opt_rename">Renombrar</string>
+    <string name="album_sel_opt_change_cover">Cambiar portada</string>
+    <string name="album_sel_opt_pin">Fijar</string>
+    <string name="album_sel_opt_unpin">Dejar de fijar</string>
+    <string name="album_sel_opt_select_all">Seleccionar todo</string>
+    <string name="album_pin_badge_desc">Fijado</string>
+
+    <string name="group_create_dialog_title">Nuevo grupo</string>
+    <string name="group_create_name_label">Nombre del grupo</string>
+    <string name="group_create_btn_save">Crear</string>
+
+    <string name="group_picker_title_move">Mover al grupo</string>
+    <string name="group_picker_cancel">Cancelar</string>
+    <string name="group_picker_empty">Aún no hay grupos. Toca el icono Agrupar para crear uno con los álbumes seleccionados.</string>
+    <string name="group_picker_top_level">Al nivel principal</string>
+    <string name="group_picker_top_level_subtitle">Sacar de cualquier grupo</string>
+    <plurals name="group_picker_subtitle_count">
+        <item quantity="one">%d álbum</item>
+        <item quantity="other">%d álbumes</item>
+    </plurals>
+
+    <string name="album_multi_delete_dialog_title">¿Eliminar %1$d álbumes?</string>
+    <string name="album_multi_delete_dialog_body">Los álbumes seleccionados se moverán a la papelera con todas sus fotos. Puedes restaurarlos durante 30 días.</string>
+    <string name="album_multi_delete_dialog_body_permanent">Los álbumes seleccionados y TODAS sus fotos se eliminarán de forma permanente. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+
+    <string name="group_drilldown_back">Volver a los álbumes</string>
+    <plurals name="group_drilldown_subtitle">
+        <item quantity="one">%d álbum en el grupo</item>
+        <item quantity="other">%d álbumes en el grupo</item>
+    </plurals>
+
+    <string name="group_action_rename">Renombrar</string>
+    <string name="group_action_delete">Eliminar</string>
+    <string name="group_action_pin">Fijar</string>
+    <string name="group_action_unpin">Dejar de fijar</string>
+    <string name="group_rename_dialog_title">Renombrar grupo</string>
+    <string name="group_delete_dialog_title">¿Eliminar el grupo?</string>
+    <string name="group_delete_dialog_body_empty">El grupo vacío se moverá a la papelera. Restaurable durante 30 días.</string>
+    <string name="group_delete_dialog_body_empty_permanent">El grupo vacío se eliminará de forma permanente. El grupo está vacío, así que no se afecta ningún álbum. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+    <string name="group_delete_dialog_body_with_albums">El grupo y los %1$d álbum(es) que contiene (con sus fotos) se moverán juntos a la papelera. Restaurable durante 30 días.</string>
+    <string name="group_delete_dialog_body_with_albums_permanent">El grupo se eliminará de forma permanente. Los %1$d álbum(es) que contiene NO se eliminan: vuelven a la lista de álbumes del nivel principal. (La papelera está desactivada en Ajustes.)</string>
+    <string name="group_delete_btn_confirm">Eliminar grupo</string>
+
+    <string name="fab_choose_title">Crear / Importar</string>
+    <string name="fab_choose_album">Álbum</string>
+    <string name="fab_choose_album_desc">Importa, mueve o copia imágenes, animaciones y vídeos</string>
+    <string name="fab_choose_group">Grupo</string>
+    <string name="fab_choose_group_desc">Crea, mueve y ordena álbumes por tema</string>
+    <string name="fab_choose_import">Importar</string>
+    <string name="fab_choose_import_desc">Importar una carpeta del dispositivo como nuevo álbum</string>
+    <string name="import_folder_default_name">Importación</string>
+    <string name="import_folder_empty">No hay fotos ni vídeos compatibles en esta carpeta</string>
+    <string name="import_folder_progress_title">Importando en «%1$s»</string>
+    <string name="import_folder_done">Importados %1$d de %2$d</string>
+    <string name="import_picker_title">Importar desde el dispositivo</string>
+    <string name="import_picker_back">Atrás</string>
+    <string name="import_picker_selected">Seleccionados: %1$d</string>
+    <string name="import_picker_empty">No hay fotos ni vídeos en el dispositivo</string>
+    <string name="import_picker_btn">Importar (%1$d)</string>
+    <string name="import_picker_count">%1$d elementos</string>
+
+    <string name="viewer_video_title">La vista previa de vídeo aún no es compatible</string>
+    <string name="viewer_video_body">La reproducción de vídeo llega en el siguiente subpaso (5.4b): necesita ExoPlayer integrado en la galería, además de una fuente de datos personalizada que transmita desde un archivo temporal descifrado.</string>
+    <string name="viewer_video_play">Reproducir</string>
+    <string name="viewer_video_pause">Pausar</string>
+    <string name="viewer_video_seek">Buscar</string>
+    <string name="viewer_failed_title">No se pudo abrir esta entrada</string>
+    <string name="viewer_failed_body">Falló el descifrado o la decodificación. El blob podría estar dañado, o la clave maestra pudo haberse borrado. Consulta el registro para más detalles.</string>
+    <string name="viewer_tap_to_close">Toca el botón ✕ o pulsa Atrás para cerrar.</string>
+
+    <string name="viewer_btn_close">Cerrar</string>
+    <string name="viewer_btn_share">Compartir</string>
+    <string name="viewer_btn_info">Información</string>
+    <string name="viewer_btn_delete">Eliminar</string>
+    <string name="viewer_btn_more">Más</string>
+
+    <string name="viewer_menu_copy">Copiar al álbum</string>
+    <string name="viewer_menu_move">Mover al álbum</string>
+    <string name="viewer_menu_rename">Renombrar</string>
+    <string name="viewer_menu_wallpaper">Establecer como fondo</string>
+    <string name="viewer_menu_export">Exportar al dispositivo</string>
+
+    <string name="viewer_rename_title">Renombrar archivo</string>
+    <string name="viewer_rename_hint">Nombre del archivo</string>
+    <string name="viewer_rename_save">Guardar</string>
+    <string name="viewer_rename_cancel">Cancelar</string>
+
+    <string name="viewer_wallpaper_title">Establecer como fondo</string>
+    <string name="viewer_wallpaper_target_home">Pantalla de inicio</string>
+    <string name="viewer_wallpaper_target_lock">Pantalla de bloqueo</string>
+    <string name="viewer_wallpaper_target_both">Ambas</string>
+    <string name="viewer_wallpaper_cancel">Cancelar</string>
+    <string name="viewer_wallpaper_done">Fondo de pantalla establecido</string>
+    <string name="viewer_wallpaper_failed">No se pudo establecer el fondo de pantalla</string>
+
+    <string name="wallpaper_crop_title">Elegir encuadre</string>
+    <string name="wallpaper_crop_subtitle_home">Pantalla de inicio</string>
+    <string name="wallpaper_crop_subtitle_lock">Pantalla de bloqueo</string>
+    <string name="wallpaper_crop_subtitle_both">Inicio + bloqueo</string>
+    <string name="wallpaper_crop_btn_cancel">Cancelar</string>
+    <string name="wallpaper_crop_btn_save">Establecer</string>
+    <string name="wallpaper_crop_loading">Cargando…</string>
+
+    <string name="viewer_info_dialog_title">Detalles de la entrada</string>
+    <string name="viewer_info_label_filename">Nombre del archivo</string>
+    <string name="viewer_info_value_no_filename">— (importado antes de 5.5e.5)</string>
+    <string name="viewer_info_label_added">Añadido a la caja fuerte</string>
+    <string name="viewer_info_label_enc_size">Tamaño cifrado</string>
+    <string name="viewer_info_label_format">Formato</string>
+    <string name="viewer_info_label_dimensions">Dimensiones</string>
+    <string name="viewer_info_label_uuid">ID de la caja fuerte</string>
+    <string name="viewer_info_value_probing">Sondeando…</string>
+    <string name="viewer_info_value_unknown">Desconocido</string>
+    <string name="viewer_info_privacy_note">El nombre original del archivo se conserva en el entrymeta cifrado (5.5e.5+); el blob en disco sigue usando un UUID aleatorio, así que los nombres en texto plano nunca aparecen en el sistema de archivos. Los metadatos EXIF/IPTC/XMP/MakerNotes dentro del archivo SÍ se conservan byte a byte dentro del blob cifrado: reaparecen cuando compartes el archivo. Eliminar los metadatos al importar (activado por defecto, con opción de desactivarlo) es un paso planificado.</string>
+
+    <string name="viewer_share_chooser">Compartir mediante…</string>
+
+    <string name="viewer_delete_dialog_title">¿Eliminar esta entrada?</string>
+
+    <string name="search_field_hint">Buscar</string>
+    <string name="search_close">Cerrar búsqueda</string>
+    <string name="search_clear">Borrar consulta</string>
+    <string name="search_no_results">No se encontró nada para «%1$s»</string>
+    <string name="search_no_results_unnamed_hint">Los archivos importados antes de esta versión no tienen nombre guardado y no aparecen aquí. Vuelve a importarlos para poder buscarlos.</string>
+
+    <string name="albums_empty_state">Aún no hay álbumes. Toca + para crear uno.</string>
+    <string name="albums_create_fab">Crear álbum</string>
+
+    <string name="album_create_dialog_title">Nuevo álbum</string>
+    <string name="album_create_name_label">Nombre del álbum</string>
+    <string name="album_create_btn_save">Crear</string>
+    <string name="album_create_btn_cancel">Cancelar</string>
+    <string name="album_dup_in_section">La sección general ya tiene un álbum llamado «%1$s»</string>
+    <string name="album_dup_in_group">Este grupo ya tiene un álbum llamado «%1$s»</string>
+    <string name="group_dup_in_section">La sección general ya tiene un grupo llamado «%1$s»</string>
+    <string name="file_conflict_title">Acción de archivo</string>
+    <string name="file_conflict_subtitle">¿Renombrar o reemplazar el existente?</string>
+    <string name="file_conflict_body">El álbum seleccionado ya tiene un archivo llamado: «%1$s»</string>
+    <string name="file_conflict_apply_all">Aplicar a todos los archivos</string>
+    <string name="file_conflict_skip">Omitir</string>
+    <string name="file_conflict_replace">Reemplazar</string>
+    <string name="file_conflict_rename">Renombrar</string>
+    <string name="file_rename_taken">Ya existe un archivo con este nombre</string>
+    <string name="entry_dup_in_album">Ya existe un archivo con este nombre en este álbum</string>
+    <string name="album_conflict_title">Acción de álbum</string>
+    <string name="album_conflict_apply_all">Aplicar a todos los álbumes</string>
+
+    <string name="album_rename_dialog_title">Renombrar álbum</string>
+    <string name="album_rename_btn_save">Guardar</string>
+
+    <string name="album_delete_dialog_title">¿Eliminar el álbum?</string>
+    <string name="album_delete_dialog_body_empty">El álbum vacío se moverá a la papelera. Restaurable durante 30 días.</string>
+    <string name="album_delete_dialog_body_empty_permanent">El álbum vacío se eliminará de forma permanente. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+    <string name="album_delete_dialog_body_with_entries">El álbum con los %1$d archivos que contiene se moverá a la papelera. Restaurable durante 30 días.</string>
+    <string name="album_delete_dialog_body_with_entries_permanent">El álbum con los %1$d archivos que contiene se eliminará de forma permanente. Esto no se puede deshacer. (La papelera está desactivada en Ajustes.)</string>
+    <string name="album_delete_btn_confirm">Eliminar</string>
+
+    <string name="album_action_rename">Renombrar</string>
+    <string name="album_action_change_cover">Cambiar portada</string>
+    <string name="album_action_delete">Eliminar</string>
+    <string name="album_action_cancel">Cancelar</string>
+
+    <string name="cover_picker_title">Elegir portada</string>
+    <string name="cover_picker_empty">El álbum está vacío: añade fotos antes de elegir una portada.</string>
+    <string name="cover_picker_back">Atrás</string>
+    <string name="cover_crop_title">Recortar portada</string>
+    <string name="cover_crop_btn_save">Guardar</string>
+    <string name="cover_crop_btn_cancel">Cancelar</string>
+    <string name="cover_crop_loading">Descifrando…</string>
+    <string name="cover_save_failed">No se pudo guardar la portada (ver registro)</string>
+
+    <string name="album_detail_back">Volver a los álbumes</string>
+    <string name="album_detail_empty">Este álbum está vacío.</string>
+
+    <plurals name="album_photo_count">
+        <item quantity="one">%d foto</item>
+        <item quantity="other">%d fotos</item>
+    </plurals>
+
+    <string name="trash_screen_title">Papelera</string>
+    <string name="trash_screen_back">Atrás</string>
+    <string name="trash_screen_empty">La papelera está vacía</string>
+    <string name="trash_expired">Caducado</string>
+    <plurals name="trash_screen_count">
+        <item quantity="one">%d elemento en la papelera</item>
+        <item quantity="other">%d elementos en la papelera</item>
+    </plurals>
+    <plurals name="trash_days_remaining">
+        <item quantity="one">%dd</item>
+        <item quantity="other">%dd</item>
+    </plurals>
+
+    <string name="trash_sel_cancel">Cancelar selección</string>
+    <string name="trash_sel_count">%1$d seleccionados</string>
+    <string name="trash_action_restore">Restaurar</string>
+
+    <string name="trash_action_delete_forever">Eliminar para siempre</string>
+    <string name="trash_action_empty">Vaciar la papelera</string>
+
+    <string name="trash_delete_forever_dialog_title">¿Eliminar para siempre?</string>
+    <plurals name="trash_delete_forever_dialog_body">
+        <item quantity="one">%d elemento se eliminará de forma permanente. Esto no se puede deshacer.</item>
+        <item quantity="other">%d elementos se eliminarán de forma permanente. Esto no se puede deshacer.</item>
+    </plurals>
+    <string name="trash_delete_forever_btn_confirm">Eliminar</string>
+
+    <string name="trash_empty_dialog_title">¿Vaciar la papelera?</string>
+    <plurals name="trash_empty_dialog_body">
+        <item quantity="one">Se eliminará de forma permanente %d elemento de la papelera. Esto no se puede deshacer.</item>
+        <item quantity="other">Se eliminarán de forma permanente los %d elementos de la papelera. Esto no se puede deshacer.</item>
+    </plurals>
+    <string name="trash_empty_btn_confirm">Vaciar</string>
+
+    <string name="trash_dialog_btn_cancel">Cancelar</string>
+
+    <plurals name="trash_album_entry_count">
+        <item quantity="one">%d foto</item>
+        <item quantity="other">%d fotos</item>
+    </plurals>
+    <plurals name="trash_group_album_count">
+        <item quantity="one">%d álbum</item>
+        <item quantity="other">%d álbumes</item>
+    </plurals>
+    <string name="trash_album_unnamed">Álbum sin título</string>
+    <string name="trash_group_unnamed">Grupo sin título</string>
+</resources>

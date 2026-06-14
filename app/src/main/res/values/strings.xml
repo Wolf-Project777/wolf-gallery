@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wolf Gallery</string>
+    <string name="welcome_placeholder">Wolf Gallery — dev panel (post-wizard)</string>
+
+    <string name="settings_open">Open settings</string>
+
+    <string name="settings_app_icon_apply_title">Apply icon?</string>
+    <string name="settings_app_icon_apply_subtitle">The launcher entry will switch over the next few seconds. Some launchers need a drawer-refresh; you may briefly see no Wolf Gallery icon while the system catches up.</string>
+    <string name="settings_app_icon_apply_confirm">Apply</string>
+    <string name="settings_app_icon_apply_cancel">Cancel</string>
+    <string name="settings_app_icon_variant">Variant %1$d</string>
+
+    <string name="menu_open">Menu</string>
+    <string name="menu_item_lock">Lock</string>
+    <string name="menu_item_trash">Trash</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_edit">Edit</string>
+    <string name="menu_item_select_all">Select all</string>
+    <string name="menu_item_sort">Sort</string>
+    <string name="menu_item_coming_soon">Coming soon</string>
+    <string name="top_bar_add">Create album or group</string>
+    <string name="top_bar_search">Search</string>
+    <string name="top_bar_trash">Open Trash</string>
+
+    <string name="search_field_hint">Search</string>
+    <string name="search_close">Close search</string>
+    <string name="search_clear">Clear query</string>
+
+    <string name="sort_dialog_title_root">Sort groups &amp; albums</string>
+    <string name="sort_dialog_title_albums">Sort albums</string>
+    <string name="sort_dialog_title_entries">Sort media</string>
+    <string name="sort_option_date_desc">Date (newest first)</string>
+    <string name="sort_option_date_asc">Date (oldest first)</string>
+    <string name="sort_option_name_az">Name (A–Z)</string>
+    <string name="sort_option_name_za">Name (Z–A)</string>
+    <string name="sort_dialog_btn_close">Close</string>
+
+    <string name="selection_count">%1$d selected</string>
+    <string name="selection_cancel">Cancel selection</string>
+
+    <string name="album_default_imported_name">Imported</string>
+
+    <string name="tab_all">All</string>
+    <string name="tab_albums">Albums</string>
+
+    <string name="albums_test_header">Albums repository self-test</string>
+    <string name="albums_test_subtitle">Creates a throwaway album with a Cyrillic name + emoji, lists it, renames it, sets a fake cover with a normalized crop rect, lists once more to verify the round-trip, then deletes the album. The default Imported album is NOT touched.</string>
+    <string name="btn_run_albums_test">Run Albums self-test</string>
+    <string name="albums_running">Running…</string>
+    <string name="toast_albums_pass">Albums self-test PASSED</string>
+    <string name="toast_albums_fail">Albums self-test FAILED — see log</string>
+
+    <string name="trash_test_header">Trash repository self-test</string>
+    <string name="trash_test_subtitle">Creates a throwaway album + a synthetic vault entry, moves it to trash, lists trash + verifies meta round-trip + verifies original-album field, restores the entry back, moves to trash again, then permanently purges it and runs purgeOlderThan with a tiny retention to verify the auto-purge path. The default Imported album is NOT touched.</string>
+    <string name="btn_run_trash_test">Run Trash self-test</string>
+    <string name="trash_running">Running…</string>
+    <string name="toast_trash_pass">Trash self-test PASSED</string>
+    <string name="toast_trash_fail">Trash self-test FAILED — see log</string>
+
+    <string name="log_status_header">Logging status (dev)</string>
+    <string name="log_size_bytes">Log file size: %1$d bytes</string>
+    <string name="log_tail_header">Last %1$d lines:</string>
+    <string name="log_empty">(log file is empty or not initialized)</string>
+
+    <string name="settings_header">Settings (dev)</string>
+    <string name="setting_logging_title">Logging</string>
+    <string name="setting_logging_subtitle">Write events to log file (resets on toggle)</string>
+    <string name="setting_screenshots_title">Allow screenshots</string>
+    <string name="setting_screenshots_subtitle">If off, screen recording and Recents preview are blocked (recommended)</string>
+    <string name="setting_force_dark_title">Force dark theme</string>
+    <string name="setting_force_dark_subtitle">If on, the app uses dark theme regardless of the system setting. If off, the app follows the system theme.</string>
+
+    <string name="setting_autolock_title">Auto-lock when minimized</string>
+    <string name="setting_autolock_subtitle">Lock the app after it has been in the background for the chosen number of minutes. Brief switches to other apps don\'t trigger it. Off = never auto-lock (only re-locks on full close).</string>
+    <string name="setting_autolock_off">Off</string>
+    <string name="setting_autolock_minutes">%1$d min</string>
+    <string name="setting_autolock_custom">Custom…</string>
+    <string name="setting_autolock_custom_title">Custom auto-lock duration</string>
+    <string name="setting_autolock_custom_subtitle">Enter a number of minutes (1 to 1440 = up to 24 hours).</string>
+    <string name="setting_autolock_custom_label">Minutes</string>
+    <string name="setting_autolock_custom_confirm">Save</string>
+    <string name="setting_autolock_custom_cancel">Cancel</string>
+
+    <string name="btn_copy_log">Copy log</string>
+    <string name="btn_share_log">Share log</string>
+    <string name="btn_clear_log">Clear all log files</string>
+    <string name="share_log_chooser">Share log via…</string>
+
+    <string name="toast_log_copied">Log copied to clipboard</string>
+    <string name="toast_log_empty">Log is empty — nothing to copy</string>
+    <string name="toast_log_cleared">All log files cleared</string>
+
+    <string name="native_header">Native (NDK) self-test</string>
+    <string name="native_subtitle">Calls libencnative.so::secureZero on a 64-byte buffer pre-filled with 0xAA and verifies every byte is 0x00 on return.</string>
+    <string name="btn_run_native_test">Run secureZero self-test</string>
+    <string name="toast_native_pass">secureZero PASSED — all 64 bytes wiped</string>
+    <string name="toast_native_fail">secureZero FAILED — see log</string>
+
+    <string name="aesgcm_header">AES-256-GCM via StrongBox self-test</string>
+    <string name="aesgcm_subtitle">Generates a hardware-backed AES-256 key under a TEST alias (PRODUCTION key is never touched), prefers StrongBox (Knox Vault on A14 5G). Verifies: hardware tier, two round-trips (small UTF-8 + 1 KiB random), ciphertext ≠ plaintext, IV uniqueness, ciphertext-tamper rejection, IV-tamper rejection. Test alias is deleted afterwards.</string>
+    <string name="btn_run_aesgcm_test">Run AES-GCM/StrongBox self-test</string>
+    <string name="aesgcm_running">Running on hardware…</string>
+    <string name="toast_aesgcm_pass">AES-GCM/StrongBox PASSED — see log for hardware tier</string>
+    <string name="toast_aesgcm_fail">AES-GCM/StrongBox FAILED — see log</string>
+
+    <string name="securebytes_header">SecureBytes self-test (Tier 2)</string>
+    <string name="securebytes_subtitle">Wraps 32 bytes in XOR-masked RAM with a per-read rotating mask. Verifies: caller buffer wiped, masked storage ≠ plaintext, round-trip read returns original, mask actually rotates, close() wipes everything, read-after-close throws, close is idempotent.</string>
+    <string name="btn_run_securebytes_test">Run SecureBytes self-test</string>
+    <string name="toast_securebytes_pass">SecureBytes PASSED — all 7 properties verified</string>
+    <string name="toast_securebytes_fail">SecureBytes FAILED — see log</string>
+
+    <string name="argon2_header">Argon2id self-test (memory-hard KDF)</string>
+    <string name="argon2_subtitle">Derives a 32-byte key from \"password\"+\"somesalt12345678\" twice with the same params (must match), then once with a different salt (must differ). Uses 4 MiB / 2 iters / 1 thread for fast dev validation; production params are 64 MiB / 3 / 4.</string>
+    <string name="btn_run_argon2_test">Run Argon2id self-test</string>
+    <string name="argon2_running">Computing…</string>
+    <string name="toast_argon2_pass">Argon2id PASSED — determinism + salt-sensitivity verified</string>
+    <string name="toast_argon2_fail">Argon2id FAILED — see log</string>
+
+    <string name="blob_header">Encrypted file blob self-test (per-file crypto)</string>
+    <string name="blob_subtitle">Streams 2 MiB of random plaintext through CipherOutputStream, verifies the on-disk layout (magic + version + IV header, +36 bytes overhead), confirms ciphertext bytes ≠ plaintext bytes at the same offset, round-trips the file via decrypt and matches SHA-256, and checks that tampered ciphertext / bad magic / wrong version are all rejected. Uses a TEST Keystore alias; production master key is not touched.</string>
+    <string name="btn_run_blob_test">Run blob round-trip self-test</string>
+    <string name="blob_running">Encrypting + decrypting 2 MiB…</string>
+    <string name="toast_blob_pass">Blob round-trip PASSED — all 6 properties verified</string>
+    <string name="toast_blob_fail">Blob round-trip FAILED — see log</string>
+
+    <string name="op_progress_title_move">Moving media to \"%1$s\"</string>
+    <string name="op_progress_title_copy">Copying media to \"%1$s\"</string>
+    <string name="op_progress_title_trash">Moving to Trash</string>
+
+    <string name="file_rename_taken">A file with this name already exists</string>
+    <string name="entry_dup_in_album">A file with this name already exists in this album</string>
+
+    <string name="album_dup_in_group">This group already has an album named \"%1$s\"</string>
+    <string name="album_dup_in_section">The general section already has an album named \"%1$s\"</string>
+
+    <string name="trash_open">Open Trash</string>
+
+    <string name="viewer_wallpaper_done">Wallpaper set</string>
+    <string name="viewer_wallpaper_failed">Couldn\'t set wallpaper</string>
+
+    <string name="export_done_single">Exported to device</string>
+    <string name="export_done_multi">Exported %1$d of %2$d</string>
+    <string name="export_failed">Could not export to device</string>
+
+    <string name="import_folder_default_name">Import</string>
+    <string name="import_folder_empty">No supported photos or videos in this folder</string>
+    <string name="import_folder_progress_title">Importing into \"%1$s\"</string>
+    <string name="import_folder_done">Imported %1$d of %2$d</string>
+    <string name="import_perm_denied">Media access is needed to import from the device</string>
+</resources>

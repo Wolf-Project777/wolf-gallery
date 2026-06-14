@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wizard_step_progress">الخطوة %1$d من %2$d</string>
+    <string name="wizard_btn_back">رجوع</string>
+    <string name="wizard_btn_next">التالي</string>
+    <string name="wizard_btn_done">تم</string>
+
+    <string name="wizard_welcome_title">مرحبًا بك في Wolf Gallery</string>
+    <string name="wizard_welcome_tagline">معرض صور مشفّر يعمل دون اتصال. يُهيّأ هنا، على جهازك — وليس في أي مكان آخر.</string>
+    <string name="wizard_welcome_threat_note">معارض الصور هدف مغرٍ — لسارقي البيانات، ولأدوات الطب الشرعي الرقمي، ولأي شخص يحصل على جهازك ولو للحظات. التشفير يُبقي المحتوى ملكًا لك.</string>
+
+    <string name="wizard_welcome_fact_offline">يعمل دون اتصال تمامًا. لا يطلب التطبيق إذن الإنترنت.</string>
+    <string name="wizard_welcome_fact_no_account">بلا حساب، بلا تسجيل، بلا سحابة. الخزنة تعيش في مساحة تخزين خاصة بالتطبيق.</string>
+    <string name="wizard_welcome_fact_hwbacked">يُولّد المفتاح الرئيسي ويحفظه العتاد الآمن في جهازك.</string>
+
+    <string name="wizard_welcome_tier_probing">جارٍ فحص العتاد الآمن…</string>
+    <string name="wizard_welcome_tier_probing_detail">يسأل Android Keystore أين يمكنه وضع المفتاح الرئيسي.</string>
+
+    <string name="wizard_welcome_tier_strongbox">StrongBox متاح</string>
+    <string name="wizard_welcome_tier_strongbox_detail">سيعيش المفتاح الرئيسي في شريحة أمان مخصّصة — منفصلة عن المعالج الرئيسي. أفضل حالة لهذا الجهاز.</string>
+
+    <string name="wizard_welcome_tier_tee">TEE (بيئة تنفيذ موثوقة)</string>
+    <string name="wizard_welcome_tier_tee_detail">سيعيش المفتاح الرئيسي في TrustZone — معزولًا عن ذاكرة نظام التشغيل العادية، على الشريحة نفسها التي بها المعالج الرئيسي. حماية قوية.</string>
+
+    <string name="wizard_welcome_tier_software">مفتاح برمجي فقط</string>
+    <string name="wizard_welcome_tier_software_detail">لا يتوفّر في هذا الجهاز عتاد آمن. سيكون المفتاح محميًّا بنظام التشغيل وحده. يمكنك المتابعة، لكن نموذج التهديد أضعف — يكفي الوصول الفعلي إلى جهاز غير مقفل.</string>
+
+    <string name="wizard_welcome_tier_error">فشل فحص العتاد</string>
+    <string name="wizard_welcome_tier_error_detail">تعذّر الوصول إلى Android Keystore (%1$s). ستستمر التهيئة وتُحاول مجددًا عند إنشاء المفتاح الرئيسي. راجع السجلات في لوحة المطوّر.</string>
+
+    <string name="wizard_crypto_title">التشفير</string>
+    <string name="wizard_crypto_intro">إليك كيف تُحمى صورك على هذا الجهاز.</string>
+
+    <string name="wizard_crypto_aes_title">AES-256-GCM + Argon2id</string>
+    <string name="wizard_crypto_aes_subtitle">معيار صناعي مع تسريع عتادي على هذا الجهاز. يحمي من جميع الهجمات التقليدية — وهو أصلًا مقاوم للحوسبة الكمّية.</string>
+    <string name="wizard_crypto_aes_badge">آمن كمّيًّا</string>
+
+    <string name="wizard_crypto_quantum_note">منظومتك مقاومة للحوسبة الكمّية أصلًا. البيانات بـ AES-256-GCM، وكلمة المرور تمرّ عبر Argon2id، والمفتاح يعيش في StrongBox العتادي — وكلها تشفير متماثل. خوارزمية Grover الكمّية تُنصّف قوّته فقط، فتترك AES-256 عند نحو 128 بت، بعيدًا عن متناول أي هجوم بالقوة الغاشمة. ولا يوجد في الخزنة تشفير غير متماثل قابل للكسر كمّيًّا (من النوع الذي تكسره خوارزمية Shor)، لذا فإن «اجمع الآن وفُكّ التشفير لاحقًا» لا ينطبق على خزنة محلية.</string>
+
+    <string name="wizard_lock_title">طريقة القفل</string>
+    <string name="wizard_lock_intro">كيف ستفتح المعرض؟</string>
+
+    <string name="wizard_lock_password_title">كلمة المرور</string>
+    <string name="wizard_lock_password_subtitle">8 أحرف كحد أدنى. حروف بأي لغة، أرقام، رموز، وأحرف كبيرة وصغيرة — كلها مقبولة. أعلى إنتروبيا لكل حرف.</string>
+    <string name="wizard_lock_password_badge">الافتراضي</string>
+
+    <string name="wizard_lock_pin_title">PIN</string>
+    <string name="wizard_lock_pin_subtitle">من 6 إلى 12 رقمًا. أسرع في الكتابة بيد واحدة. أبجدية أصغر، يعوّضها Argon2id أكثر صرامة عند الفتح.</string>
+    <string name="wizard_lock_pin_badge">6-12 رقمًا</string>
+
+    <string name="wizard_lock_argon_note">كلا الخيارين جيّد. يستخدم رمز PIN قدر 128 ميبي بايت / 5 تكرارات من Argon2id، ويستخدم وضع كلمة المرور 64 ميبي بايت / 3 تكرارات — فتجعل دالة اشتقاق المفتاح القوة الغاشمة متقاربة بينهما. الفارق هو سرعة كتابتك.</string>
+
+    <string name="wizard_set_title">عيّن طريقة الفتح</string>
+    <string name="wizard_set_intro_password">اختر كلمة مرور — 8 أحرف على الأقل. حروف بأي لغة، أرقام، رموز، وأحرف كبيرة وصغيرة — كلها مقبولة.</string>
+    <string name="wizard_set_intro_pin">اختر رمز PIN — من 6 إلى 12 رقمًا.</string>
+
+    <string name="wizard_set_field_password">كلمة المرور</string>
+    <string name="wizard_set_field_pin">PIN</string>
+    <string name="wizard_set_field_confirm">تأكيد</string>
+
+    <string name="wizard_set_show">إظهار</string>
+    <string name="wizard_set_hide">إخفاء</string>
+
+    <string name="wizard_set_btn_create">إنشاء الخزنة</string>
+    <string name="wizard_set_btn_creating">جارٍ الإنشاء…</string>
+
+    <string name="wizard_set_err_pin_digits">يجب أن يحتوي رمز PIN على أرقام فقط</string>
+    <string name="wizard_set_err_pin_too_short">يجب ألا يقل رمز PIN عن 6 أرقام</string>
+    <string name="wizard_set_err_pin_too_long">يجب ألا يزيد رمز PIN عن 12 رقمًا</string>
+    <string name="wizard_set_err_password_too_short">يجب ألا تقل كلمة المرور عن 8 أحرف</string>
+    <string name="wizard_set_err_confirm_empty">اكتب سرّك مجددًا للتأكيد</string>
+    <string name="wizard_set_err_confirm_mismatch">التأكيد غير مطابق</string>
+
+    <string name="wizard_unlock_title">Wolf Gallery</string>
+    <string name="wizard_unlock_label_pin">PIN:</string>
+    <string name="wizard_unlock_label_password">كلمة المرور:</string>
+    <string name="wizard_unlock_show">إظهار</string>
+    <string name="wizard_unlock_hide">إخفاء</string>
+    <string name="wizard_unlock_btn_unlock">فتح</string>
+    <string name="wizard_unlock_btn_unlocking">جارٍ الفتح…</string>
+    <string name="wizard_unlock_btn_locked">مقفل (%1$s)</string>
+    <string name="wizard_unlock_err_wrong_pin">رمز PIN غير صحيح. حاول مجددًا.</string>
+    <string name="wizard_unlock_err_wrong_password">كلمة مرور غير صحيحة. حاول مجددًا.</string>
+    <string name="wizard_unlock_backoff_countdown">حاول مجددًا بعد %1$s</string>
+    <string name="wizard_unlock_wipe_warning">%1$d محاولات خاطئة أخرى ستمحو الخزنة.</string>
+    <string name="wizard_unlock_wipe_toast">مُحيت الخزنة. ستُعاد التهيئة.</string>
+
+    <string name="wizard_set_backoff_info_title">الانتظار بين المحاولات الخاطئة</string>
+    <string name="wizard_set_backoff_info_subtitle">مفعّل دائمًا. يزداد الانتظار مع كل محاولة فاشلة — خطأ الكتابة يكلّف ثانية، والتخمين المتكرر يقفل التطبيق نصف ساعة.</string>
+
+    <string name="wizard_brute_wipe_heading">الوضع المتشكّك</string>
+    <string name="wizard_brute_wipe_title">محو الخزنة بعد محاولات خاطئة</string>
+    <string name="wizard_brute_wipe_subtitle">يدمّر الخزنة إذا فشل عدد كبير من التخمينات متتاليًا.</string>
+    <string name="wizard_brute_wipe_warning">المحو يحذف كل الملفات المشفّرة والمفتاح الرئيسي. لا استعادة بعده، حتى لو تذكّرت السرّ لاحقًا.</string>
+    <string name="wizard_brute_wipe_threshold_label">المحو بعد</string>
+    <string name="wizard_brute_wipe_after_n">بعد %1$d</string>
+    <string name="wizard_brute_wipe_custom">مخصّص…</string>
+    <string name="wizard_brute_wipe_custom_title">عتبة محو مخصّصة</string>
+    <string name="wizard_brute_wipe_custom_subtitle">بعد كم محاولة خاطئة متتالية يجب محو الخزنة؟ (1–999)</string>
+    <string name="wizard_brute_wipe_custom_label">المحاولات</string>
+    <string name="wizard_brute_wipe_custom_confirm">حفظ</string>
+    <string name="wizard_brute_wipe_custom_cancel">إلغاء</string>
+
+    <string name="wizard_done_title">اكتمل الإعداد</string>
+    <string name="wizard_done_intro">خزنتك جاهزة. هذا ما اخترته:</string>
+
+    <string name="wizard_done_label_crypto">التشفير</string>
+    <string name="wizard_done_label_lock">طريقة الفتح</string>
+    <string name="wizard_done_label_brute">الحماية من القوة الغاشمة</string>
+    <string name="wizard_done_label_tier">حماية المفتاح</string>
+
+    <string name="wizard_done_value_crypto_aes">AES-256-GCM</string>
+
+    <string name="wizard_done_value_lock_pin">PIN</string>
+    <string name="wizard_done_value_lock_password">كلمة المرور</string>
+
+    <string name="wizard_done_value_brute_backoff_only">انتظار بين المحاولات</string>
+    <string name="wizard_done_value_brute_with_wipe">انتظار + محو بعد %1$d محاولات</string>
+
+    <string name="wizard_done_value_tier_probing">جارٍ الفحص…</string>
+    <string name="wizard_done_value_tier_strongbox">StrongBox (شريحة مخصّصة)</string>
+    <string name="wizard_done_value_tier_tee">TEE (TrustZone)</string>
+    <string name="wizard_done_value_tier_software">برمجي فقط</string>
+    <string name="wizard_done_value_tier_unknown">غير معروف</string>
+
+    <string name="wizard_done_warning_software">لا يوفّر هذا الجهاز عتادًا آمنًا. المفتاح الرئيسي محمي بنظام التشغيل وحده — يكفي الوصول الفعلي إلى جهاز غير مقفل لاختراقه.</string>
+</resources>

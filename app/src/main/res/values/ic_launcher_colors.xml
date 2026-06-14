@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="ic_launcher_bg_cosmic">#FF0F1B2E</color>
+    <color name="ic_launcher_bg_nebula">#FF061029</color>
+
+    <color name="ic_launcher_bg_shield">#FF000000</color>
+    <color name="ic_launcher_bg_blade">#FF000000</color>
+
+    <color name="ic_launcher_bg_copper">#FF2A211B</color>
+
+    <color name="ic_launcher_bg_lunar">#FF0E1B2E</color>
+
+    <color name="ic_launcher_bg_steel">#FF2C313A</color>
+
+    <color name="ic_launcher_bg_ember">#FFFFFFFF</color>
+    <color name="ic_launcher_bg_floral">#FFFFFFFF</color>
+
+    <color name="ic_launcher_bg_lavender">#FFD8CEE9</color>
+</resources>

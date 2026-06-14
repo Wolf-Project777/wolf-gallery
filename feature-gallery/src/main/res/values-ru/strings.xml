@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="gallery_import_header">Импорт: фото · анимации · видео</string>
+    <string name="gallery_import_subtitle">Выбирайте через системный Android Photo Picker (галерея, скриншоты, скачанные медиа); каждый файл шифруется мастер-ключом, к нему генерируется превью 384px, и всё сохраняется в vault ниже. Оригиналы с устройства пока НЕ удаляются — это требует явного подтверждения и появится на следующем шаге.</string>
+    <string name="gallery_import_supported">Принимаются: JPEG, PNG, HEIC/HEIF, WEBP, AVIF, GIF, BMP / MP4, MKV, WebM, 3GP. Файлы других форматов, попавшие в picker, отклоняются на этапе импорта — чтобы не тащить парсеры с богатой историей CVE.</string>
+
+    <string name="gallery_import_btn_pick">Выбрать файлы…</string>
+
+    <string name="gallery_import_btn_gallery">Из Галереи</string>
+    <string name="gallery_import_btn_files">Через приложение…</string>
+    <string name="gallery_import_chooser_title">Импортировать через…</string>
+    <string name="gallery_import_btn_busy">Импортируем…</string>
+
+    <string name="gallery_import_progress_line">(%1$d/%2$d) %3$s</string>
+
+    <string name="gallery_import_done_ok">Импортировано %1$d из %2$d</string>
+
+    <string name="gallery_import_done_partial">Импортировано %1$d из %2$d — ошибок: %3$d (см. лог)</string>
+
+    <string name="gallery_import_done_all_failed">Все %1$d импортов провалились (см. лог)</string>
+
+    <string name="gallery_grid_header">Содержимое vault\'а (%1$d)</string>
+    <string name="gallery_empty">Vault пуст. Импортируйте фото или видео выше.</string>
+
+    <string name="gallery_action_title">Элемент vault\'а</string>
+    <string name="gallery_action_size_line">Зашифровано: %1$d КиБ</string>
+    <string name="gallery_action_delete_warning">Будет перемещено в Корзину; можно восстановить в течение 30 дней.</string>
+    <string name="gallery_action_delete_warning_permanent">Будет удалено безвозвратно. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+    <string name="gallery_action_btn_delete">Удалить</string>
+    <string name="gallery_action_btn_close">Закрыть</string>
+    <string name="gallery_action_btn_move">Переместить…</string>
+    <string name="gallery_action_btn_copy">Копировать…</string>
+
+    <string name="gallery_action_picker_move_title">Переместить в альбом</string>
+    <string name="gallery_action_picker_copy_title">Копировать в альбом</string>
+    <string name="gallery_action_picker_no_other_albums">Нет других альбомов. Сначала создайте альбом.</string>
+    <string name="gallery_action_move_failed">Не удалось переместить (см. лог)</string>
+    <string name="gallery_action_copy_failed">Не удалось скопировать (см. лог)</string>
+
+    <string name="selection_count">Выбрано: %1$d</string>
+    <string name="selection_cancel">Отменить выбор</string>
+    <string name="selection_btn_share">Поделиться</string>
+    <string name="selection_btn_delete">Удалить</string>
+    <string name="selection_btn_options">Опции</string>
+    <string name="selection_opt_copy">Копировать в альбом</string>
+    <string name="selection_opt_move">Переместить в альбом</string>
+    <string name="selection_opt_select_all">Выбрать всё</string>
+
+    <string name="selection_opt_rename">Переименовать</string>
+    <string name="selection_opt_wallpaper">Установить как обои</string>
+    <string name="selection_opt_wallpaper_unavailable">Будет позже</string>
+    <string name="selection_opt_export">Экспортировать на устройство</string>
+
+    <string name="export_done_single">Экспортировано на устройство</string>
+    <string name="export_done_multi">Экспортировано %1$d из %2$d</string>
+    <string name="export_failed">Не удалось экспортировать на устройство</string>
+    <string name="entry_rename_dialog_title">Переименовать файл</string>
+    <string name="entry_rename_field_label">Имя файла</string>
+    <string name="entry_rename_btn_save">Сохранить</string>
+
+    <string name="selection_opt_single_select_only">Только при одиночном выборе</string>
+    <string name="selection_delete_dialog_title">Удалить %1$d элементов?</string>
+    <string name="selection_delete_dialog_body">Элементы будут перемещены в Корзину. Их можно восстановить в течение 30 дней.</string>
+    <string name="selection_delete_dialog_body_permanent">Элементы будут удалены безвозвратно. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+
+    <string name="dest_picker_title_move">Переместить в альбом</string>
+    <string name="dest_picker_title_copy">Копировать в альбом</string>
+    <string name="dest_picker_cancel">Отмена</string>
+    <string name="dest_picker_op_move">Перемещение</string>
+    <string name="dest_picker_op_copy">Копирование</string>
+    <string name="dest_picker_empty">Нет альбомов. Сначала создайте альбом.</string>
+    <plurals name="dest_picker_subtitle_count">
+        <item quantity="one">%d элемент</item>
+        <item quantity="few">%d элемента</item>
+        <item quantity="many">%d элементов</item>
+        <item quantity="other">%d элементов</item>
+    </plurals>
+
+    <string name="op_progress_title_move">Перенос медиа в \"%1$s\"</string>
+    <string name="op_progress_title_copy">Копирование медиа в \"%1$s\"</string>
+    <string name="op_progress_title_trash">Перемещение в Корзину</string>
+    <string name="op_progress_title_restore">Восстановление</string>
+
+    <string name="src_picker_title">Выбрать фото</string>
+    <string name="src_picker_subtitle_dest">Добавить в: %1$s</string>
+    <string name="src_picker_action_select">Выбрать</string>
+    <string name="src_picker_close">Закрыть</string>
+    <string name="src_picker_empty_albums">Нет других альбомов для выбора.</string>
+    <string name="src_picker_empty_album">Этот альбом пуст.</string>
+    <string name="src_picker_commit_title">Что сделать с выбранными фото?</string>
+    <string name="src_picker_commit_copy">Копировать</string>
+    <string name="src_picker_commit_move">Переместить</string>
+    <string name="src_picker_commit_cancel">Отмена</string>
+    <plurals name="src_picker_action_select_count">
+        <item quantity="one">Выбрать (%d)</item>
+        <item quantity="few">Выбрать (%d)</item>
+        <item quantity="many">Выбрать (%d)</item>
+        <item quantity="other">Выбрать (%d)</item>
+    </plurals>
+
+    <string name="albums_groups_section">Группы</string>
+    <string name="albums_top_level_section">Альбомы</string>
+    <plurals name="group_album_count">
+        <item quantity="one">%d альбом</item>
+        <item quantity="few">%d альбома</item>
+        <item quantity="many">%d альбомов</item>
+        <item quantity="other">%d альбомов</item>
+    </plurals>
+
+    <string name="album_sel_count">Выбрано: %1$d</string>
+    <string name="album_sel_cancel">Отменить выбор</string>
+    <string name="album_sel_btn_group">Группа</string>
+    <string name="album_sel_btn_move">Переместить</string>
+    <string name="album_sel_btn_share">Поделиться</string>
+    <string name="album_sel_btn_delete">Удалить</string>
+    <string name="album_sel_btn_options">Опции</string>
+    <string name="album_sel_share_unavailable">Будет позже</string>
+    <string name="album_sel_opt_rename">Переименовать</string>
+    <string name="album_sel_opt_change_cover">Изменить обложку</string>
+    <string name="album_sel_opt_pin">Закрепить</string>
+    <string name="album_sel_opt_unpin">Открепить</string>
+    <string name="album_sel_opt_select_all">Выбрать всё</string>
+    <string name="album_pin_badge_desc">Закреплено</string>
+
+    <string name="group_create_dialog_title">Новая группа</string>
+    <string name="group_create_name_label">Имя группы</string>
+    <string name="group_create_btn_save">Создать</string>
+
+    <string name="group_picker_title_move">Переместить в группу</string>
+    <string name="group_picker_cancel">Отмена</string>
+    <string name="group_picker_empty">Пока нет групп. Нажмите Группа, чтобы создать новую из выбранных альбомов.</string>
+    <string name="group_picker_top_level">В общий раздел</string>
+    <string name="group_picker_top_level_subtitle">Вынести из любой группы</string>
+    <plurals name="group_picker_subtitle_count">
+        <item quantity="one">%d альбом</item>
+        <item quantity="few">%d альбома</item>
+        <item quantity="many">%d альбомов</item>
+        <item quantity="other">%d альбомов</item>
+    </plurals>
+
+    <string name="album_multi_delete_dialog_title">Удалить %1$d альбомов?</string>
+    <string name="album_multi_delete_dialog_body">Выбранные альбомы со всеми фото будут перемещены в Корзину. Можно восстановить в течение 30 дней.</string>
+    <string name="album_multi_delete_dialog_body_permanent">Выбранные альбомы и ВСЕ их фото будут удалены безвозвратно. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+
+    <string name="group_drilldown_back">К альбомам</string>
+    <plurals name="group_drilldown_subtitle">
+        <item quantity="one">%d альбом в группе</item>
+        <item quantity="few">%d альбома в группе</item>
+        <item quantity="many">%d альбомов в группе</item>
+        <item quantity="other">%d альбомов в группе</item>
+    </plurals>
+
+    <string name="group_action_rename">Переименовать</string>
+    <string name="group_action_delete">Удалить</string>
+    <string name="group_action_pin">Закрепить</string>
+    <string name="group_action_unpin">Открепить</string>
+    <string name="group_rename_dialog_title">Переименовать группу</string>
+    <string name="group_delete_dialog_title">Удалить группу?</string>
+    <string name="group_delete_dialog_body_empty">Пустая группа будет перемещена в Корзину. Можно восстановить в течение 30 дней.</string>
+    <string name="group_delete_dialog_body_empty_permanent">Пустая группа будет удалена безвозвратно. Альбомов внутри нет, ничего не пострадает. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+    <string name="group_delete_dialog_body_with_albums">Группа и все %1$d альбом(а/ов) внутри (со всеми фото) будут перемещены в Корзину вместе. Можно восстановить в течение 30 дней.</string>
+    <string name="group_delete_dialog_body_with_albums_permanent">Группа будет удалена безвозвратно. %1$d альбом(а/ов) внутри НЕ удалятся — они вернутся в общий список альбомов. (Корзина отключена в Настройках.)</string>
+    <string name="group_delete_btn_confirm">Удалить группу</string>
+
+    <string name="fab_choose_title">Создать / Импорт</string>
+    <string name="fab_choose_album">Альбом</string>
+    <string name="fab_choose_album_desc">Импортируйте, перемещайте или копируйте изображения, анимации и видео</string>
+    <string name="fab_choose_group">Группа</string>
+    <string name="fab_choose_group_desc">Создавайте, перемещайте и отсортировывайте альбомы по темам</string>
+    <string name="fab_choose_import">Импорт</string>
+    <string name="fab_choose_import_desc">Импортируйте папку с устройства как новый альбом</string>
+
+    <string name="import_folder_default_name">Импорт</string>
+    <string name="import_folder_empty">В папке нет поддерживаемых фото или видео</string>
+    <string name="import_folder_progress_title">Импорт в «%1$s»</string>
+    <string name="import_folder_done">Импортировано %1$d из %2$d</string>
+
+    <string name="import_picker_title">Импорт с устройства</string>
+    <string name="import_picker_back">Назад</string>
+    <string name="import_picker_selected">Выбрано: %1$d</string>
+    <string name="import_picker_empty">На устройстве нет фото или видео</string>
+    <string name="import_picker_btn">Импортировать (%1$d)</string>
+    <string name="import_picker_count">%1$d шт.</string>
+
+    <string name="viewer_video_title">Просмотр видео ещё не поддерживается</string>
+    <string name="viewer_video_body">Воспроизведение видео появится в следующем под-шаге (5.4b) — нужен ExoPlayer в составе галереи и кастомный data source, который стримит из расшифрованного временного файла.</string>
+    <string name="viewer_video_play">Воспроизвести</string>
+    <string name="viewer_video_pause">Пауза</string>
+    <string name="viewer_video_seek">Перемотка</string>
+    <string name="viewer_failed_title">Не удалось открыть элемент</string>
+    <string name="viewer_failed_body">Расшифровка или декодирование не удались. Возможно, blob повреждён, или мастер-ключ был стёрт. Подробности в логе.</string>
+    <string name="viewer_tap_to_close">Нажмите кнопку ✕ или Назад, чтобы закрыть.</string>
+
+    <string name="viewer_btn_close">Закрыть</string>
+    <string name="viewer_btn_share">Поделиться</string>
+    <string name="viewer_btn_info">Сведения</string>
+    <string name="viewer_btn_delete">Удалить</string>
+    <string name="viewer_btn_more">Ещё</string>
+
+    <string name="viewer_menu_copy">Копировать в альбом</string>
+    <string name="viewer_menu_move">Переместить в альбом</string>
+    <string name="viewer_menu_rename">Переименовать</string>
+    <string name="viewer_menu_wallpaper">Установить как обои</string>
+    <string name="viewer_menu_export">Экспортировать на устройство</string>
+
+    <string name="viewer_rename_title">Переименовать файл</string>
+    <string name="viewer_rename_hint">Имя файла</string>
+    <string name="viewer_rename_save">Сохранить</string>
+    <string name="viewer_rename_cancel">Отмена</string>
+
+    <string name="viewer_wallpaper_title">Установить как обои</string>
+    <string name="viewer_wallpaper_target_home">Главный экран</string>
+    <string name="viewer_wallpaper_target_lock">Экран блокировки</string>
+    <string name="viewer_wallpaper_target_both">Оба</string>
+    <string name="viewer_wallpaper_cancel">Отмена</string>
+    <string name="viewer_wallpaper_done">Обои установлены</string>
+    <string name="viewer_wallpaper_failed">Не удалось установить обои</string>
+
+    <string name="wallpaper_crop_title">Выберите кадр</string>
+    <string name="wallpaper_crop_subtitle_home">Главный экран</string>
+    <string name="wallpaper_crop_subtitle_lock">Экран блокировки</string>
+    <string name="wallpaper_crop_subtitle_both">Главный + блокировка</string>
+    <string name="wallpaper_crop_btn_cancel">Отмена</string>
+    <string name="wallpaper_crop_btn_save">Установить</string>
+    <string name="wallpaper_crop_loading">Загрузка…</string>
+
+    <string name="viewer_info_dialog_title">Сведения о файле</string>
+    <string name="viewer_info_label_filename">Имя файла</string>
+    <string name="viewer_info_value_no_filename">— (импорт до 5.5e.5)</string>
+    <string name="viewer_info_label_added">Добавлено в vault</string>
+    <string name="viewer_info_label_enc_size">Зашифрованный размер</string>
+    <string name="viewer_info_label_format">Формат</string>
+    <string name="viewer_info_label_dimensions">Размер изображения</string>
+    <string name="viewer_info_label_uuid">ID в vault\'е</string>
+    <string name="viewer_info_value_probing">Определение…</string>
+    <string name="viewer_info_value_unknown">Неизвестно</string>
+    <string name="viewer_info_privacy_note">Оригинальное имя файла теперь сохраняется в зашифрованной entrymeta (5.5e.5+); сам blob на диске по-прежнему именуется случайным UUID, поэтому plaintext-имена не светятся в файловой системе. EXIF/IPTC/XMP/MakerNotes внутри файла сохраняются БАЙТ-В-БАЙТ внутри зашифрованного blob\'а — они вернутся обратно когда вы делаете Share. Стирание метаданных при импорте (по умолчанию ON, с opt-out) — запланированный шаг.</string>
+
+    <string name="viewer_share_chooser">Поделиться через…</string>
+
+    <string name="viewer_delete_dialog_title">Удалить элемент?</string>
+
+    <string name="search_field_hint">Поиск</string>
+    <string name="search_close">Закрыть поиск</string>
+    <string name="search_clear">Очистить запрос</string>
+    <string name="search_no_results">Ничего не найдено по запросу «%1$s»</string>
+
+    <string name="search_no_results_unnamed_hint">Файлы, импортированные до этой версии, не имеют сохранённого имени и не появляются в результатах. Переимпортируйте их, чтобы они стали искаться.</string>
+
+    <string name="albums_empty_state">Альбомов пока нет. Нажмите +, чтобы создать.</string>
+    <string name="albums_create_fab">Создать альбом</string>
+
+    <string name="album_create_dialog_title">Новый альбом</string>
+    <string name="album_create_name_label">Имя альбома</string>
+    <string name="album_create_btn_save">Создать</string>
+    <string name="album_create_btn_cancel">Отмена</string>
+
+    <string name="album_dup_in_section">В общем разделе уже есть альбом с именем: \"%1$s\"</string>
+    <string name="album_dup_in_group">В этой группе уже есть альбом с именем: \"%1$s\"</string>
+    <string name="group_dup_in_section">В общем разделе уже есть группа с именем: \"%1$s\"</string>
+
+    <string name="file_conflict_title">Действие с файлом</string>
+    <string name="file_conflict_subtitle">Переименовать или заменить существующий?</string>
+    <string name="file_conflict_body">В выбранном альбоме уже есть файл с именем: \"%1$s\"</string>
+    <string name="file_conflict_apply_all">Применить ко всем файлам</string>
+    <string name="file_conflict_skip">Пропустить</string>
+    <string name="file_conflict_replace">Заменить</string>
+    <string name="file_conflict_rename">Переименовать</string>
+    <string name="file_rename_taken">Файл с таким именем уже есть</string>
+    <string name="entry_dup_in_album">Файл с таким именем уже есть в этом альбоме</string>
+
+    <string name="album_conflict_title">Действие с альбомом</string>
+    <string name="album_conflict_apply_all">Применить ко всем альбомам</string>
+
+    <string name="album_rename_dialog_title">Переименовать альбом</string>
+    <string name="album_rename_btn_save">Сохранить</string>
+
+    <string name="album_delete_dialog_title">Удалить альбом?</string>
+    <string name="album_delete_dialog_body_empty">Пустой альбом будет перемещён в Корзину. Можно восстановить в течение 30 дней.</string>
+    <string name="album_delete_dialog_body_empty_permanent">Пустой альбом будет удалён безвозвратно. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+    <string name="album_delete_dialog_body_with_entries">Альбом и все %1$d файлов внутри будут перемещены в Корзину. Можно восстановить в течение 30 дней.</string>
+    <string name="album_delete_dialog_body_with_entries_permanent">Альбом и все %1$d файлов внутри будут удалены безвозвратно. Действие нельзя отменить. (Корзина отключена в Настройках.)</string>
+    <string name="album_delete_btn_confirm">Удалить</string>
+
+    <string name="album_action_rename">Переименовать</string>
+    <string name="album_action_change_cover">Изменить обложку</string>
+    <string name="album_action_delete">Удалить</string>
+    <string name="album_action_cancel">Отмена</string>
+
+    <string name="cover_picker_title">Выберите обложку</string>
+    <string name="cover_picker_empty">Альбом пуст — добавьте фото, прежде чем выбирать обложку.</string>
+    <string name="cover_picker_back">Назад</string>
+    <string name="cover_crop_title">Обрезать обложку</string>
+    <string name="cover_crop_btn_save">Сохранить</string>
+    <string name="cover_crop_btn_cancel">Отмена</string>
+    <string name="cover_crop_loading">Расшифровка…</string>
+    <string name="cover_save_failed">Не удалось сохранить обложку (см. лог)</string>
+
+    <string name="album_detail_back">К альбомам</string>
+    <string name="album_detail_empty">Этот альбом пуст.</string>
+
+    <plurals name="album_photo_count">
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+        <item quantity="other">%d фото</item>
+    </plurals>
+
+    <string name="trash_screen_title">Корзина</string>
+    <string name="trash_screen_back">Назад</string>
+    <string name="trash_screen_empty">Корзина пуста</string>
+    <string name="trash_expired">Истёк</string>
+    <plurals name="trash_screen_count">
+        <item quantity="one">%d элемент в Корзине</item>
+        <item quantity="few">%d элемента в Корзине</item>
+        <item quantity="many">%d элементов в Корзине</item>
+        <item quantity="other">%d элементов в Корзине</item>
+    </plurals>
+    <plurals name="trash_days_remaining">
+        <item quantity="one">%dд</item>
+        <item quantity="few">%dд</item>
+        <item quantity="many">%dд</item>
+        <item quantity="other">%dд</item>
+    </plurals>
+
+    <string name="trash_sel_cancel">Отменить выбор</string>
+    <string name="trash_sel_count">Выбрано: %1$d</string>
+    <string name="trash_action_restore">Восстановить</string>
+
+    <string name="trash_action_delete_forever">Удалить навсегда</string>
+    <string name="trash_action_empty">Очистить корзину</string>
+
+    <string name="trash_delete_forever_dialog_title">Удалить навсегда?</string>
+    <plurals name="trash_delete_forever_dialog_body">
+        <item quantity="one">%d элемент будет удалён безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="few">%d элемента будут удалены безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="many">%d элементов будут удалены безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="other">%d элементов будут удалены безвозвратно. Действие нельзя отменить.</item>
+    </plurals>
+    <string name="trash_delete_forever_btn_confirm">Удалить</string>
+
+    <string name="trash_empty_dialog_title">Очистить корзину?</string>
+    <plurals name="trash_empty_dialog_body">
+        <item quantity="one">Все %d элемент в Корзине будет удалён безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="few">Все %d элемента в Корзине будут удалены безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="many">Все %d элементов в Корзине будут удалены безвозвратно. Действие нельзя отменить.</item>
+        <item quantity="other">Все %d элементов в Корзине будут удалены безвозвратно. Действие нельзя отменить.</item>
+    </plurals>
+    <string name="trash_empty_btn_confirm">Очистить</string>
+
+    <string name="trash_dialog_btn_cancel">Отмена</string>
+
+    <plurals name="trash_album_entry_count">
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+        <item quantity="other">%d фото</item>
+    </plurals>
+    <plurals name="trash_group_album_count">
+        <item quantity="one">%d альбом</item>
+        <item quantity="few">%d альбома</item>
+        <item quantity="many">%d альбомов</item>
+        <item quantity="other">%d альбомов</item>
+    </plurals>
+    <string name="trash_album_unnamed">Без имени</string>
+    <string name="trash_group_unnamed">Без имени</string>
+</resources>

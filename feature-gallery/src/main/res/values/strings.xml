@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="gallery_import_header">Import: photos · animations · video</string>
+    <string name="gallery_import_subtitle">Pick from your gallery via the Android Photo Picker; each file is encrypted with your master key, given a 384px thumbnail, and saved to the vault below. Originals on the device are NOT removed yet — that needs explicit confirmation and is coming in the next step.</string>
+    <string name="gallery_import_supported">Accepted: JPEG, PNG, HEIC/HEIF, WEBP, AVIF, GIF, BMP / MP4, MKV, WebM, 3GP. Files in other formats that appear in the picker are rejected at import to keep the parser surface small.</string>
+
+    <string name="gallery_import_btn_pick">Pick files…</string>
+
+    <string name="gallery_import_btn_gallery">From gallery</string>
+    <string name="gallery_import_btn_files">From app…</string>
+    <string name="gallery_import_chooser_title">Import via…</string>
+    <string name="gallery_import_btn_busy">Importing…</string>
+
+    <string name="gallery_import_progress_line">(%1$d/%2$d) %3$s</string>
+
+    <string name="gallery_import_done_ok">Imported %1$d of %2$d</string>
+
+    <string name="gallery_import_done_partial">Imported %1$d of %2$d — %3$d failed (see log)</string>
+
+    <string name="gallery_import_done_all_failed">All %1$d imports failed (see log)</string>
+
+    <string name="gallery_grid_header">Vault contents (%1$d)</string>
+    <string name="gallery_empty">Vault is empty. Import photos or videos above.</string>
+
+    <string name="gallery_action_title">Vault entry</string>
+    <string name="gallery_action_size_line">Encrypted size: %1$d KiB</string>
+    <string name="gallery_action_delete_warning">Will be moved to Trash; restorable for 30 days.</string>
+    <string name="gallery_action_delete_warning_permanent">Will be permanently deleted. This cannot be undone. (Trash is disabled in Settings.)</string>
+    <string name="gallery_action_btn_delete">Delete</string>
+    <string name="gallery_action_btn_close">Close</string>
+    <string name="gallery_action_btn_move">Move…</string>
+    <string name="gallery_action_btn_copy">Copy…</string>
+
+    <string name="gallery_action_picker_move_title">Move to album</string>
+    <string name="gallery_action_picker_copy_title">Copy to album</string>
+    <string name="gallery_action_picker_no_other_albums">No other albums available. Create another album first.</string>
+    <string name="gallery_action_move_failed">Move failed (see log)</string>
+    <string name="gallery_action_copy_failed">Copy failed (see log)</string>
+
+    <string name="selection_count">%1$d selected</string>
+    <string name="selection_cancel">Cancel selection</string>
+    <string name="selection_btn_share">Share</string>
+    <string name="selection_btn_delete">Delete</string>
+    <string name="selection_btn_options">Options</string>
+    <string name="selection_opt_copy">Copy to album</string>
+    <string name="selection_opt_move">Move to album</string>
+    <string name="selection_opt_select_all">Select all</string>
+
+    <string name="selection_opt_rename">Rename</string>
+    <string name="selection_opt_wallpaper">Set as wallpaper</string>
+    <string name="selection_opt_wallpaper_unavailable">Coming later</string>
+    <string name="selection_opt_export">Export to device</string>
+
+    <string name="export_done_single">Exported to device</string>
+    <string name="export_done_multi">Exported %1$d of %2$d</string>
+    <string name="export_failed">Could not export to device</string>
+    <string name="entry_rename_dialog_title">Rename file</string>
+    <string name="entry_rename_field_label">Filename</string>
+    <string name="entry_rename_btn_save">Save</string>
+
+    <string name="selection_opt_single_select_only">Only with one item selected</string>
+    <string name="selection_delete_dialog_title">Delete %1$d items?</string>
+    <string name="selection_delete_dialog_body">Items will be moved to Trash and can be restored within 30 days.</string>
+    <string name="selection_delete_dialog_body_permanent">Items will be permanently deleted. This cannot be undone. (Trash is disabled in Settings.)</string>
+
+    <string name="dest_picker_title_move">Move to album</string>
+    <string name="dest_picker_title_copy">Copy to album</string>
+    <string name="dest_picker_cancel">Cancel</string>
+    <string name="dest_picker_op_move">Moving</string>
+    <string name="dest_picker_op_copy">Copying</string>
+    <string name="dest_picker_empty">No albums available. Create an album first.</string>
+    <plurals name="dest_picker_subtitle_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+
+    <string name="op_progress_title_move">Moving media to \"%1$s\"</string>
+    <string name="op_progress_title_copy">Copying media to \"%1$s\"</string>
+    <string name="op_progress_title_trash">Moving to Trash</string>
+    <string name="op_progress_title_restore">Restoring</string>
+
+    <string name="src_picker_title">Pick photos</string>
+    <string name="src_picker_subtitle_dest">Add to: %1$s</string>
+    <string name="src_picker_action_select">Select</string>
+    <string name="src_picker_close">Close</string>
+    <string name="src_picker_empty_albums">No other albums to pick from.</string>
+    <string name="src_picker_empty_album">This album is empty.</string>
+    <string name="src_picker_commit_title">What to do with selected photos?</string>
+    <string name="src_picker_commit_copy">Copy</string>
+    <string name="src_picker_commit_move">Move</string>
+    <string name="src_picker_commit_cancel">Cancel</string>
+    <plurals name="src_picker_action_select_count">
+        <item quantity="one">Select (%d)</item>
+        <item quantity="other">Select (%d)</item>
+    </plurals>
+
+    <string name="albums_groups_section">Groups</string>
+    <string name="albums_top_level_section">Albums</string>
+    <plurals name="group_album_count">
+        <item quantity="one">%d album</item>
+        <item quantity="other">%d albums</item>
+    </plurals>
+
+    <string name="album_sel_count">%1$d selected</string>
+    <string name="album_sel_cancel">Cancel selection</string>
+    <string name="album_sel_btn_group">Group</string>
+    <string name="album_sel_btn_move">Move</string>
+    <string name="album_sel_btn_share">Share</string>
+    <string name="album_sel_btn_delete">Delete</string>
+    <string name="album_sel_btn_options">Options</string>
+    <string name="album_sel_share_unavailable">Coming later</string>
+    <string name="album_sel_opt_rename">Rename</string>
+    <string name="album_sel_opt_change_cover">Change cover</string>
+    <string name="album_sel_opt_pin">Pin</string>
+    <string name="album_sel_opt_unpin">Unpin</string>
+    <string name="album_sel_opt_select_all">Select all</string>
+    <string name="album_pin_badge_desc">Pinned</string>
+
+    <string name="group_create_dialog_title">New group</string>
+    <string name="group_create_name_label">Group name</string>
+    <string name="group_create_btn_save">Create</string>
+
+    <string name="group_picker_title_move">Move to group</string>
+    <string name="group_picker_cancel">Cancel</string>
+    <string name="group_picker_empty">No groups yet. Tap the Group icon to create one from the selected albums.</string>
+    <string name="group_picker_top_level">To top level</string>
+    <string name="group_picker_top_level_subtitle">Move out of any group</string>
+    <plurals name="group_picker_subtitle_count">
+        <item quantity="one">%d album</item>
+        <item quantity="other">%d albums</item>
+    </plurals>
+
+    <string name="album_multi_delete_dialog_title">Delete %1$d albums?</string>
+    <string name="album_multi_delete_dialog_body">Selected albums will be moved to Trash with all their photos. You can restore them within 30 days.</string>
+    <string name="album_multi_delete_dialog_body_permanent">Selected albums and ALL their photos will be permanently deleted. This cannot be undone. (Trash is disabled in Settings.)</string>
+
+    <string name="group_drilldown_back">Back to albums</string>
+    <plurals name="group_drilldown_subtitle">
+        <item quantity="one">%d album in group</item>
+        <item quantity="other">%d albums in group</item>
+    </plurals>
+
+    <string name="group_action_rename">Rename</string>
+    <string name="group_action_delete">Delete</string>
+    <string name="group_action_pin">Pin</string>
+    <string name="group_action_unpin">Unpin</string>
+    <string name="group_rename_dialog_title">Rename group</string>
+    <string name="group_delete_dialog_title">Delete group?</string>
+    <string name="group_delete_dialog_body_empty">Empty group will be moved to Trash. Restorable within 30 days.</string>
+    <string name="group_delete_dialog_body_empty_permanent">Empty group will be permanently deleted. The group is empty so no albums are affected. This cannot be undone. (Trash is disabled in Settings.)</string>
+    <string name="group_delete_dialog_body_with_albums">Group and all %1$d album(s) inside (with their photos) will be moved to Trash together. Restorable within 30 days.</string>
+    <string name="group_delete_dialog_body_with_albums_permanent">Group will be permanently deleted. The %1$d album(s) inside are NOT deleted — they return to the top-level albums list. (Trash is disabled in Settings.)</string>
+    <string name="group_delete_btn_confirm">Delete group</string>
+
+    <string name="fab_choose_title">Create / Import</string>
+    <string name="fab_choose_album">Album</string>
+    <string name="fab_choose_album_desc">Import, move, or copy images, animations, and videos</string>
+    <string name="fab_choose_group">Group</string>
+    <string name="fab_choose_group_desc">Create, move, and sort albums by topic</string>
+    <string name="fab_choose_import">Import</string>
+    <string name="fab_choose_import_desc">Import a device folder as a new album</string>
+
+    <string name="import_folder_default_name">Import</string>
+    <string name="import_folder_empty">No supported photos or videos in this folder</string>
+    <string name="import_folder_progress_title">Importing into \"%1$s\"</string>
+    <string name="import_folder_done">Imported %1$d of %2$d</string>
+
+    <string name="import_picker_title">Import from device</string>
+    <string name="import_picker_back">Back</string>
+    <string name="import_picker_selected">Selected: %1$d</string>
+    <string name="import_picker_empty">No photos or videos on the device</string>
+    <string name="import_picker_btn">Import (%1$d)</string>
+    <string name="import_picker_count">%1$d items</string>
+
+    <string name="viewer_video_title">Video preview not yet supported</string>
+    <string name="viewer_video_body">Video playback lands in the next sub-step (5.4b) — needs ExoPlayer wired into the gallery, plus a custom data source that streams from a decrypted temp file.</string>
+    <string name="viewer_video_play">Play</string>
+    <string name="viewer_video_pause">Pause</string>
+    <string name="viewer_video_seek">Seek</string>
+    <string name="viewer_failed_title">Could not open this entry</string>
+    <string name="viewer_failed_body">Decryption or decoding failed. The blob might be corrupt, or the master key may have been wiped. See log for details.</string>
+    <string name="viewer_tap_to_close">Tap the ✕ button or press Back to close.</string>
+
+    <string name="viewer_btn_close">Close</string>
+    <string name="viewer_btn_share">Share</string>
+    <string name="viewer_btn_info">Info</string>
+    <string name="viewer_btn_delete">Delete</string>
+    <string name="viewer_btn_more">More</string>
+
+    <string name="viewer_menu_copy">Copy to album</string>
+    <string name="viewer_menu_move">Move to album</string>
+    <string name="viewer_menu_rename">Rename</string>
+    <string name="viewer_menu_wallpaper">Set as wallpaper</string>
+    <string name="viewer_menu_export">Export to device</string>
+
+    <string name="viewer_rename_title">Rename file</string>
+    <string name="viewer_rename_hint">File name</string>
+    <string name="viewer_rename_save">Save</string>
+    <string name="viewer_rename_cancel">Cancel</string>
+
+    <string name="viewer_wallpaper_title">Set as wallpaper</string>
+    <string name="viewer_wallpaper_target_home">Home screen</string>
+    <string name="viewer_wallpaper_target_lock">Lock screen</string>
+    <string name="viewer_wallpaper_target_both">Both</string>
+    <string name="viewer_wallpaper_cancel">Cancel</string>
+    <string name="viewer_wallpaper_done">Wallpaper set</string>
+    <string name="viewer_wallpaper_failed">Couldn\'t set wallpaper</string>
+
+    <string name="wallpaper_crop_title">Choose frame</string>
+    <string name="wallpaper_crop_subtitle_home">Home screen</string>
+    <string name="wallpaper_crop_subtitle_lock">Lock screen</string>
+    <string name="wallpaper_crop_subtitle_both">Home + Lock</string>
+    <string name="wallpaper_crop_btn_cancel">Cancel</string>
+    <string name="wallpaper_crop_btn_save">Set</string>
+    <string name="wallpaper_crop_loading">Loading…</string>
+
+    <string name="viewer_info_dialog_title">Entry details</string>
+    <string name="viewer_info_label_filename">Filename</string>
+    <string name="viewer_info_value_no_filename">— (imported before 5.5e.5)</string>
+    <string name="viewer_info_label_added">Added to vault</string>
+    <string name="viewer_info_label_enc_size">Encrypted size</string>
+    <string name="viewer_info_label_format">Format</string>
+    <string name="viewer_info_label_dimensions">Dimensions</string>
+    <string name="viewer_info_label_uuid">Vault ID</string>
+    <string name="viewer_info_value_probing">Probing…</string>
+    <string name="viewer_info_value_unknown">Unknown</string>
+    <string name="viewer_info_privacy_note">The original filename is preserved in encrypted entrymeta (5.5e.5+); the on-disk blob still uses a random UUID so plaintext names never appear in the filesystem. EXIF/IPTC/XMP/MakerNotes inside the file ARE preserved byte-for-byte inside the encrypted blob — they reappear when you share the file out. Stripping metadata at import (default-on, with opt-out) is a planned step.</string>
+
+    <string name="viewer_share_chooser">Share via…</string>
+
+    <string name="viewer_delete_dialog_title">Delete this entry?</string>
+
+    <string name="search_field_hint">Search</string>
+    <string name="search_close">Close search</string>
+    <string name="search_clear">Clear query</string>
+    <string name="search_no_results">Nothing found for \'%1$s\'</string>
+
+    <string name="search_no_results_unnamed_hint">Files imported before this version have no saved name and don\'t appear here. Re-import them to make them searchable.</string>
+
+    <string name="albums_empty_state">No albums yet. Tap + to create one.</string>
+    <string name="albums_create_fab">Create album</string>
+
+    <string name="album_create_dialog_title">New album</string>
+    <string name="album_create_name_label">Album name</string>
+    <string name="album_create_btn_save">Create</string>
+    <string name="album_create_btn_cancel">Cancel</string>
+
+    <string name="album_dup_in_section">The general section already has an album named \"%1$s\"</string>
+    <string name="album_dup_in_group">This group already has an album named \"%1$s\"</string>
+    <string name="group_dup_in_section">The general section already has a group named \"%1$s\"</string>
+
+    <string name="file_conflict_title">File action</string>
+    <string name="file_conflict_subtitle">Rename or replace the existing one?</string>
+    <string name="file_conflict_body">The selected album already has a file named: \"%1$s\"</string>
+    <string name="file_conflict_apply_all">Apply to all files</string>
+    <string name="file_conflict_skip">Skip</string>
+    <string name="file_conflict_replace">Replace</string>
+    <string name="file_conflict_rename">Rename</string>
+    <string name="file_rename_taken">A file with this name already exists</string>
+    <string name="entry_dup_in_album">A file with this name already exists in this album</string>
+
+    <string name="album_conflict_title">Album action</string>
+    <string name="album_conflict_apply_all">Apply to all albums</string>
+
+    <string name="album_rename_dialog_title">Rename album</string>
+    <string name="album_rename_btn_save">Save</string>
+
+    <string name="album_delete_dialog_title">Delete album?</string>
+    <string name="album_delete_dialog_body_empty">Empty album will be moved to Trash. Restorable within 30 days.</string>
+    <string name="album_delete_dialog_body_empty_permanent">Empty album will be permanently deleted. This cannot be undone. (Trash is disabled in Settings.)</string>
+    <string name="album_delete_dialog_body_with_entries">Album with all %1$d files inside will be moved to Trash. Restorable within 30 days.</string>
+    <string name="album_delete_dialog_body_with_entries_permanent">Album with all %1$d files inside will be permanently deleted. This cannot be undone. (Trash is disabled in Settings.)</string>
+    <string name="album_delete_btn_confirm">Delete</string>
+
+    <string name="album_action_rename">Rename</string>
+    <string name="album_action_change_cover">Change cover</string>
+    <string name="album_action_delete">Delete</string>
+    <string name="album_action_cancel">Cancel</string>
+
+    <string name="cover_picker_title">Choose cover</string>
+    <string name="cover_picker_empty">Album is empty — add photos before picking a cover.</string>
+    <string name="cover_picker_back">Back</string>
+    <string name="cover_crop_title">Crop cover</string>
+    <string name="cover_crop_btn_save">Save</string>
+    <string name="cover_crop_btn_cancel">Cancel</string>
+    <string name="cover_crop_loading">Decrypting…</string>
+    <string name="cover_save_failed">Could not save cover (see log)</string>
+
+    <string name="album_detail_back">Back to albums</string>
+    <string name="album_detail_empty">This album is empty.</string>
+
+    <plurals name="album_photo_count">
+        <item quantity="one">%d photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+
+    <string name="trash_screen_title">Trash</string>
+    <string name="trash_screen_back">Back</string>
+    <string name="trash_screen_empty">Trash is empty</string>
+    <string name="trash_expired">Expired</string>
+    <plurals name="trash_screen_count">
+        <item quantity="one">%d item in Trash</item>
+        <item quantity="other">%d items in Trash</item>
+    </plurals>
+    <plurals name="trash_days_remaining">
+        <item quantity="one">%dd</item>
+        <item quantity="other">%dd</item>
+    </plurals>
+
+    <string name="trash_sel_cancel">Cancel selection</string>
+    <string name="trash_sel_count">%1$d selected</string>
+    <string name="trash_action_restore">Restore</string>
+
+    <string name="trash_action_delete_forever">Delete forever</string>
+    <string name="trash_action_empty">Empty Trash</string>
+
+    <string name="trash_delete_forever_dialog_title">Delete forever?</string>
+    <plurals name="trash_delete_forever_dialog_body">
+        <item quantity="one">%d item will be permanently deleted. This cannot be undone.</item>
+        <item quantity="other">%d items will be permanently deleted. This cannot be undone.</item>
+    </plurals>
+    <string name="trash_delete_forever_btn_confirm">Delete</string>
+
+    <string name="trash_empty_dialog_title">Empty Trash?</string>
+    <plurals name="trash_empty_dialog_body">
+        <item quantity="one">All %d item in Trash will be permanently deleted. This cannot be undone.</item>
+        <item quantity="other">All %d items in Trash will be permanently deleted. This cannot be undone.</item>
+    </plurals>
+    <string name="trash_empty_btn_confirm">Empty</string>
+
+    <string name="trash_dialog_btn_cancel">Cancel</string>
+
+    <plurals name="trash_album_entry_count">
+        <item quantity="one">%d photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    <plurals name="trash_group_album_count">
+        <item quantity="one">%d album</item>
+        <item quantity="other">%d albums</item>
+    </plurals>
+    <string name="trash_album_unnamed">Untitled album</string>
+    <string name="trash_group_unnamed">Untitled group</string>
+</resources>

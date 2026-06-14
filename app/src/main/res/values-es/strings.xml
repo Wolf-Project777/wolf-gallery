@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="settings_open">Abrir ajustes</string>
+
+    <string name="settings_app_icon_apply_title">¿Aplicar el icono?</string>
+    <string name="settings_app_icon_apply_subtitle">La entrada del lanzador cambiará en los próximos segundos. Algunos lanzadores necesitan refrescar el cajón de apps; puede que no veas el icono de Wolf Gallery un instante mientras el sistema se actualiza.</string>
+    <string name="settings_app_icon_apply_confirm">Aplicar</string>
+    <string name="settings_app_icon_apply_cancel">Cancelar</string>
+    <string name="settings_app_icon_variant">Variante %1$d</string>
+
+    <string name="menu_open">Menú</string>
+    <string name="menu_item_lock">Bloquear</string>
+    <string name="menu_item_trash">Papelera</string>
+    <string name="menu_item_settings">Ajustes</string>
+    <string name="menu_item_edit">Editar</string>
+    <string name="menu_item_select_all">Seleccionar todo</string>
+    <string name="menu_item_sort">Ordenar</string>
+    <string name="menu_item_coming_soon">Próximamente</string>
+    <string name="top_bar_add">Crear álbum o grupo</string>
+    <string name="top_bar_search">Buscar</string>
+    <string name="top_bar_trash">Abrir la papelera</string>
+    <string name="search_field_hint">Buscar</string>
+    <string name="search_close">Cerrar búsqueda</string>
+    <string name="search_clear">Borrar consulta</string>
+
+    <string name="sort_dialog_title_root">Ordenar grupos y álbumes</string>
+    <string name="sort_dialog_title_albums">Ordenar álbumes</string>
+    <string name="sort_dialog_title_entries">Ordenar medios</string>
+    <string name="sort_option_date_desc">Fecha (más recientes primero)</string>
+    <string name="sort_option_date_asc">Fecha (más antiguos primero)</string>
+    <string name="sort_option_name_az">Nombre (A–Z)</string>
+    <string name="sort_option_name_za">Nombre (Z–A)</string>
+    <string name="sort_dialog_btn_close">Cerrar</string>
+
+    <string name="selection_count">%1$d seleccionados</string>
+    <string name="selection_cancel">Cancelar selección</string>
+
+    <string name="album_default_imported_name">Importados</string>
+
+    <string name="tab_all">Todo</string>
+    <string name="tab_albums">Álbumes</string>
+
+    <string name="trash_open">Abrir la papelera</string>
+
+    <string name="op_progress_title_move">Moviendo medios a «%1$s»</string>
+    <string name="op_progress_title_copy">Copiando medios a «%1$s»</string>
+    <string name="op_progress_title_trash">Moviendo a la papelera</string>
+
+    <string name="file_rename_taken">Ya existe un archivo con este nombre</string>
+    <string name="entry_dup_in_album">Ya existe un archivo con este nombre en este álbum</string>
+    <string name="album_dup_in_group">Este grupo ya tiene un álbum llamado «%1$s»</string>
+    <string name="album_dup_in_section">La sección general ya tiene un álbum llamado «%1$s»</string>
+
+    <string name="viewer_wallpaper_done">Fondo de pantalla establecido</string>
+    <string name="viewer_wallpaper_failed">No se pudo establecer el fondo de pantalla</string>
+
+    <string name="export_done_single">Exportado al dispositivo</string>
+    <string name="export_done_multi">Exportados %1$d de %2$d</string>
+    <string name="export_failed">No se pudo exportar al dispositivo</string>
+
+    <string name="import_folder_default_name">Importación</string>
+    <string name="import_folder_empty">No hay fotos ni vídeos compatibles en esta carpeta</string>
+    <string name="import_folder_progress_title">Importando en «%1$s»</string>
+    <string name="import_folder_done">Importados %1$d de %2$d</string>
+    <string name="import_perm_denied">Se necesita acceso a los medios para importar desde el dispositivo</string>
+
+    <string name="app_name">Wolf Gallery</string>
+    <string name="welcome_placeholder">Wolf Gallery — panel de desarrollo (tras el asistente)</string>
+
+    <string name="albums_test_header">Autoprueba del repositorio de álbumes</string>
+    <string name="albums_test_subtitle">Crea un álbum desechable con un nombre en cirílico y un emoji, lo lista, lo renombra, le asigna una portada falsa con un recorte normalizado, lo lista de nuevo para verificar el ciclo completo y luego elimina el álbum. El álbum Importados predeterminado NO se toca.</string>
+    <string name="btn_run_albums_test">Ejecutar autoprueba de álbumes</string>
+    <string name="albums_running">Ejecutando…</string>
+    <string name="toast_albums_pass">Autoprueba de álbumes SUPERADA</string>
+    <string name="toast_albums_fail">Autoprueba de álbumes FALLIDA — ver registro</string>
+
+    <string name="trash_test_header">Autoprueba del repositorio de la papelera</string>
+    <string name="trash_test_subtitle">Crea un álbum desechable y una entrada sintética en la bóveda, la mueve a la papelera, lista la papelera y verifica el ciclo de metadatos y el campo de álbum original, restaura la entrada, la vuelve a mover a la papelera, luego la purga de forma permanente y ejecuta purgeOlderThan con una retención mínima para verificar la purga automática. El álbum Importados predeterminado NO se toca.</string>
+    <string name="btn_run_trash_test">Ejecutar autoprueba de la papelera</string>
+    <string name="trash_running">Ejecutando…</string>
+    <string name="toast_trash_pass">Autoprueba de la papelera SUPERADA</string>
+    <string name="toast_trash_fail">Autoprueba de la papelera FALLIDA — ver registro</string>
+
+    <string name="log_status_header">Estado del registro (dev)</string>
+    <string name="log_size_bytes">Tamaño del archivo de registro: %1$d bytes</string>
+    <string name="log_tail_header">Últimas %1$d líneas:</string>
+    <string name="log_empty">(el archivo de registro está vacío o no se ha inicializado)</string>
+
+    <string name="settings_header">Ajustes (dev)</string>
+    <string name="setting_logging_title">Registro</string>
+    <string name="setting_logging_subtitle">Escribir eventos en el archivo de registro (se reinicia al cambiar)</string>
+    <string name="setting_screenshots_title">Permitir capturas de pantalla</string>
+    <string name="setting_screenshots_subtitle">Si está desactivado, se bloquean la grabación de pantalla y la vista previa en Recientes (recomendado)</string>
+    <string name="setting_force_dark_title">Forzar tema oscuro</string>
+    <string name="setting_force_dark_subtitle">Si está activado, la app usa el tema oscuro sin importar el ajuste del sistema. Si está desactivado, la app sigue el tema del sistema.</string>
+
+    <string name="setting_autolock_title">Bloqueo automático al minimizar</string>
+    <string name="setting_autolock_subtitle">Bloquea la app después de que haya estado en segundo plano el número de minutos elegido. Los cambios breves a otras apps no lo activan. Desactivado = nunca se bloquea automáticamente (solo se vuelve a bloquear al cerrar por completo).</string>
+    <string name="setting_autolock_off">Desactivado</string>
+    <string name="setting_autolock_minutes">%1$d min</string>
+    <string name="setting_autolock_custom">Personalizado…</string>
+    <string name="setting_autolock_custom_title">Duración personalizada del bloqueo automático</string>
+    <string name="setting_autolock_custom_subtitle">Introduce un número de minutos (1 a 1440 = hasta 24 horas).</string>
+    <string name="setting_autolock_custom_label">Minutos</string>
+    <string name="setting_autolock_custom_confirm">Guardar</string>
+    <string name="setting_autolock_custom_cancel">Cancelar</string>
+
+    <string name="btn_copy_log">Copiar registro</string>
+    <string name="btn_share_log">Compartir registro</string>
+    <string name="btn_clear_log">Borrar todos los archivos de registro</string>
+    <string name="share_log_chooser">Compartir registro mediante…</string>
+
+    <string name="toast_log_copied">Registro copiado al portapapeles</string>
+    <string name="toast_log_empty">El registro está vacío — nada que copiar</string>
+    <string name="toast_log_cleared">Se borraron todos los archivos de registro</string>
+
+    <string name="native_header">Autoprueba nativa (NDK)</string>
+    <string name="native_subtitle">Llama a libencnative.so::secureZero sobre un búfer de 64 bytes rellenado con 0xAA y verifica que cada byte sea 0x00 al regresar.</string>
+    <string name="btn_run_native_test">Ejecutar autoprueba de secureZero</string>
+    <string name="toast_native_pass">secureZero SUPERADA — los 64 bytes borrados</string>
+    <string name="toast_native_fail">secureZero FALLIDA — ver registro</string>
+
+    <string name="aesgcm_header">Autoprueba de AES-256-GCM vía StrongBox</string>
+    <string name="aesgcm_subtitle">Genera una clave AES-256 respaldada por hardware bajo un alias de PRUEBA (la clave de PRODUCCIÓN nunca se toca), prefiere StrongBox (Knox Vault en A14 5G). Verifica: nivel de hardware, dos ciclos completos (UTF-8 corto + 1 KiB aleatorio), texto cifrado ≠ texto plano, unicidad del IV, rechazo de alteración del texto cifrado, rechazo de alteración del IV. El alias de prueba se elimina después.</string>
+    <string name="btn_run_aesgcm_test">Ejecutar autoprueba AES-GCM/StrongBox</string>
+    <string name="aesgcm_running">Ejecutando en el hardware…</string>
+    <string name="toast_aesgcm_pass">AES-GCM/StrongBox SUPERADA — consulta el registro para el nivel de hardware</string>
+    <string name="toast_aesgcm_fail">AES-GCM/StrongBox FALLIDA — ver registro</string>
+
+    <string name="securebytes_header">Autoprueba de SecureBytes (Nivel 2)</string>
+    <string name="securebytes_subtitle">Envuelve 32 bytes en RAM enmascarada con XOR usando una máscara rotatoria por lectura. Verifica: búfer del llamador borrado, almacenamiento enmascarado ≠ texto plano, la lectura de ciclo devuelve el original, la máscara realmente rota, close() borra todo, leer tras cerrar lanza excepción, close es idempotente.</string>
+    <string name="btn_run_securebytes_test">Ejecutar autoprueba de SecureBytes</string>
+    <string name="toast_securebytes_pass">SecureBytes SUPERADA — las 7 propiedades verificadas</string>
+    <string name="toast_securebytes_fail">SecureBytes FALLIDA — ver registro</string>
+
+    <string name="argon2_header">Autoprueba de Argon2id (KDF de memoria intensiva)</string>
+    <string name="argon2_subtitle">Deriva una clave de 32 bytes a partir de \"password\"+\"somesalt12345678\" dos veces con los mismos parámetros (deben coincidir) y luego una vez con una sal distinta (debe diferir). Usa 4 MiB / 2 iteraciones / 1 hilo para una validación rápida de desarrollo; los parámetros de producción son 64 MiB / 3 / 4.</string>
+    <string name="btn_run_argon2_test">Ejecutar autoprueba de Argon2id</string>
+    <string name="argon2_running">Calculando…</string>
+    <string name="toast_argon2_pass">Argon2id SUPERADA — determinismo y sensibilidad a la sal verificados</string>
+    <string name="toast_argon2_fail">Argon2id FALLIDA — ver registro</string>
+
+    <string name="blob_header">Autoprueba de blob de archivo cifrado (cifrado por archivo)</string>
+    <string name="blob_subtitle">Transmite 2 MiB de texto plano aleatorio a través de CipherOutputStream, verifica la estructura en disco (magic + versión + cabecera IV, +36 bytes de sobrecarga), confirma que los bytes cifrados ≠ los bytes en texto plano en el mismo desplazamiento, hace un ciclo completo del archivo mediante descifrado y comprueba el SHA-256, y verifica que se rechacen el texto cifrado alterado, el magic incorrecto y la versión errónea. Usa un alias de PRUEBA del Keystore; la clave maestra de producción no se toca.</string>
+    <string name="btn_run_blob_test">Ejecutar autoprueba de ciclo de blob</string>
+    <string name="blob_running">Cifrando y descifrando 2 MiB…</string>
+    <string name="toast_blob_pass">Ciclo de blob SUPERADO — las 6 propiedades verificadas</string>
+    <string name="toast_blob_fail">Ciclo de blob FALLIDO — ver registro</string>
+</resources>
