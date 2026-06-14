@@ -1024,6 +1024,7 @@ private fun TestsAndLogsCategory(
 }
 
 private const val FEEDBACK_EMAIL = "wolf-project777@protonmail.com"
+private const val PROJECT_URL = "https://github.com/Wolf-Project777/wolf-gallery"
 
 @Composable
 private fun AboutCategory(
@@ -1036,6 +1037,11 @@ private fun AboutCategory(
     val copy = {
         clipboard.setText(AnnotatedString(FEEDBACK_EMAIL))
         Toast.makeText(context, copiedMsg, Toast.LENGTH_SHORT).show()
+    }
+    val copiedLinkMsg = stringResource(R.string.about_link_copied)
+    val copyLink = {
+        clipboard.setText(AnnotatedString(PROJECT_URL))
+        Toast.makeText(context, copiedLinkMsg, Toast.LENGTH_SHORT).show()
     }
 
     SettingsScrollColumn(modifier = modifier) {
@@ -1092,6 +1098,34 @@ private fun AboutCategory(
                 modifier = Modifier.weight(1f)
             )
             TextButton(onClick = copy) {
+                Text(stringResource(R.string.support_copy))
+            }
+        }
+
+        Spacer(Modifier.height(20.dp))
+        HorizontalDivider()
+        Spacer(Modifier.height(16.dp))
+
+        Text(
+            text = stringResource(R.string.about_source_header),
+            style = MaterialTheme.typography.titleMedium
+        )
+        Spacer(Modifier.height(8.dp))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(10.dp))
+                .clickable(onClick = copyLink)
+                .padding(end = 4.dp, top = 4.dp, bottom = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = PROJECT_URL,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.weight(1f)
+            )
+            TextButton(onClick = copyLink) {
                 Text(stringResource(R.string.support_copy))
             }
         }

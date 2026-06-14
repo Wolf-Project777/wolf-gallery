@@ -108,4 +108,6 @@
     <string name="about_feedback_header">Обратная связь</string>
     <string name="about_feedback_subtitle">Вопросы или предложения? Нажмите, чтобы скопировать адрес.</string>
     <string name="about_email_copied">Email скопирован</string>
+    <string name="about_source_header">Исходный код</string>
+    <string name="about_link_copied">Ссылка скопирована</string>
 </resources>
