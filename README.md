@@ -15,12 +15,10 @@
 
 <div align="center">
 
-<a href="https://apt.izzysoft.de/fdroid/index/apk/dev.encgallery"><img alt="Get it on IzzyOnDroid" src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="75"></a>
-<a href="https://f-droid.org/packages/dev.encgallery/"><img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75"></a>
 <a href="https://github.com/Wolf-Project777/wolf-gallery/releases/latest"><img alt="Get it on GitHub" src="https://raw.githubusercontent.com/Kunzisoft/Github-badge/main/get-it-on-github.png" height="75"></a>
 <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Wolf-Project777/wolf-gallery"><img alt="Get it on Obtainium" src="https://github.com/ImranR98/Obtainium/raw/main/assets/graphics/badge_obtainium.png" height="75"></a>
 
-<sub>GitHub and Obtainium work now. The IzzyOnDroid and F-Droid badges go live once the app is accepted there (currently in review).</sub>
+<sub>IzzyOnDroid and F-Droid coming soon.</sub>
 
 </div>
 
