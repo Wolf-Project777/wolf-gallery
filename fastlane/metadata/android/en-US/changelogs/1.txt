@@ -1,0 +1,3 @@
+First public release of Wolf Gallery.
+
+An encrypted, fully offline photo and video vault with a comfortable, personal gallery on top: AES-256-GCM with Argon2id, an optional ML-KEM-768 post-quantum mode, a native crypto core, groups and albums, themes and pure-black dark modes, a built-in trash, and a first-run wizard.

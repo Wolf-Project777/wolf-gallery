@@ -9,6 +9,11 @@
 ![Offline](https://img.shields.io/badge/100%25-Offline-000000)
 ![No telemetry](https://img.shields.io/badge/Telemetry-None-000000)
 
+[![GitHub release](https://img.shields.io/github/v/release/Wolf-Project777/wolf-gallery?logo=github&label=GitHub)](https://github.com/Wolf-Project777/wolf-gallery/releases/latest)
+[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/dev.encgallery&label=IzzyOnDroid)](https://apt.izzysoft.de/fdroid/index/apk/dev.encgallery)
+[![F-Droid](https://img.shields.io/f-droid/v/dev.encgallery?logo=f-droid&label=F-Droid)](https://f-droid.org/packages/dev.encgallery/)
+[![Obtainium](https://img.shields.io/badge/Obtainium-Add-7c4dff?logo=android&logoColor=white)](https://github.com/Wolf-Project777/wolf-gallery/releases/latest)
+
 </div>
 
 ---
@@ -115,6 +120,22 @@ Open this directory in **Android Studio** (Panda 4 / 2025.3.4 or newer). Gradle 
 ## License
 
 [GPL-3.0-only](LICENSE).
+
+## Support development
+
+Wolf Gallery is free, open-source, and has no ads, accounts, or trackers. If it's useful to you, a donation helps it keep evolving. Privacy-first coins only — no KYC, nothing custodial. The same addresses live inside the app under *Settings → Support development*, with offline QR codes.
+
+[![Monero](https://img.shields.io/badge/Monero-XMR-FF6600?logo=monero&logoColor=white)](#support-development)
+
+```
+42nfQ6zMT9jbLM2XGwNLLX137s8RkYRrhhJSqrFFZvCwcWegttcMQJZ85gTG6niredYWfRP6FYoEtPKYDDWQ63CM8hT5xzK
+```
+
+[![Zcash](https://img.shields.io/badge/Zcash-ZEC-F4B728?logo=zcash&logoColor=white)](#support-development)
+
+```
+u1hwe88n4r8zz8958ssr02swq3svxmpqxq5uzhn3sp3zkjna39ymphtkc4egc2w0s4pxvhemmw2cw89gz7qzkzxvhnhrywwhm0aaq706h0a8p7jc447m59nululu77y42x2u6n056jwyvclphau2tu9jayt4c4szzkrjh5vxtrd587rx65
+```
 
 ## Contact
 
