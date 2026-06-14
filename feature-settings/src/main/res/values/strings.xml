@@ -107,4 +107,6 @@
     <string name="about_feedback_header">Feedback</string>
     <string name="about_feedback_subtitle">Questions or suggestions? Tap to copy the address.</string>
     <string name="about_email_copied">Email copied</string>
+    <string name="about_source_header">Source code</string>
+    <string name="about_link_copied">Link copied</string>
 </resources>

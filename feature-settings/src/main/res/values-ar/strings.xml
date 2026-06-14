@@ -107,4 +107,6 @@
     <string name="about_feedback_header">الملاحظات</string>
     <string name="about_feedback_subtitle">أسئلة أو اقتراحات؟ اضغط لنسخ العنوان.</string>
     <string name="about_email_copied">تم نسخ البريد الإلكتروني</string>
+    <string name="about_source_header">الكود المصدري</string>
+    <string name="about_link_copied">تم نسخ الرابط</string>
 </resources>

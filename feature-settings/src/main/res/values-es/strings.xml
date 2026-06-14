@@ -107,4 +107,6 @@
     <string name="about_feedback_header">Comentarios</string>
     <string name="about_feedback_subtitle">¿Preguntas o sugerencias? Toca para copiar la dirección.</string>
     <string name="about_email_copied">Correo copiado</string>
+    <string name="about_source_header">Código fuente</string>
+    <string name="about_link_copied">Enlace copiado</string>
 </resources>
