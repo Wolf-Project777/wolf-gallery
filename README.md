@@ -9,10 +9,18 @@
 ![Offline](https://img.shields.io/badge/100%25-Offline-000000)
 ![No telemetry](https://img.shields.io/badge/Telemetry-None-000000)
 
-[![GitHub release](https://img.shields.io/github/v/release/Wolf-Project777/wolf-gallery?logo=github&label=GitHub)](https://github.com/Wolf-Project777/wolf-gallery/releases/latest)
-[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/dev.encgallery&label=IzzyOnDroid)](https://apt.izzysoft.de/fdroid/index/apk/dev.encgallery)
-[![F-Droid](https://img.shields.io/f-droid/v/dev.encgallery?logo=f-droid&label=F-Droid)](https://f-droid.org/packages/dev.encgallery/)
-[![Obtainium](https://img.shields.io/badge/Obtainium-Add-7c4dff?logo=android&logoColor=white)](https://github.com/Wolf-Project777/wolf-gallery/releases/latest)
+</div>
+
+## Download
+
+<div align="center">
+
+<a href="https://apt.izzysoft.de/fdroid/index/apk/dev.encgallery"><img alt="Get it on IzzyOnDroid" src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="75"></a>
+<a href="https://f-droid.org/packages/dev.encgallery/"><img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75"></a>
+<a href="https://github.com/Wolf-Project777/wolf-gallery/releases/latest"><img alt="Get it on GitHub" src="https://raw.githubusercontent.com/Kunzisoft/Github-badge/main/get-it-on-github.png" height="75"></a>
+<a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Wolf-Project777/wolf-gallery"><img alt="Get it on Obtainium" src="https://github.com/ImranR98/Obtainium/raw/main/assets/graphics/badge_obtainium.png" height="75"></a>
+
+<sub>GitHub and Obtainium work now. The IzzyOnDroid and F-Droid badges go live once the app is accepted there (currently in review).</sub>
 
 </div>
 
@@ -125,13 +133,13 @@ Open this directory in **Android Studio** (Panda 4 / 2025.3.4 or newer). Gradle 
 
 Wolf Gallery is free, open-source, and has no ads, accounts, or trackers. If it's useful to you, a donation helps it keep evolving. Privacy-first coins only — no KYC, nothing custodial. The same addresses live inside the app under *Settings → Support development*, with offline QR codes.
 
-[![Monero](https://img.shields.io/badge/Monero-XMR-FF6600?logo=monero&logoColor=white)](#support-development)
+![Monero](https://img.shields.io/badge/Monero-XMR-FF6600?style=for-the-badge&logo=monero&logoColor=white)
 
 ```
 42nfQ6zMT9jbLM2XGwNLLX137s8RkYRrhhJSqrFFZvCwcWegttcMQJZ85gTG6niredYWfRP6FYoEtPKYDDWQ63CM8hT5xzK
 ```
 
-[![Zcash](https://img.shields.io/badge/Zcash-ZEC-F4B728?logo=zcash&logoColor=white)](#support-development)
+![Zcash](https://img.shields.io/badge/Zcash-ZEC-F4B728?style=for-the-badge&logo=zcash&logoColor=white)
 
 ```
 u1hwe88n4r8zz8958ssr02swq3svxmpqxq5uzhn3sp3zkjna39ymphtkc4egc2w0s4pxvhemmw2cw89gz7qzkzxvhnhrywwhm0aaq706h0a8p7jc447m59nululu77y42x2u6n056jwyvclphau2tu9jayt4c4szzkrjh5vxtrd587rx65
