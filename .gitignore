@@ -12,6 +12,7 @@ local.properties
 /app/release
 *.keystore
 *.jks
+keystore.properties
 
 # Local icon-generation workshop (holds absolute dev paths) — kept on disk, not published
 /tools/
