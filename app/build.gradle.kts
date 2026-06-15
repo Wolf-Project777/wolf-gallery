@@ -25,6 +25,11 @@ android {
         versionName = "1.0"
     }
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     androidResources {
 
         localeFilters += listOf("en", "ru", "es", "ar")
