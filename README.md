@@ -37,10 +37,12 @@ And this is only the beginning — **Wolf Gallery is actively evolving, with a l
 
 |  |  |  |  |
 |:--:|:--:|:--:|:--:|
-| ![Albums grouped by topic](fastlane/metadata/android/en-US/images/phoneScreenshots/01.jpg) | ![Browsing a group on the light theme](fastlane/metadata/android/en-US/images/phoneScreenshots/02.jpg) | ![Photo, animation and video viewer](fastlane/metadata/android/en-US/images/phoneScreenshots/04.jpg) | ![Create albums, groups and import](fastlane/metadata/android/en-US/images/phoneScreenshots/06.jpg) |
-| Albums grouped by topic | Inside a group · light theme | Photos, animations & video | Create albums, groups & import |
-| ![Sort and manage albums](fastlane/metadata/android/en-US/images/phoneScreenshots/07.jpg) | ![Flexible import and one-tap lock](fastlane/metadata/android/en-US/images/phoneScreenshots/08.jpg) | ![Auto-lock and screenshot protection](fastlane/metadata/android/en-US/images/phoneScreenshots/09.jpg) | ![Multi-select and manage](fastlane/metadata/android/en-US/images/phoneScreenshots/16.jpg) |
-| Sort & manage albums | Flexible import · one-tap lock | Auto-lock & screenshot protection | Multi-select: rename, pin, cover, export |
+| ![Albums grouped by topic](fastlane/metadata/android/en-US/images/phoneScreenshots/01.jpg) | ![Browsing a group on the light theme](fastlane/metadata/android/en-US/images/phoneScreenshots/02.jpg) | ![All photos in a mosaic grid](fastlane/metadata/android/en-US/images/phoneScreenshots/03.jpg) | ![Album view with import and menu](fastlane/metadata/android/en-US/images/phoneScreenshots/04.jpg) |
+| Albums grouped by topic | Inside a group · light theme | All photos · mosaic grid | Album view · import & menu |
+| ![Viewer with share, wallpaper and export](fastlane/metadata/android/en-US/images/phoneScreenshots/05.jpg) | ![Photo, animation and video playback](fastlane/metadata/android/en-US/images/phoneScreenshots/06.jpg) | ![Search across the vault](fastlane/metadata/android/en-US/images/phoneScreenshots/07.jpg) | ![Themes and accent colors](fastlane/metadata/android/en-US/images/phoneScreenshots/08.jpg) |
+| Viewer · share, wallpaper, export | Photos, animations & video | Search across the vault | Themes & accent colors |
+| ![Choose your app icon](fastlane/metadata/android/en-US/images/phoneScreenshots/09.jpg) | ![Security: auto-lock and screenshot block](fastlane/metadata/android/en-US/images/phoneScreenshots/10.jpg) | ![Encrypted entry details](fastlane/metadata/android/en-US/images/phoneScreenshots/11.jpg) | ![Built-in trash](fastlane/metadata/android/en-US/images/phoneScreenshots/12.jpg) |
+| Choose your app icon | Security · auto-lock & screenshot block | Encrypted entry details | Built-in trash |
 
 ## Features
 
