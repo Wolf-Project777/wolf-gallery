@@ -291,6 +291,7 @@
     <string name="cover_picker_title">Выберите обложку</string>
     <string name="cover_picker_empty">Альбом пуст — добавьте фото, прежде чем выбирать обложку.</string>
     <string name="cover_picker_back">Назад</string>
+    <string name="scroll_to_top">Наверх</string>
     <string name="cover_crop_title">Обрезать обложку</string>
     <string name="cover_crop_btn_save">Сохранить</string>
     <string name="cover_crop_btn_cancel">Отмена</string>

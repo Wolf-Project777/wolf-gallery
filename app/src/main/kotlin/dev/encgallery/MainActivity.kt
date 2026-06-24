@@ -454,9 +454,10 @@ class MainActivity : ComponentActivity() {
                                 onAutoLockTimeoutChange = { AppSettings.setLockTimeoutMinutes(it) },
                                 screenshotsAllowed = allowScreenshots,
                                 onScreenshotsChange = { value ->
-
                                     AppSettings.setScreenshotsAllowed(value)
-                                    recreate()
+                                    window.decorView.postDelayed({
+                                        applyScreenshotPolicy(AppSettings.screenshotsAllowed.value)
+                                    }, 180L)
                                 },
                                 themeVariant = themeVariantNow,
                                 onThemeVariantChange = { AppSettings.setThemeVariant(it) },
@@ -1600,9 +1601,29 @@ private fun SkeletonContent(
     val coverPickerAlbum: AlbumSummary? = coverPickerAlbumUuid?.let { uuid ->
         albumSummaries.find { it.meta.uuid == uuid }
     }
-    val coverPickerEntries: List<VaultEntry> = coverPickerAlbumUuid?.let { uuid ->
-        entries.filter { it.albumUuid == uuid }
-    } ?: emptyList()
+    val coverPickerEntries: List<VaultEntry> =
+        remember(entries, coverPickerAlbumUuid, entrySortRevision, entrySortOrderState, filenameCacheRevision) {
+            val uuid = coverPickerAlbumUuid ?: return@remember emptyList()
+            sortEntries(
+                entries.filter { it.albumUuid == uuid },
+                AppSettings.entrySortOrderFor("album:$uuid"),
+                GallerySession.entryFilenameCache
+            )
+        }
+    LaunchedEffect(coverPickerAlbumUuid, entries, entrySortOrderState) {
+        val uuid = coverPickerAlbumUuid ?: return@LaunchedEffect
+        val order = AppSettings.entrySortOrderFor("album:$uuid")
+        if (order != EntrySortOrder.NAME_AZ && order != EntrySortOrder.NAME_ZA) return@LaunchedEffect
+        val cache = GallerySession.entryFilenameCache
+        val missing = entries.filter { it.albumUuid == uuid && it.uuid !in cache }
+        if (missing.isEmpty()) return@LaunchedEffect
+        val resolved = withContext(Dispatchers.IO) {
+            EntriesRepository(KeystoreAesGcm(KeystoreAesGcm.PRODUCTION_ALIAS))
+                .batchResolve(missing)
+        }
+        cache.putAll(resolved)
+        GallerySession.entryFilenameCacheRevision++
+    }
     val coverCropEntry: VaultEntry? = coverCropEntryUuid?.let { uuid ->
         coverPickerEntries.firstOrNull { it.uuid == uuid }
     }

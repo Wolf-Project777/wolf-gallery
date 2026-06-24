@@ -257,6 +257,20 @@ fun GalleryGrid(
             )
         }
 
+        if (!inSelectionMode && gridHeightDp == null) {
+            if (enlarged) {
+                ScrollToTopButton(
+                    state = mosaicState,
+                    modifier = Modifier.align(Alignment.BottomCenter)
+                )
+            } else {
+                ScrollToTopButton(
+                    state = gridState,
+                    modifier = Modifier.align(Alignment.BottomCenter)
+                )
+            }
+        }
+
         if (inSelectionMode) {
             if (actionStage == GridActionStage.NONE ||
                 actionStage == GridActionStage.OPTIONS

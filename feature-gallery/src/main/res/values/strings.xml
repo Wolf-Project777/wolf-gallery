@@ -281,6 +281,7 @@
     <string name="cover_picker_title">Choose cover</string>
     <string name="cover_picker_empty">Album is empty — add photos before picking a cover.</string>
     <string name="cover_picker_back">Back</string>
+    <string name="scroll_to_top">Scroll to top</string>
     <string name="cover_crop_title">Crop cover</string>
     <string name="cover_crop_btn_save">Save</string>
     <string name="cover_crop_btn_cancel">Cancel</string>

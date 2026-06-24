@@ -1,0 +1,5 @@
+What's new in 1.1
+
+• New: a "scroll to top" button now appears once you scroll down in the gallery and album views — tap it to jump straight back to the top.
+• Fixed: display glitches (jumping text, a sticky/laggy switch) when turning the screenshot-protection setting on or off.
+• Fixed: the album cover picker now follows the album's chosen sort order.
