@@ -268,6 +268,7 @@
     <string name="cover_picker_title">Elegir portada</string>
     <string name="cover_picker_empty">El álbum está vacío: añade fotos antes de elegir una portada.</string>
     <string name="cover_picker_back">Atrás</string>
+    <string name="scroll_to_top">Ir arriba</string>
     <string name="cover_crop_title">Recortar portada</string>
     <string name="cover_crop_btn_save">Guardar</string>
     <string name="cover_crop_btn_cancel">Cancelar</string>

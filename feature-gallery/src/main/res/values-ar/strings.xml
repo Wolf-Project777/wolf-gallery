@@ -288,6 +288,7 @@
     <string name="cover_picker_title">اختيار الغلاف</string>
     <string name="cover_picker_empty">الألبوم فارغ — أضف صورًا قبل اختيار غلاف.</string>
     <string name="cover_picker_back">رجوع</string>
+    <string name="scroll_to_top">التمرير إلى الأعلى</string>
     <string name="cover_crop_title">اقتصاص الغلاف</string>
     <string name="cover_crop_btn_save">حفظ</string>
     <string name="cover_crop_btn_cancel">إلغاء</string>

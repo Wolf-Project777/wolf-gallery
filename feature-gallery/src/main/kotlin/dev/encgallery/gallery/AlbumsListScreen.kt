@@ -381,6 +381,13 @@ fun AlbumsListScreen(
                     columns = columns,
                     modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight()
                 )
+                if (!inSelectionMode) {
+                    ScrollToTopButton(
+                        state = gridState,
+                        modifier = Modifier.align(Alignment.BottomCenter),
+                        appearAfterIndex = columns * 4 - 1
+                    )
+                }
                 }
             }
         }
