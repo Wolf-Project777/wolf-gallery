@@ -19,7 +19,7 @@
 
 <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Wolf-Project777/wolf-gallery"><img alt="Get it on Obtainium" src="https://raw.githubusercontent.com/Wolf-Project777/wolf-gallery/main/assets/get-it-on-obtainium.png" width="240"></a>
 
-<sub>IzzyOnDroid and F-Droid coming soon.</sub>
+<sub>F-Droid coming soon.</sub>
 
 </div>
 
