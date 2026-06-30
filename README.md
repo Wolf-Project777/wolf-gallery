@@ -81,8 +81,8 @@ And this is only the beginning — **Wolf Gallery is actively evolving, with a l
 - **AES-256-GCM** authenticated encryption — protects both the *confidentiality* of your files and their *integrity* (any tampering is detected on decryption).
 - **Argon2id** key derivation — the memory-hard winner of the Password Hashing Competition. Your passphrase is stretched into a key that is expensive to brute-force on GPUs and ASICs; the key itself is never stored in plaintext.
 - **Hardware-backed keys** — the master key lives in the Android Keystore (StrongBox-backed where available), and AES runs on the CPU's hardware crypto extensions for speed.
-- **Optional post-quantum mode** — an opt-in **ML-KEM-768 + AES hybrid** (NIST FIPS 203) for key protection that stays secure even against future quantum adversaries. On its own, AES-256 already retains a ~128-bit security margin under Grover's algorithm — a comfortable cushion for the foreseeable future; the hybrid mode is there for those who want a genuine post-quantum guarantee.
-- **Native crypto core** — all cryptographic operations run in C/C++ with locked memory (`mlock`) so secrets are kept out of swap and wiped after use.
+- **Quantum-resistant by design** — the vault is symmetric-only (AES-256), with no asymmetric key exchange. There is nothing for Shor's algorithm to break, and "harvest now, decrypt later" does not apply to a local vault. Under Grover's algorithm AES-256 still retains a ~128-bit security margin.
+- **Native crypto core** — cryptographic operations run in C/C++, and key material is zeroed in memory after use.
 
 > **Performance note:** encryption, decryption, and import speed scale with your device's CPU and available RAM. Argon2id is *deliberately* memory-hard, so stronger settings cost more time on lower-end hardware — that cost is the security.
 

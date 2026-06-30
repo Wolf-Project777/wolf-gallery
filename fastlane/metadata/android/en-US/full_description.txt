@@ -1,40 +1,39 @@
-Security, convenience, comfort and personalization — in one gallery.
+Wolf Gallery is an offline gallery that keeps your photos and videos encrypted on the device.
 
-Pick any gallery app and you usually face a trade-off. The secure ones are bare — a locked box with nothing else. The pretty, comfortable ones with themes and layout options keep your photos wide open. You rarely find one app that is secure and convenient and comfortable and personal at the same time.
+Each file is stored as ciphertext in the app's private storage, so other apps and the system only ever see encrypted data. Files are decrypted on demand. That includes sharing to another app and setting a wallpaper, so media is not written out in the clear. You can use it as your main gallery or keep it next to the stock one as a private vault.
 
-Wolf Gallery is built to be exactly that. Strong, modern encryption underneath; a flexible, comfortable interface on top. Even sharing a file or setting a wallpaper happens straight from the encrypted vault, so your media stays protected right up to the moment you choose to use it. You can make it your main gallery in place of the stock one — or keep it alongside as a private vault for what matters most.
-
-And this is only the beginning — Wolf Gallery is actively evolving, with a lot more ahead.
+Development is active and ongoing.
 
 = Security =
 
-* Every file is encrypted and kept in an isolated vault inside the app's private storage. To the rest of the device, the vault is just opaque ciphertext.
-* 100% offline — no INTERNET permission, no accounts, no cloud, no telemetry, no trackers. It physically cannot phone home.
-* AES-256-GCM authenticated encryption — protects both confidentiality and integrity (tampering is detected on decryption).
-* Argon2id key derivation — the memory-hard winner of the Password Hashing Competition. Your passphrase is never stored in plaintext.
-* Hardware-backed keys via the Android Keystore (StrongBox where available).
-* Optional post-quantum mode — an opt-in ML-KEM-768 + AES hybrid (NIST FIPS 203).
-* Native crypto core in C/C++ with locked memory (mlock), keeping secrets out of swap.
-* Screenshots and Recents previews are blocked (FLAG_SECURE); repeated wrong attempts are slowed by exponential backoff, with an optional wipe-after-N-failures.
+* Every file is encrypted in an isolated vault inside the app's private storage.
+* No INTERNET permission. No accounts, no cloud, no telemetry, no trackers. The app cannot reach the network.
+* AES-256-GCM authenticated encryption, so tampering is detected on decryption.
+* Argon2id password-based key derivation (the memory-hard Password Hashing Competition winner). The passphrase is never stored.
+* The vault key is wrapped with an Argon2id key on top of the hardware-backed Android Keystore, so both the device and your password or PIN are needed to decrypt.
+* Quantum-resistant by design: the vault is symmetric-only (AES-256), with no asymmetric key exchange. There is nothing for Shor's algorithm to break, and "harvest now, decrypt later" does not apply to a local vault. Against Grover's algorithm AES-256 keeps about 128-bit strength.
+* Native C/C++ crypto core that zeroes key material in memory after use.
+* FLAG_SECURE blocks screenshots and Recents previews. Wrong unlock attempts are slowed by exponential backoff, with an optional wipe after a set number of failures.
+* An in-app self-test screen runs the crypto, file-format and migration checks on the device.
 
-= Convenience — organize your way =
+= Organize =
 
-* Groups and albums you build directly inside the app.
-* Rename freely, with emoji and symbols in names.
-* Order, sort, search and pin your groups, albums and files.
-* Album covers from any picture, framed the way you want.
-* Import and export — you decide where your media lives.
-* Share to other apps and set as wallpaper, straight from the encrypted vault.
+* Groups and albums created inside the app.
+* Rename with emoji and symbols.
+* Sort, search and pin groups, albums and files.
+* Album covers from any picture, with adjustable framing.
+* Import and export on your terms.
+* Share to other apps and set as wallpaper directly from the vault.
 
-= Personalization =
+= Appearance =
 
 * Several themes, including pure-black dark modes, with a custom accent color.
-* Grid density, rounded or square shapes, and top- or bottom-placed action bar.
+* Adjustable grid density, rounded or square thumbnails, and a top- or bottom-placed action bar.
 
-= Comfort =
+= Other =
 
-* A built-in trash so deletions can be undone.
-* A guided first-run wizard.
-* Available in several languages, with more translations on the way.
+* Built-in trash with undo.
+* First-run setup wizard.
+* Available in several languages, with more translations in progress.
 
-Part of Wolf Project — non-custodial, encrypted, anonymous, open-source. Nothing phones home.
+Part of Wolf Project. Open-source, offline, no accounts.
