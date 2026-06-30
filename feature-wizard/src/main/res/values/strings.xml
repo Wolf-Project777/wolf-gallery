@@ -72,6 +72,22 @@
     <string name="wizard_set_err_confirm_empty">Type your secret again to confirm</string>
     <string name="wizard_set_err_confirm_mismatch">Confirmation doesn’t match</string>
 
+    <string name="wizard_change_title">Change password / PIN</string>
+    <string name="wizard_change_new_type_label">New secret type</string>
+    <string name="wizard_change_intro">Enter your current secret, then a new one. Your photos are not re-encrypted — only the vault key is re-wrapped.</string>
+    <string name="wizard_change_field_old_pin">Current PIN</string>
+    <string name="wizard_change_field_old_password">Current password</string>
+    <string name="wizard_change_field_new_pin">New PIN</string>
+    <string name="wizard_change_field_new_password">New password</string>
+    <string name="wizard_change_field_confirm">Confirm new secret</string>
+    <string name="wizard_change_btn_apply">Change</string>
+    <string name="wizard_change_btn_working">Changing…</string>
+    <string name="wizard_change_btn_cancel">Cancel</string>
+    <string name="wizard_change_toast_success_password">Password changed successfully</string>
+    <string name="wizard_change_toast_success_pin">PIN changed successfully</string>
+    <string name="wizard_change_err_wrong_pin">Current PIN is incorrect</string>
+    <string name="wizard_change_err_wrong_password">Current password is incorrect</string>
+
     <string name="wizard_unlock_title">Wolf Gallery</string>
     <string name="wizard_unlock_label_pin">PIN:</string>
     <string name="wizard_unlock_label_password">Password:</string>

@@ -72,6 +72,22 @@
     <string name="wizard_set_err_confirm_empty">Введите секрет ещё раз для подтверждения</string>
     <string name="wizard_set_err_confirm_mismatch">Подтверждение не совпадает</string>
 
+    <string name="wizard_change_title">Сменить пароль / PIN</string>
+    <string name="wizard_change_new_type_label">Тип нового секрета</string>
+    <string name="wizard_change_intro">Введите текущий секрет, затем новый. Фото не перешифровываются — заново заворачивается только ключ сейфа.</string>
+    <string name="wizard_change_field_old_pin">Текущий PIN</string>
+    <string name="wizard_change_field_old_password">Текущий пароль</string>
+    <string name="wizard_change_field_new_pin">Новый PIN</string>
+    <string name="wizard_change_field_new_password">Новый пароль</string>
+    <string name="wizard_change_field_confirm">Повторите новый секрет</string>
+    <string name="wizard_change_btn_apply">Сменить</string>
+    <string name="wizard_change_btn_working">Меняю…</string>
+    <string name="wizard_change_btn_cancel">Отмена</string>
+    <string name="wizard_change_toast_success_password">Пароль успешно изменён</string>
+    <string name="wizard_change_toast_success_pin">PIN успешно изменён</string>
+    <string name="wizard_change_err_wrong_pin">Текущий PIN неверный</string>
+    <string name="wizard_change_err_wrong_password">Текущий пароль неверный</string>
+
     <string name="wizard_unlock_title">Wolf Gallery</string>
     <string name="wizard_unlock_label_pin">PIN:</string>
     <string name="wizard_unlock_label_password">Пароль:</string>

@@ -91,18 +91,18 @@
     <string name="toast_log_empty">Log is empty — nothing to copy</string>
     <string name="toast_log_cleared">All log files cleared</string>
 
-    <string name="native_header">Native (NDK) self-test</string>
-    <string name="native_subtitle">Calls libencnative.so::secureZero on a 64-byte buffer pre-filled with 0xAA and verifies every byte is 0x00 on return.</string>
+    <string name="native_header">Native module self-test</string>
+    <string name="native_subtitle">Calls the native secureZero function on a 64-byte buffer pre-filled with 0xAA and verifies every byte is 0x00 on return.</string>
     <string name="btn_run_native_test">Run secureZero self-test</string>
     <string name="toast_native_pass">secureZero PASSED — all 64 bytes wiped</string>
     <string name="toast_native_fail">secureZero FAILED — see log</string>
 
-    <string name="aesgcm_header">AES-256-GCM via StrongBox self-test</string>
-    <string name="aesgcm_subtitle">Generates a hardware-backed AES-256 key under a TEST alias (PRODUCTION key is never touched), prefers StrongBox (Knox Vault on A14 5G). Verifies: hardware tier, two round-trips (small UTF-8 + 1 KiB random), ciphertext ≠ plaintext, IV uniqueness, ciphertext-tamper rejection, IV-tamper rejection. Test alias is deleted afterwards.</string>
-    <string name="btn_run_aesgcm_test">Run AES-GCM/StrongBox self-test</string>
+    <string name="aesgcm_header">AES-256-GCM self-test</string>
+    <string name="aesgcm_subtitle">Generates a hardware-backed AES-256 key under a TEST alias (PRODUCTION key is never touched), preferring the device\'s protected hardware module. Verifies: hardware tier, two round-trips (small UTF-8 + 1 KiB random), ciphertext ≠ plaintext, IV uniqueness, ciphertext-tamper rejection, IV-tamper rejection. Test alias is deleted afterwards.</string>
+    <string name="btn_run_aesgcm_test">Run AES-GCM self-test</string>
     <string name="aesgcm_running">Running on hardware…</string>
-    <string name="toast_aesgcm_pass">AES-GCM/StrongBox PASSED — see log for hardware tier</string>
-    <string name="toast_aesgcm_fail">AES-GCM/StrongBox FAILED — see log</string>
+    <string name="toast_aesgcm_pass">AES-GCM PASSED — see log for hardware tier</string>
+    <string name="toast_aesgcm_fail">AES-GCM FAILED — see log</string>
 
     <string name="securebytes_header">SecureBytes self-test (Tier 2)</string>
     <string name="securebytes_subtitle">Wraps 32 bytes in XOR-masked RAM with a per-read rotating mask. Verifies: caller buffer wiped, masked storage ≠ plaintext, round-trip read returns original, mask actually rotates, close() wipes everything, read-after-close throws, close is idempotent.</string>
@@ -116,6 +116,27 @@
     <string name="argon2_running">Computing…</string>
     <string name="toast_argon2_pass">Argon2id PASSED — determinism + salt-sensitivity verified</string>
     <string name="toast_argon2_fail">Argon2id FAILED — see log</string>
+
+    <string name="kekwrap_header">Password-KEK DEK wrap self-test (password-bound vault key)</string>
+    <string name="kekwrap_subtitle">Derives a 64-byte Argon2id output split into KEK + verifier (domain-separated, so the stored verifier never leaks the KEK), wraps a random DEK under the KEK with AES-GCM, and verifies: round-trip, random IV, wrong-password rejection, ciphertext/IV tamper rejection, password change re-wrapping the SAME DEK (no file re-encryption), and that the old KEK can no longer unwrap. In-memory only; no Keystore, no vault files touched.</string>
+    <string name="btn_run_kekwrap_test">Run password-KEK wrap self-test</string>
+    <string name="kekwrap_running">Wrapping…</string>
+    <string name="toast_kekwrap_pass">Password-KEK wrap PASSED — password is cryptographically required</string>
+    <string name="toast_kekwrap_fail">Password-KEK wrap FAILED — see log</string>
+
+    <string name="dekvault_header">DEK vault format + v1→v2 migration self-test (password-bound at rest)</string>
+    <string name="dekvault_subtitle">Exercises the on-disk DEK file lifecycle on a TEST Keystore alias: creates a v2 blob (magic + version + Keystore-encrypt(KEK-wrap(DEK))) and reads it back, rejects a wrong-password KEK, detects a legacy v1 (Keystore-only) blob, migrates v1→v2 keeping the SAME DEK (no file re-encryption), and changes the password by re-wrapping (same DEK, new KEK loads, old KEK fails). Operates on in-memory bytes; the real vault.dek is never touched.</string>
+    <string name="btn_run_dekvault_test">Run DEK vault + migration self-test</string>
+    <string name="dekvault_running">Migrating…</string>
+    <string name="toast_dekvault_pass">DEK vault + migration PASSED — DEK survives migration, password required</string>
+    <string name="toast_dekvault_fail">DEK vault + migration FAILED — see log</string>
+
+    <string name="pwchange_header">Password-change crash-safety self-test (two-file atomic commit)</string>
+    <string name="pwchange_subtitle">Simulates power-loss at every step of a password change on a TEST Keystore alias and temp dir: re-wraps the DEK under a new KEK and writes a new verifier, staging both as .new files and committing DEK-first. Verifies crash recovery — pre-commit rolls back to OLD, post-DEK-commit rolls forward to NEW, a stray staged file is discarded — plus a full apply where the new secret loads and the old one no longer does. No real vault files touched.</string>
+    <string name="btn_run_pwchange_test">Run password-change crash-safety test</string>
+    <string name="pwchange_running">Simulating…</string>
+    <string name="toast_pwchange_pass">Password-change crash-safety PASSED — no brick window</string>
+    <string name="toast_pwchange_fail">Password-change crash-safety FAILED — see log</string>
 
     <string name="blob_header">Encrypted file blob self-test (per-file crypto)</string>
     <string name="blob_subtitle">Streams 2 MiB of random plaintext through CipherOutputStream, verifies the on-disk layout (magic + version + IV header, +36 bytes overhead), confirms ciphertext bytes ≠ plaintext bytes at the same offset, round-trips the file via decrypt and matches SHA-256, and checks that tampered ciphertext / bad magic / wrong version are all rejected. Uses a TEST Keystore alias; production master key is not touched.</string>

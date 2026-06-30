@@ -24,6 +24,8 @@
 
     <string name="settings_security_screenshots_title">Разрешить скриншоты</string>
     <string name="settings_security_screenshots_subtitle">Если выключено — запись экрана и превью в недавних приложениях заблокированы (рекомендуется).</string>
+    <string name="settings_security_changepw_title">Сменить пароль / PIN</string>
+    <string name="settings_security_changepw_subtitle">Перезавернуть ключ сейфа под новый секрет. Фото не перешифровываются.</string>
     <string name="settings_security_autolock_title">Автоблокировка в фоне</string>
     <string name="settings_security_autolock_subtitle">Заблокировать приложение после простоя в фоне на выбранное количество минут. Кратковременные переключения не учитываются. Выкл — нет автоблокировки.</string>
     <string name="settings_security_autolock_off">Выкл</string>

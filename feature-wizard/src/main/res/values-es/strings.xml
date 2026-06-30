@@ -72,6 +72,22 @@
     <string name="wizard_set_err_confirm_empty">Escribe tu secreto de nuevo para confirmar</string>
     <string name="wizard_set_err_confirm_mismatch">La confirmación no coincide</string>
 
+    <string name="wizard_change_title">Cambiar contraseña / PIN</string>
+    <string name="wizard_change_new_type_label">Tipo del nuevo secreto</string>
+    <string name="wizard_change_intro">Introduce tu secreto actual y luego uno nuevo. Tus fotos no se vuelven a cifrar: solo se reenvuelve la clave de la bóveda.</string>
+    <string name="wizard_change_field_old_pin">PIN actual</string>
+    <string name="wizard_change_field_old_password">Contraseña actual</string>
+    <string name="wizard_change_field_new_pin">Nuevo PIN</string>
+    <string name="wizard_change_field_new_password">Nueva contraseña</string>
+    <string name="wizard_change_field_confirm">Confirmar nuevo secreto</string>
+    <string name="wizard_change_btn_apply">Cambiar</string>
+    <string name="wizard_change_btn_working">Cambiando…</string>
+    <string name="wizard_change_btn_cancel">Cancelar</string>
+    <string name="wizard_change_toast_success_password">Contraseña cambiada correctamente</string>
+    <string name="wizard_change_toast_success_pin">PIN cambiado correctamente</string>
+    <string name="wizard_change_err_wrong_pin">El PIN actual es incorrecto</string>
+    <string name="wizard_change_err_wrong_password">La contraseña actual es incorrecta</string>
+
     <string name="wizard_unlock_title">Wolf Gallery</string>
     <string name="wizard_unlock_label_pin">PIN:</string>
     <string name="wizard_unlock_label_password">Contraseña:</string>

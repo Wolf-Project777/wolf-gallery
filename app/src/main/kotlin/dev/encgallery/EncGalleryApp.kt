@@ -1,6 +1,7 @@
 package dev.encgallery
 
 import android.app.Application
+import dev.encgallery.crypto.PasswordChange
 import dev.encgallery.crypto.VaultDataKey
 import dev.encgallery.logging.EncLog
 import dev.encgallery.settings.AppSettings
@@ -14,6 +15,8 @@ class EncGalleryApp : Application() {
         AppSettings.init(this)
 
         VaultDataKey.init(this)
+
+        PasswordChange.recoverIfPending(filesDir)?.let { EncLog.w("App", it) }
 
         EncLog.i("App", "EncGalleryApp.onCreate — process started")
         EncLog.d("App", "filesDir=$filesDir")

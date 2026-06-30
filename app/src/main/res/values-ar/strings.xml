@@ -115,18 +115,18 @@
     <string name="toast_log_empty">السجل فارغ — لا شيء لنسخه</string>
     <string name="toast_log_cleared">تم مسح جميع ملفات السجل</string>
 
-    <string name="native_header">اختبار ذاتي أصلي (NDK)</string>
-    <string name="native_subtitle">يستدعي libencnative.so::secureZero على مخزن مؤقت بحجم 64 بايت مملوء مسبقًا بـ 0xAA ويتحقق من أن كل بايت يساوي 0x00 عند العودة.</string>
+    <string name="native_header">اختبار ذاتي للوحدة الأصلية</string>
+    <string name="native_subtitle">يستدعي دالة secureZero الأصلية على مخزن مؤقت بحجم 64 بايت مملوء مسبقًا بـ 0xAA ويتحقق من أن كل بايت يساوي 0x00 عند العودة.</string>
     <string name="btn_run_native_test">تشغيل الاختبار الذاتي لـ secureZero</string>
     <string name="toast_native_pass">نجح secureZero — مُسحت كل الـ 64 بايت</string>
     <string name="toast_native_fail">فشل secureZero — راجع السجل</string>
 
-    <string name="aesgcm_header">اختبار ذاتي لـ AES-256-GCM عبر StrongBox</string>
-    <string name="aesgcm_subtitle">يولّد مفتاح AES-256 مدعومًا بالعتاد تحت اسم مستعار للاختبار (لا يُمَسّ مفتاح الإنتاج إطلاقًا)، ويفضّل StrongBox (Knox Vault على A14 5G). يتحقق من: مستوى العتاد، دورتين كاملتين (UTF-8 قصير + 1 كيبي عشوائي)، النص المشفّر ≠ النص الصريح، تفرّد الـ IV، رفض العبث بالنص المشفّر، رفض العبث بالـ IV. يُحذف الاسم المستعار للاختبار بعد ذلك.</string>
-    <string name="btn_run_aesgcm_test">تشغيل اختبار AES-GCM/StrongBox</string>
+    <string name="aesgcm_header">اختبار ذاتي لـ AES-256-GCM</string>
+    <string name="aesgcm_subtitle">يولّد مفتاح AES-256 مدعومًا بالعتاد تحت اسم مستعار للاختبار (لا يُمَسّ مفتاح الإنتاج إطلاقًا)، ويفضّل وحدة العتاد المحمية في الجهاز. يتحقق من: مستوى العتاد، دورتين كاملتين (UTF-8 قصير + 1 كيبي عشوائي)، النص المشفّر ≠ النص الصريح، تفرّد الـ IV، رفض العبث بالنص المشفّر، رفض العبث بالـ IV. يُحذف الاسم المستعار للاختبار بعد ذلك.</string>
+    <string name="btn_run_aesgcm_test">تشغيل اختبار AES-GCM</string>
     <string name="aesgcm_running">جارٍ التشغيل على العتاد…</string>
-    <string name="toast_aesgcm_pass">نجح AES-GCM/StrongBox — راجع السجل لمعرفة مستوى العتاد</string>
-    <string name="toast_aesgcm_fail">فشل AES-GCM/StrongBox — راجع السجل</string>
+    <string name="toast_aesgcm_pass">نجح AES-GCM — راجع السجل لمعرفة مستوى العتاد</string>
+    <string name="toast_aesgcm_fail">فشل AES-GCM — راجع السجل</string>
 
     <string name="securebytes_header">اختبار ذاتي لـ SecureBytes (المستوى 2)</string>
     <string name="securebytes_subtitle">يغلّف 32 بايت في ذاكرة مُقنّعة بـ XOR مع قناع دوّار لكل قراءة. يتحقق من: مسح مخزن المُستدعي، التخزين المُقنّع ≠ النص الصريح، قراءة الدورة تعيد الأصل، دوران القناع فعليًا، أن close() يمسح كل شيء، أن القراءة بعد الإغلاق تُطلق استثناءً، أن close غير حسّاس للتكرار.</string>
@@ -140,6 +140,27 @@
     <string name="argon2_running">جارٍ الحساب…</string>
     <string name="toast_argon2_pass">نجح Argon2id — تم التحقق من الحتمية والحساسية للملح</string>
     <string name="toast_argon2_fail">فشل Argon2id — راجع السجل</string>
+
+    <string name="kekwrap_header">اختبار ذاتي لتغليف DEK بمفتاح KEK المشتق من كلمة المرور (مفتاح خزنة مرتبط بكلمة المرور)</string>
+    <string name="kekwrap_subtitle">يشتق ناتج Argon2id بطول 64 بايت ويقسمه إلى KEK ومُحقِّق (مع فصل النطاق، بحيث لا يكشف المحقِّق المخزَّن مفتاح KEK)، ويغلّف DEK عشوائيًا تحت KEK باستخدام AES-GCM، ويتحقق من: الدورة الكاملة، وعشوائية IV، ورفض كلمة المرور الخاطئة، ورفض العبث بالنص المشفّر/IV، وتغيير كلمة المرور مع إعادة تغليف نفس DEK (دون إعادة تشفير الملفات)، وأن مفتاح KEK القديم لم يعد قادرًا على فك التغليف. في الذاكرة فقط؛ لا يُمَس Keystore ولا ملفات الخزنة.</string>
+    <string name="btn_run_kekwrap_test">تشغيل الاختبار الذاتي لمفتاح KEK لكلمة المرور</string>
+    <string name="kekwrap_running">جارٍ التغليف…</string>
+    <string name="toast_kekwrap_pass">نجح KEK لكلمة المرور — كلمة المرور مطلوبة تشفيريًا</string>
+    <string name="toast_kekwrap_fail">فشل KEK لكلمة المرور — راجع السجل</string>
+
+    <string name="dekvault_header">اختبار ذاتي لتنسيق ملف DEK + الترحيل من v1 إلى v2 (مرتبط بكلمة المرور أثناء السكون)</string>
+    <string name="dekvault_subtitle">يختبر دورة حياة ملف DEK على اسم مستعار اختباري في Keystore: ينشئ كتلة v2 (التوقيع السحري + الإصدار + Keystore-encrypt(تغليف-KEK(DEK))) ويعيد قراءتها، ويرفض KEK لكلمة مرور خاطئة، ويكتشف كتلة قديمة v1 (Keystore فقط)، ويرحّل من v1 إلى v2 مع الحفاظ على نفس DEK (دون إعادة تشفير الملفات)، ويغيّر كلمة المرور بإعادة التغليف (نفس DEK، يحمّل KEK الجديد ويفشل القديم). يعمل على بايتات في الذاكرة؛ لا يُمَس ملف vault.dek الحقيقي إطلاقًا.</string>
+    <string name="btn_run_dekvault_test">تشغيل الاختبار الذاتي لـ DEK + الترحيل</string>
+    <string name="dekvault_running">جارٍ الترحيل…</string>
+    <string name="toast_dekvault_pass">نجح DEK + الترحيل — يبقى DEK سليمًا بعد الترحيل، وكلمة المرور مطلوبة</string>
+    <string name="toast_dekvault_fail">فشل DEK + الترحيل — راجع السجل</string>
+
+    <string name="pwchange_header">اختبار ذاتي لمتانة تغيير كلمة المرور ضد الأعطال (التزام ذرّي لملفين)</string>
+    <string name="pwchange_subtitle">يحاكي انقطاع الطاقة عند كل خطوة من تغيير كلمة المرور على اسم مستعار اختباري في Keystore ومجلد مؤقت: يعيد تغليف DEK بمفتاح KEK جديد ويكتب مُحقِّقًا جديدًا، كلاهما كملفات .new، مع التزام DEK أولًا. يتحقق من الاسترداد: قبل الالتزام يعود إلى القديم، بعد التزام DEK يتقدّم إلى الجديد، والملف .new المفرد يُهمَل؛ إضافةً إلى تغيير كامل يحمّل فيه السرّ الجديد ولا يحمّل القديم. لا تُمَس ملفات الخزنة الحقيقية.</string>
+    <string name="btn_run_pwchange_test">تشغيل اختبار متانة تغيير كلمة المرور</string>
+    <string name="pwchange_running">جارٍ المحاكاة…</string>
+    <string name="toast_pwchange_pass">نجح اختبار متانة تغيير كلمة المرور — لا نافذة تعطيل</string>
+    <string name="toast_pwchange_fail">فشل اختبار متانة تغيير كلمة المرور — راجع السجل</string>
 
     <string name="blob_header">اختبار ذاتي لكتلة ملف مشفّرة (تشفير لكل ملف)</string>
     <string name="blob_subtitle">يمرّر 2 ميبي من النص الصريح العشوائي عبر CipherOutputStream، ويتحقق من البنية على القرص (magic + الإصدار + ترويسة IV، +36 بايت إضافية)، ويؤكّد أن بايتات النص المشفّر ≠ بايتات النص الصريح عند الإزاحة نفسها، ويُجري دورة كاملة للملف عبر فكّ التشفير ويطابق SHA-256، ويتحقق من رفض النص المشفّر المُعبَث به والـ magic الخاطئ والإصدار الخاطئ. يستخدم اسمًا مستعارًا للاختبار في Keystore؛ لا يُمَسّ المفتاح الرئيسي للإنتاج.</string>

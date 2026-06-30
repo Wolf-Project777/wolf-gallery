@@ -126,6 +126,8 @@ fun SettingsScreen(
 
     appIconContent: @Composable () -> Unit,
 
+    changePasswordContent: @Composable (onClose: () -> Unit) -> Unit,
+
     appVersionName: String,
 
     onClose: () -> Unit,
@@ -196,6 +198,7 @@ fun SettingsScreen(
                     onAutoLockTimeoutChange = onAutoLockTimeoutChange,
                     screenshotsAllowed = screenshotsAllowed,
                     onScreenshotsChange = onScreenshotsChange,
+                    changePasswordContent = changePasswordContent,
                     modifier = Modifier.padding(innerPadding)
                 )
                 SettingsCategory.APPEARANCE -> AppearanceCategory(
@@ -405,8 +408,18 @@ private fun SecurityCategory(
     onAutoLockTimeoutChange: (Int) -> Unit,
     screenshotsAllowed: Boolean,
     onScreenshotsChange: (Boolean) -> Unit,
+    changePasswordContent: @Composable (onClose: () -> Unit) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var showChange by remember { mutableStateOf(false) }
+
+    if (showChange) {
+        androidx.compose.foundation.layout.Box(modifier = modifier) {
+            changePasswordContent { showChange = false }
+        }
+        return
+    }
+
     SettingsScrollColumn(modifier = modifier) {
         AutoLockBlock(
             timeoutMinutes = autoLockTimeoutMinutes,
@@ -421,6 +434,34 @@ private fun SecurityCategory(
             checked = screenshotsAllowed,
             onCheckedChange = onScreenshotsChange
         )
+        Spacer(Modifier.height(20.dp))
+        HorizontalDivider()
+        Spacer(Modifier.height(12.dp))
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { showChange = true }
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(modifier = Modifier.weight(1f).padding(end = 12.dp)) {
+                Text(
+                    text = stringResource(R.string.settings_security_changepw_title),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+                Text(
+                    text = stringResource(R.string.settings_security_changepw_subtitle),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            ThemedIcon(
+                vector = Icons.Default.KeyboardArrowRight,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
     }
 }
 

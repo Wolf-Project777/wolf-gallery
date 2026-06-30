@@ -1,0 +1,5 @@
+What's new in 1.2
+
+• Stronger encryption: your password or PIN now cryptographically unwraps the vault key, not just the app lock. It's wrapped with an Argon2id key over the hardware Keystore, so decryption needs your secret and the device. Existing vaults upgrade on first unlock; photos are never re-encrypted.
+• New: change your password or PIN, and switch between them, in Settings → Security — no re-encryption.
+• Refined wording and wider device testing on stock and custom ROMs.

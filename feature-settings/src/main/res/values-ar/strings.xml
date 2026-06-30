@@ -24,6 +24,8 @@
 
     <string name="settings_security_screenshots_title">السماح بلقطات الشاشة</string>
     <string name="settings_security_screenshots_subtitle">إيقافها يمنع تسجيل الشاشة والمعاينة في قائمة التطبيقات الأخيرة (مُستحسَن).</string>
+    <string name="settings_security_changepw_title">تغيير كلمة المرور / رمز PIN</string>
+    <string name="settings_security_changepw_subtitle">إعادة تغليف مفتاح الخزنة بسرّ جديد. لا يُعاد تشفير صورك.</string>
     <string name="settings_security_autolock_title">القفل عند التصغير</string>
     <string name="settings_security_autolock_subtitle">يقفل التطبيق بعد مدة الخمول المختارة. التبديل السريع لا يُحتسَب. إيقاف = بلا قفل تلقائي.</string>
     <string name="settings_security_autolock_off">إيقاف</string>

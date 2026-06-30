@@ -77,7 +77,10 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.encgallery.crypto.DekVault
+import dev.encgallery.crypto.KekWrap
 import dev.encgallery.crypto.KeystoreAesGcm
+import dev.encgallery.crypto.PasswordChange
 import dev.encgallery.crypto.SecureBytes
 import dev.encgallery.featuresettings.SettingsScreen
 import dev.encgallery.launcher.AppIconPicker
@@ -156,6 +159,7 @@ import dev.encgallery.featuresettings.LocalThemeVariant
 import dev.encgallery.featuresettings.MedievalIcons
 import dev.encgallery.featuresettings.ThemedIcon
 import dev.encgallery.featuresettings.ThemeVariant
+import dev.encgallery.wizard.ChangePasswordScreen
 import dev.encgallery.wizard.UnlockScreen
 import dev.encgallery.wizard.WizardHost
 import kotlinx.coroutines.CompletableDeferred
@@ -488,6 +492,13 @@ class MainActivity : ComponentActivity() {
                                 onLoggingChange = { AppSettings.setLoggingEnabled(it) },
                                 testsAndLogsContent = { TestsAndLogsContent() },
                                 appIconContent = { AppIconPicker() },
+                                changePasswordContent = { onCloseChange ->
+                                    ChangePasswordScreen(
+                                        lockMethod = lockMethod,
+                                        onLockMethodChanged = { AppSettings.setLockMethod(it) },
+                                        onClose = onCloseChange
+                                    )
+                                },
                                 appVersionName = appVersionName,
                                 onClose = { settingsOpen = false }
                             )
@@ -2771,6 +2782,115 @@ private fun TestsAndLogsContent() {
     Spacer(Modifier.height(12.dp))
 
     Text(
+        text = stringResource(R.string.kekwrap_header),
+        style = MaterialTheme.typography.titleMedium
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = stringResource(R.string.kekwrap_subtitle),
+        style = MaterialTheme.typography.bodySmall
+    )
+    Spacer(Modifier.height(8.dp))
+
+    var kekwrapRunning by remember { mutableStateOf(false) }
+    Button(
+        modifier = Modifier.fillMaxWidth(),
+        enabled = !kekwrapRunning,
+        onClick = {
+            kekwrapRunning = true
+            scope.launch {
+                val passed = withContext(Dispatchers.IO) { runKekWrapSelfTest() }
+                kekwrapRunning = false
+                val msgRes = if (passed) R.string.toast_kekwrap_pass else R.string.toast_kekwrap_fail
+                Toast.makeText(context, msgRes, Toast.LENGTH_LONG).show()
+            }
+        }
+    ) {
+        Text(
+            if (kekwrapRunning) stringResource(R.string.kekwrap_running)
+            else stringResource(R.string.btn_run_kekwrap_test)
+        )
+    }
+
+    Spacer(Modifier.height(20.dp))
+    HorizontalDivider()
+    Spacer(Modifier.height(12.dp))
+
+    Text(
+        text = stringResource(R.string.dekvault_header),
+        style = MaterialTheme.typography.titleMedium
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = stringResource(R.string.dekvault_subtitle),
+        style = MaterialTheme.typography.bodySmall
+    )
+    Spacer(Modifier.height(8.dp))
+
+    var dekvaultRunning by remember { mutableStateOf(false) }
+    Button(
+        modifier = Modifier.fillMaxWidth(),
+        enabled = !dekvaultRunning,
+        onClick = {
+            dekvaultRunning = true
+            scope.launch {
+                val passed = withContext(Dispatchers.IO) {
+                    runDekVaultSelfTest(context.applicationContext)
+                }
+                dekvaultRunning = false
+                val msgRes = if (passed) R.string.toast_dekvault_pass else R.string.toast_dekvault_fail
+                Toast.makeText(context, msgRes, Toast.LENGTH_LONG).show()
+            }
+        }
+    ) {
+        Text(
+            if (dekvaultRunning) stringResource(R.string.dekvault_running)
+            else stringResource(R.string.btn_run_dekvault_test)
+        )
+    }
+
+    Spacer(Modifier.height(20.dp))
+    HorizontalDivider()
+    Spacer(Modifier.height(12.dp))
+
+    Text(
+        text = stringResource(R.string.pwchange_header),
+        style = MaterialTheme.typography.titleMedium
+    )
+    Spacer(Modifier.height(4.dp))
+    Text(
+        text = stringResource(R.string.pwchange_subtitle),
+        style = MaterialTheme.typography.bodySmall
+    )
+    Spacer(Modifier.height(8.dp))
+
+    var pwchangeRunning by remember { mutableStateOf(false) }
+    Button(
+        modifier = Modifier.fillMaxWidth(),
+        enabled = !pwchangeRunning,
+        onClick = {
+            pwchangeRunning = true
+            scope.launch {
+                val passed = withContext(Dispatchers.IO) {
+                    runPasswordChangeSelfTest(context.applicationContext)
+                }
+                pwchangeRunning = false
+                val msgRes = if (passed) R.string.toast_pwchange_pass else R.string.toast_pwchange_fail
+                Toast.makeText(context, msgRes, Toast.LENGTH_LONG).show()
+            }
+        }
+    ) {
+        Text(
+            if (pwchangeRunning) stringResource(R.string.pwchange_running)
+            else stringResource(R.string.btn_run_pwchange_test)
+        )
+    }
+
+    Spacer(Modifier.height(20.dp))
+    HorizontalDivider()
+    Spacer(Modifier.height(12.dp))
+
+    Text(
         text = stringResource(R.string.blob_header),
         style = MaterialTheme.typography.titleMedium
     )
@@ -3107,6 +3227,48 @@ private fun runArgon2idSelfTest(): Boolean {
         }
     } catch (t: Throwable) {
         EncLog.e("Argon2SelfTest", "exception: ${t.javaClass.simpleName}: ${t.message}")
+        false
+    }
+}
+
+private fun runKekWrapSelfTest(): Boolean {
+    val tag = "KekWrapTest"
+    return try {
+        KekWrap.runSelfTest { line -> EncLog.i(tag, line) }
+            .also { passed ->
+                if (passed) EncLog.i(tag, "PASS — all 11 properties verified")
+                else EncLog.e(tag, "FAIL — see lines above for which property")
+            }
+    } catch (t: Throwable) {
+        EncLog.e(tag, "exception: ${t.javaClass.simpleName}: ${t.message}")
+        false
+    }
+}
+
+private fun runDekVaultSelfTest(context: Context): Boolean {
+    val tag = "DekVaultTest"
+    return try {
+        DekVault.runSelfTest(context) { line -> EncLog.i(tag, line) }
+            .also { passed ->
+                if (passed) EncLog.i(tag, "PASS — all 5 properties verified (create/load, wrong-pw, v1→v2 migration, change-password)")
+                else EncLog.e(tag, "FAIL — see lines above for which property")
+            }
+    } catch (t: Throwable) {
+        EncLog.e(tag, "exception: ${t.javaClass.simpleName}: ${t.message}")
+        false
+    }
+}
+
+private fun runPasswordChangeSelfTest(context: Context): Boolean {
+    val tag = "PwChangeTest"
+    return try {
+        PasswordChange.runSelfTest(context) { line -> EncLog.i(tag, line) }
+            .also { passed ->
+                if (passed) EncLog.i(tag, "PASS — all 4 properties verified (rollback, roll-forward, stray-discard, full apply)")
+                else EncLog.e(tag, "FAIL — see lines above for which property")
+            }
+    } catch (t: Throwable) {
+        EncLog.e(tag, "exception: ${t.javaClass.simpleName}: ${t.message}")
         false
     }
 }

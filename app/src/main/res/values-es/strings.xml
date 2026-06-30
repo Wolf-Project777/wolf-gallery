@@ -115,18 +115,18 @@
     <string name="toast_log_empty">El registro está vacío — nada que copiar</string>
     <string name="toast_log_cleared">Se borraron todos los archivos de registro</string>
 
-    <string name="native_header">Autoprueba nativa (NDK)</string>
-    <string name="native_subtitle">Llama a libencnative.so::secureZero sobre un búfer de 64 bytes rellenado con 0xAA y verifica que cada byte sea 0x00 al regresar.</string>
+    <string name="native_header">Autoprueba del módulo nativo</string>
+    <string name="native_subtitle">Llama a la función nativa secureZero sobre un búfer de 64 bytes rellenado con 0xAA y verifica que cada byte sea 0x00 al regresar.</string>
     <string name="btn_run_native_test">Ejecutar autoprueba de secureZero</string>
     <string name="toast_native_pass">secureZero SUPERADA — los 64 bytes borrados</string>
     <string name="toast_native_fail">secureZero FALLIDA — ver registro</string>
 
-    <string name="aesgcm_header">Autoprueba de AES-256-GCM vía StrongBox</string>
-    <string name="aesgcm_subtitle">Genera una clave AES-256 respaldada por hardware bajo un alias de PRUEBA (la clave de PRODUCCIÓN nunca se toca), prefiere StrongBox (Knox Vault en A14 5G). Verifica: nivel de hardware, dos ciclos completos (UTF-8 corto + 1 KiB aleatorio), texto cifrado ≠ texto plano, unicidad del IV, rechazo de alteración del texto cifrado, rechazo de alteración del IV. El alias de prueba se elimina después.</string>
-    <string name="btn_run_aesgcm_test">Ejecutar autoprueba AES-GCM/StrongBox</string>
+    <string name="aesgcm_header">Autoprueba de AES-256-GCM</string>
+    <string name="aesgcm_subtitle">Genera una clave AES-256 respaldada por hardware bajo un alias de PRUEBA (la clave de PRODUCCIÓN nunca se toca), prefiriendo el módulo de hardware protegido del dispositivo. Verifica: nivel de hardware, dos ciclos completos (UTF-8 corto + 1 KiB aleatorio), texto cifrado ≠ texto plano, unicidad del IV, rechazo de alteración del texto cifrado, rechazo de alteración del IV. El alias de prueba se elimina después.</string>
+    <string name="btn_run_aesgcm_test">Ejecutar autoprueba AES-GCM</string>
     <string name="aesgcm_running">Ejecutando en el hardware…</string>
-    <string name="toast_aesgcm_pass">AES-GCM/StrongBox SUPERADA — consulta el registro para el nivel de hardware</string>
-    <string name="toast_aesgcm_fail">AES-GCM/StrongBox FALLIDA — ver registro</string>
+    <string name="toast_aesgcm_pass">AES-GCM SUPERADA — consulta el registro para el nivel de hardware</string>
+    <string name="toast_aesgcm_fail">AES-GCM FALLIDA — ver registro</string>
 
     <string name="securebytes_header">Autoprueba de SecureBytes (Nivel 2)</string>
     <string name="securebytes_subtitle">Envuelve 32 bytes en RAM enmascarada con XOR usando una máscara rotatoria por lectura. Verifica: búfer del llamador borrado, almacenamiento enmascarado ≠ texto plano, la lectura de ciclo devuelve el original, la máscara realmente rota, close() borra todo, leer tras cerrar lanza excepción, close es idempotente.</string>
@@ -140,6 +140,27 @@
     <string name="argon2_running">Calculando…</string>
     <string name="toast_argon2_pass">Argon2id SUPERADA — determinismo y sensibilidad a la sal verificados</string>
     <string name="toast_argon2_fail">Argon2id FALLIDA — ver registro</string>
+
+    <string name="kekwrap_header">Autoprueba de envoltura de DEK con KEK de contraseña (clave de bóveda ligada a la contraseña)</string>
+    <string name="kekwrap_subtitle">Deriva una salida Argon2id de 64 bytes dividida en KEK + verificador (con separación de dominio, de modo que el verificador almacenado nunca filtra el KEK), envuelve un DEK aleatorio bajo el KEK con AES-GCM y verifica: ida y vuelta, IV aleatorio, rechazo con contraseña incorrecta, rechazo ante manipulación de texto cifrado/IV, cambio de contraseña re-envolviendo el MISMO DEK (sin recifrar archivos) y que el KEK antiguo ya no puede desenvolver. Solo en memoria; no se tocan Keystore ni archivos de la bóveda.</string>
+    <string name="btn_run_kekwrap_test">Ejecutar autoprueba de KEK de contraseña</string>
+    <string name="kekwrap_running">Envolviendo…</string>
+    <string name="toast_kekwrap_pass">KEK de contraseña SUPERADO — la contraseña es criptográficamente obligatoria</string>
+    <string name="toast_kekwrap_fail">KEK de contraseña FALLIDO — ver registro</string>
+
+    <string name="dekvault_header">Autoprueba del formato del archivo DEK + migración v1→v2 (ligado a la contraseña en reposo)</string>
+    <string name="dekvault_subtitle">Ejercita el ciclo de vida del archivo DEK en un alias de Keystore de PRUEBA: crea un blob v2 (magic + versión + Keystore-encrypt(envoltura-KEK(DEK))) y lo vuelve a leer, rechaza un KEK de contraseña incorrecta, detecta un blob heredado v1 (solo Keystore), migra v1→v2 conservando el MISMO DEK (sin recifrar archivos) y cambia la contraseña re-envolviendo (mismo DEK, el KEK nuevo carga, el antiguo falla). Opera con bytes en memoria; nunca toca el vault.dek real.</string>
+    <string name="btn_run_dekvault_test">Ejecutar autoprueba de DEK + migración</string>
+    <string name="dekvault_running">Migrando…</string>
+    <string name="toast_dekvault_pass">DEK + migración SUPERADAS — el DEK sobrevive a la migración, contraseña obligatoria</string>
+    <string name="toast_dekvault_fail">DEK + migración FALLIDAS — ver registro</string>
+
+    <string name="pwchange_header">Autoprueba de resistencia a fallos del cambio de contraseña (commit atómico de dos archivos)</string>
+    <string name="pwchange_subtitle">Simula un corte de energía en cada paso de un cambio de contraseña en un alias de Keystore de PRUEBA y un directorio temporal: reenvuelve el DEK con un nuevo KEK y escribe un nuevo verificador, ambos como archivos .new, confirmando primero el DEK. Verifica la recuperación: antes del commit revierte al ANTIGUO, tras el commit del DEK avanza al NUEVO, un .new suelto se descarta; más un cambio completo donde el nuevo secreto carga y el antiguo ya no. No se tocan archivos reales de la bóveda.</string>
+    <string name="btn_run_pwchange_test">Ejecutar prueba de resistencia del cambio de contraseña</string>
+    <string name="pwchange_running">Simulando…</string>
+    <string name="toast_pwchange_pass">Resistencia del cambio de contraseña SUPERADA — sin ventana de bloqueo</string>
+    <string name="toast_pwchange_fail">Resistencia del cambio de contraseña FALLIDA — ver registro</string>
 
     <string name="blob_header">Autoprueba de blob de archivo cifrado (cifrado por archivo)</string>
     <string name="blob_subtitle">Transmite 2 MiB de texto plano aleatorio a través de CipherOutputStream, verifica la estructura en disco (magic + versión + cabecera IV, +36 bytes de sobrecarga), confirma que los bytes cifrados ≠ los bytes en texto plano en el mismo desplazamiento, hace un ciclo completo del archivo mediante descifrado y comprueba el SHA-256, y verifica que se rechacen el texto cifrado alterado, el magic incorrecto y la versión errónea. Usa un alias de PRUEBA del Keystore; la clave maestra de producción no se toca.</string>

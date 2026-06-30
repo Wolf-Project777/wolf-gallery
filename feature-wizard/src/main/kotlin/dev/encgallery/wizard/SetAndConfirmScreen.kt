@@ -46,9 +46,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dev.encgallery.crypto.Argon2idParams
 import dev.encgallery.crypto.BruteForceConfig
+import dev.encgallery.crypto.KekWrap
 import dev.encgallery.crypto.KeystoreAesGcm
 import dev.encgallery.crypto.LockMethod
 import dev.encgallery.crypto.SecureBytes
+import dev.encgallery.crypto.VaultDataKey
 import dev.encgallery.crypto.VerifierStore
 import dev.encgallery.logging.EncLog
 import dev.encgallery.nativec.NativeCrypto
@@ -494,9 +496,9 @@ private fun createVault(
 ): CreateVaultResult {
     val tag = "WizardSetAndConfirm"
     var pwBytes: ByteArray? = null
-    var verifier: ByteArray? = null
     var salt: ByteArray? = null
     var secure: SecureBytes? = null
+    var derived: KekWrap.Derived? = null
 
     return try {
         pwBytes = password.toByteArray(Charsets.UTF_8)
@@ -505,40 +507,31 @@ private fun createVault(
 
         salt = SecureRandom().generateSeed(VerifierStore.SALT_LEN)
 
+        val keystore = KeystoreAesGcm(KeystoreAesGcm.PRODUCTION_ALIAS)
+        val tier = keystore.ensureExists(ctx, strongBoxPreferred = true)
+        EncLog.i(tag, "master key created — tier: $tier")
+
         val params = Argon2idParams.forLockMethod(lockMethod)
         val tStart = System.currentTimeMillis()
         secure.read { plain ->
-            verifier = NativeCrypto.argon2idHashRaw(
-                plain,
-                salt,
-                params.memoryKib,
-                params.iterations,
-                params.parallelism,
-                params.hashLen
-            ) ?: error("argon2idHashRaw returned null")
+            derived = KekWrap.derive(plain, salt!!, params)
         }
         val argonMs = System.currentTimeMillis() - tStart
         EncLog.i(
             tag,
-            "verifier computed (Argon2id, mem=${params.memoryKib}KiB iter=${params.iterations}, took ${argonMs}ms)"
+            "KEK+verifier derived (Argon2id 64B split, mem=${params.memoryKib}KiB iter=${params.iterations}, took ${argonMs}ms)"
         )
 
-        VerifierStore(ctx).write(salt!!, verifier!!)
-        EncLog.i(
-            tag,
-            "verifier persisted to filesDir/auth/verifier.bin (${VerifierStore.EXPECTED_SIZE} bytes)"
-        )
-
-        val tier = KeystoreAesGcm(KeystoreAesGcm.PRODUCTION_ALIAS)
-            .ensureExists(ctx, strongBoxPreferred = true)
-        EncLog.i(tag, "master key created — tier: $tier")
+        VerifierStore(ctx).writeV3(lockMethod, salt!!, derived!!.verifier)
+        VaultDataKey.createAndPrime(keystore, derived!!.kek)
+        EncLog.i(tag, "verifier v3 persisted (method=$lockMethod); vault.dek v2 created (Keystore+password-KEK) and primed")
 
         CreateVaultResult.Success
     } catch (t: Throwable) {
         EncLog.e(tag, "vault creation failed: ${t.javaClass.simpleName}: ${t.message}")
         CreateVaultResult.Failure("${t.javaClass.simpleName}: ${t.message ?: "unknown"}")
     } finally {
-        verifier?.let { NativeCrypto.secureZero(it) }
+        derived?.close()
         salt?.let { NativeCrypto.secureZero(it) }
         pwBytes?.let { NativeCrypto.secureZero(it) }
         try {

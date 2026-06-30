@@ -27,7 +27,7 @@ class EncryptedFileBlob(private val keystore: KeystoreAesGcm) {
     }
 
     fun encryptEnvelope(input: InputStream, output: File) {
-        val key = VaultDataKey.secretKey(keystore)
+        val key = VaultDataKey.secretKey()
         val (cipher, iv) = VaultDataKey.newEncryptCipher(key)
         encryptStream(input, output, VERSION_2, cipher, iv)
     }
@@ -111,7 +111,7 @@ class EncryptedFileBlob(private val keystore: KeystoreAesGcm) {
 
             val cipher = when (version) {
                 VERSION_1 -> keystore.newDecryptCipher(iv)
-                VERSION_2 -> VaultDataKey.newDecryptCipher(VaultDataKey.secretKey(keystore), iv)
+                VERSION_2 -> VaultDataKey.newDecryptCipher(VaultDataKey.secretKey(), iv)
                 else -> throw BlobFormatException(
                     "blob ${input.name} unsupported version $version"
                 )

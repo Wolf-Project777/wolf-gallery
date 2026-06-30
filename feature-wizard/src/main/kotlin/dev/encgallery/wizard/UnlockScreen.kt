@@ -38,8 +38,11 @@ import androidx.compose.ui.unit.dp
 import dev.encgallery.crypto.Argon2idParams
 import dev.encgallery.crypto.BackoffCurve
 import dev.encgallery.crypto.BruteForceConfig
+import dev.encgallery.crypto.KekWrap
+import dev.encgallery.crypto.KeystoreAesGcm
 import dev.encgallery.crypto.LockMethod
 import dev.encgallery.crypto.SecureBytes
+import dev.encgallery.crypto.VaultDataKey
 import dev.encgallery.crypto.VerifierStore
 import dev.encgallery.logging.EncLog
 import dev.encgallery.nativec.NativeCrypto
@@ -68,6 +71,14 @@ fun UnlockScreen(
     var working by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
 
+    var effectiveMethod by remember { mutableStateOf(lockMethod) }
+    LaunchedEffect(Unit) {
+        val embedded = withContext(Dispatchers.IO) {
+            VerifierStore(context.applicationContext).read()?.lockMethod
+        }
+        if (embedded != null) effectiveMethod = embedded
+    }
+
     var nowTick by remember { mutableLongStateOf(System.currentTimeMillis()) }
 
     val backoffActive = bruteForceConfig.backoffEnabled && failureCount > 0
@@ -87,7 +98,7 @@ fun UnlockScreen(
         }
     }
 
-    val minLen = when (lockMethod) {
+    val minLen = when (effectiveMethod) {
         LockMethod.PIN -> 6
         LockMethod.PASSWORD -> 8
     }
@@ -107,7 +118,7 @@ fun UnlockScreen(
 
         Text(
             text = stringResource(
-                when (lockMethod) {
+                when (effectiveMethod) {
                     LockMethod.PIN -> R.string.wizard_unlock_label_pin
                     LockMethod.PASSWORD -> R.string.wizard_unlock_label_password
                 }
@@ -122,10 +133,10 @@ fun UnlockScreen(
 
         OutlinedTextField(
             value = input,
-            onValueChange = { input = filterUnlockInput(it, lockMethod) },
+            onValueChange = { input = filterUnlockInput(it, effectiveMethod) },
             singleLine = true,
             enabled = !working && !isInBackoff,
-            keyboardOptions = when (lockMethod) {
+            keyboardOptions = when (effectiveMethod) {
                 LockMethod.PIN -> KeyboardOptions(keyboardType = KeyboardType.NumberPassword)
                 LockMethod.PASSWORD -> KeyboardOptions(keyboardType = KeyboardType.Password)
             },
@@ -192,7 +203,7 @@ fun UnlockScreen(
                 val typed = input
                 scope.launch {
                     val result = withContext(Dispatchers.IO) {
-                        tryUnlock(context.applicationContext, typed, lockMethod)
+                        tryUnlock(context.applicationContext, typed, effectiveMethod)
                     }
                     working = false
                     when (result) {
@@ -219,7 +230,7 @@ fun UnlockScreen(
                             } else {
                                 onWrongAttempt()
                                 error = context.getString(
-                                    when (lockMethod) {
+                                    when (effectiveMethod) {
                                         LockMethod.PIN -> R.string.wizard_unlock_err_wrong_pin
                                         LockMethod.PASSWORD -> R.string.wizard_unlock_err_wrong_password
                                     }
@@ -275,9 +286,10 @@ private suspend fun tryUnlock(
 ): UnlockResult = withContext(Dispatchers.IO) {
     val tag = "Unlock"
     var inputBytes: ByteArray? = null
-    var derived: ByteArray? = null
     var stored: VerifierStore.Stored? = null
     var secure: SecureBytes? = null
+    var derived: KekWrap.Derived? = null
+    var v1Check: ByteArray? = null
 
     try {
         stored = VerifierStore(ctx).read()
@@ -292,34 +304,52 @@ private suspend fun tryUnlock(
         secure = SecureBytes.fromAndWipe(inputBytes)
         inputBytes = null
 
-        val params = Argon2idParams.forLockMethod(lockMethod)
+        val effectiveMethod =
+            if (stored!!.version == 3) (stored!!.lockMethod ?: lockMethod) else lockMethod
+        val params = Argon2idParams.forLockMethod(effectiveMethod)
+        val keystore = KeystoreAesGcm(KeystoreAesGcm.PRODUCTION_ALIAS)
+
         val tStart = System.currentTimeMillis()
         secure.read { plain ->
-            derived = NativeCrypto.argon2idHashRaw(
-                plain,
-                stored!!.salt,
-                params.memoryKib,
-                params.iterations,
-                params.parallelism,
-                params.hashLen
-            ) ?: error("argon2idHashRaw returned null")
+            derived = KekWrap.derive(plain, stored!!.salt, params)
+            if (stored!!.version == 1) {
+                v1Check = NativeCrypto.argon2idHashRaw(
+                    plain,
+                    stored!!.salt,
+                    params.memoryKib,
+                    params.iterations,
+                    params.parallelism,
+                    32
+                ) ?: error("argon2idHashRaw returned null")
+            }
         }
         val tookMs = System.currentTimeMillis() - tStart
-        EncLog.i(tag, "verifying (Argon2id, took ${tookMs}ms)")
+        EncLog.i(tag, "verifying (Argon2id, verifier v${stored!!.version}, method=$effectiveMethod, took ${tookMs}ms)")
 
-        val match = MessageDigest.isEqual(derived, stored!!.verifier)
-        if (match) {
-            EncLog.i(tag, "verification success")
-            UnlockResult.Success
+        val match = if (stored!!.version == 1) {
+            MessageDigest.isEqual(v1Check, stored!!.verifier)
         } else {
+            MessageDigest.isEqual(derived!!.verifier, stored!!.verifier)
+        }
+
+        if (!match) {
             EncLog.i(tag, "verification failed (wrong secret)")
             UnlockResult.WrongSecret
+        } else {
+            val migrated = VaultDataKey.unlockAndPrime(keystore, derived!!.kek)
+            if (stored!!.version != 3) {
+                VerifierStore(ctx).writeV3(effectiveMethod, stored!!.salt, derived!!.verifier)
+                EncLog.i(tag, "verifier upgraded → v3 (method=$effectiveMethod)")
+            }
+            EncLog.i(tag, "verification success (DEK primed, dek migrated=$migrated)")
+            UnlockResult.Success
         }
     } catch (t: Throwable) {
         EncLog.e(tag, "unlock attempt failed: ${t.javaClass.simpleName}: ${t.message}")
         UnlockResult.Error("${t.javaClass.simpleName}: ${t.message ?: "unknown"}")
     } finally {
-        derived?.let { NativeCrypto.secureZero(it) }
+        derived?.close()
+        v1Check?.let { NativeCrypto.secureZero(it) }
         stored?.let {
             NativeCrypto.secureZero(it.salt)
             NativeCrypto.secureZero(it.verifier)

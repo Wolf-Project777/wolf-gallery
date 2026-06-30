@@ -91,18 +91,18 @@
     <string name="toast_log_empty">Лог пуст — копировать нечего</string>
     <string name="toast_log_cleared">Все файлы лога очищены</string>
 
-    <string name="native_header">Самопроверка нативного модуля (NDK)</string>
-    <string name="native_subtitle">Заполняет буфер из 64 байт значением 0xAA, вызывает нативную функцию обнуления памяти (secureZero из libencnative.so) и проверяет, что все байты стали нулевыми.</string>
+    <string name="native_header">Самопроверка нативного модуля</string>
+    <string name="native_subtitle">Заполняет буфер из 64 байт значением 0xAA, вызывает нативную функцию обнуления памяти (secureZero) и проверяет, что все байты стали нулевыми.</string>
     <string name="btn_run_native_test">Запустить самопроверку secureZero</string>
     <string name="toast_native_pass">secureZero ПРОЙДЕН — все 64 байта обнулены</string>
     <string name="toast_native_fail">secureZero ПРОВАЛЕН — см. лог</string>
 
-    <string name="aesgcm_header">Самопроверка AES-256-GCM через StrongBox</string>
-    <string name="aesgcm_subtitle">Создаёт тестовый аппаратный ключ AES-256 (рабочий ключ не затрагивается), по возможности в StrongBox (Knox Vault на A14 5G). Проверяет: уровень защиты железа, шифрование и расшифровку двух образцов (текст в UTF-8 и 1 КиБ случайных данных), что зашифрованные данные отличаются от исходных, уникальность вектора инициализации (IV) и что подделанные данные отвергаются. Тестовый ключ удаляется в конце.</string>
-    <string name="btn_run_aesgcm_test">Запустить самопроверку AES-GCM/StrongBox</string>
+    <string name="aesgcm_header">Самопроверка AES-256-GCM</string>
+    <string name="aesgcm_subtitle">Создаёт тестовый аппаратный ключ AES-256 (рабочий ключ не затрагивается), по возможности в защищённом аппаратном модуле устройства. Проверяет: уровень защиты железа, шифрование и расшифровку двух образцов (текст в UTF-8 и 1 КиБ случайных данных), что зашифрованные данные отличаются от исходных, уникальность вектора инициализации (IV) и что подделанные данные отвергаются. Тестовый ключ удаляется в конце.</string>
+    <string name="btn_run_aesgcm_test">Запустить самопроверку AES-GCM</string>
     <string name="aesgcm_running">Работает с железом…</string>
-    <string name="toast_aesgcm_pass">AES-GCM/StrongBox ПРОЙДЕН — уровень железа в логе</string>
-    <string name="toast_aesgcm_fail">AES-GCM/StrongBox ПРОВАЛЕН — см. лог</string>
+    <string name="toast_aesgcm_pass">AES-GCM ПРОЙДЕН — уровень железа в логе</string>
+    <string name="toast_aesgcm_fail">AES-GCM ПРОВАЛЕН — см. лог</string>
 
     <string name="securebytes_header">Самопроверка SecureBytes (Tier 2)</string>
     <string name="securebytes_subtitle">Хранит 32 байта в оперативной памяти под XOR-маской, которая меняется при каждом чтении. Проверяет: исходный буфер обнулён, в памяти лежат не открытые данные, чтение возвращает оригинал, маска действительно меняется, закрытие всё обнуляет, чтение после закрытия выдаёт ошибку, повторное закрытие безопасно.</string>
@@ -116,6 +116,27 @@
     <string name="argon2_running">Вычисляем…</string>
     <string name="toast_argon2_pass">Argon2id ПРОЙДЕН — детерминизм и чувствительность к соли подтверждены</string>
     <string name="toast_argon2_fail">Argon2id ПРОВАЛЕН — см. лог</string>
+
+    <string name="kekwrap_header">Self-test обёртки DEK паролевым KEK (ключ сейфа, привязанный к паролю)</string>
+    <string name="kekwrap_subtitle">Берёт 64-байтный вывод Argon2id, делит на KEK + verifier (домен-сепарация: хранимый verifier не палит KEK), заворачивает случайный DEK под KEK через AES-GCM и проверяет: round-trip, случайный IV, отказ при неверном пароле, отказ при порче шифротекста/IV, смену пароля с пере-обёрткой ТОГО ЖЕ DEK (без перешифровки файлов) и что старый KEK больше не разворачивает. Только в памяти; Keystore и файлы сейфа не трогаются.</string>
+    <string name="btn_run_kekwrap_test">Запустить self-test паролевого KEK</string>
+    <string name="kekwrap_running">Заворачиваю…</string>
+    <string name="toast_kekwrap_pass">Паролевый KEK ПРОЙДЕН — пароль криптографически обязателен</string>
+    <string name="toast_kekwrap_fail">Паролевый KEK ПРОВАЛЕН — см. лог</string>
+
+    <string name="dekvault_header">Self-test формата DEK-файла + миграция v1→v2 (привязка к паролю в покое)</string>
+    <string name="dekvault_subtitle">Прогоняет жизненный цикл DEK-файла на ТЕСТОВОМ Keystore-алиасе: создаёт v2-блоб (magic + версия + Keystore-encrypt(KEK-обёртка(DEK))) и читает обратно, отвергает KEK неверного пароля, распознаёт легаси v1 (только Keystore), мигрирует v1→v2 с сохранением ТОГО ЖЕ DEK (без перешифровки файлов) и меняет пароль пере-обёрткой (тот же DEK, новый KEK грузит, старый отказывает). Работает с байтами в памяти; боевой vault.dek не трогается.</string>
+    <string name="btn_run_dekvault_test">Запустить self-test DEK + миграции</string>
+    <string name="dekvault_running">Мигрирую…</string>
+    <string name="toast_dekvault_pass">DEK + миграция ПРОЙДЕНЫ — DEK переживает миграцию, пароль обязателен</string>
+    <string name="toast_dekvault_fail">DEK + миграция ПРОВАЛЕНЫ — см. лог</string>
+
+    <string name="pwchange_header">Self-test устойчивости смены пароля к крашу (атомарный коммит двух файлов)</string>
+    <string name="pwchange_subtitle">Симулирует потерю питания на каждом шаге смены пароля на ТЕСТОВОМ Keystore-алиасе и во временной папке: пере-заворачивает DEK под новый KEK и пишет новый verifier, обоих как .new-файлы, коммитит DEK первым. Проверяет восстановление: до коммита — откат к СТАРОМУ, после коммита DEK — докат к НОВОМУ, одиночный .new — отбрасывается; плюс полная смена, где новый секрет грузит, а старый уже нет. Боевые файлы не трогаются.</string>
+    <string name="btn_run_pwchange_test">Запустить тест устойчивости смены пароля</string>
+    <string name="pwchange_running">Симулирую…</string>
+    <string name="toast_pwchange_pass">Устойчивость смены пароля ПРОЙДЕНА — окна окирпичивания нет</string>
+    <string name="toast_pwchange_fail">Устойчивость смены пароля ПРОВАЛЕНА — см. лог</string>
 
     <string name="blob_header">Самопроверка зашифрованного blob\'а (per-file крипто)</string>
     <string name="blob_subtitle">Шифрует 2 МиБ случайных данных в файл, проверяет его формат на диске (сигнатура, версия и заголовок с вектором инициализации — около 36 байт служебных данных), что зашифрованные байты на диске отличаются от исходных на том же месте, расшифровывает обратно и сверяет контрольную сумму SHA-256, а также что файл с испорченными данными, неверной сигнатурой или версией отвергается. Использует тестовый ключ Keystore; рабочий мастер-ключ не затрагивается.</string>

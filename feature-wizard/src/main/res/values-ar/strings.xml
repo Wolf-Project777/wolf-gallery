@@ -72,6 +72,22 @@
     <string name="wizard_set_err_confirm_empty">اكتب سرّك مجددًا للتأكيد</string>
     <string name="wizard_set_err_confirm_mismatch">التأكيد غير مطابق</string>
 
+    <string name="wizard_change_title">تغيير كلمة المرور / رمز PIN</string>
+    <string name="wizard_change_new_type_label">نوع السرّ الجديد</string>
+    <string name="wizard_change_intro">أدخل سرّك الحالي ثم سرًّا جديدًا. لا يُعاد تشفير صورك — يُعاد فقط تغليف مفتاح الخزنة.</string>
+    <string name="wizard_change_field_old_pin">رمز PIN الحالي</string>
+    <string name="wizard_change_field_old_password">كلمة المرور الحالية</string>
+    <string name="wizard_change_field_new_pin">رمز PIN الجديد</string>
+    <string name="wizard_change_field_new_password">كلمة المرور الجديدة</string>
+    <string name="wizard_change_field_confirm">تأكيد السرّ الجديد</string>
+    <string name="wizard_change_btn_apply">تغيير</string>
+    <string name="wizard_change_btn_working">جارٍ التغيير…</string>
+    <string name="wizard_change_btn_cancel">إلغاء</string>
+    <string name="wizard_change_toast_success_password">تم تغيير كلمة المرور بنجاح</string>
+    <string name="wizard_change_toast_success_pin">تم تغيير رمز PIN بنجاح</string>
+    <string name="wizard_change_err_wrong_pin">رمز PIN الحالي غير صحيح</string>
+    <string name="wizard_change_err_wrong_password">كلمة المرور الحالية غير صحيحة</string>
+
     <string name="wizard_unlock_title">Wolf Gallery</string>
     <string name="wizard_unlock_label_pin">PIN:</string>
     <string name="wizard_unlock_label_password">كلمة المرور:</string>

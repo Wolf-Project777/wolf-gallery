@@ -24,6 +24,8 @@
 
     <string name="settings_security_screenshots_title">Allow screenshots</string>
     <string name="settings_security_screenshots_subtitle">Off blocks screen recording and the Recents preview (recommended).</string>
+    <string name="settings_security_changepw_title">Change password / PIN</string>
+    <string name="settings_security_changepw_subtitle">Re-wrap the vault key under a new secret. Your photos are not re-encrypted.</string>
     <string name="settings_security_autolock_title">Auto-lock when minimized</string>
     <string name="settings_security_autolock_subtitle">Lock the app after the chosen idle interval. Brief switches don\'t count. Off = no auto-lock.</string>
     <string name="settings_security_autolock_off">Off</string>

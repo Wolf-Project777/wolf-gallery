@@ -24,6 +24,8 @@
 
     <string name="settings_security_screenshots_title">Permitir capturas de pantalla</string>
     <string name="settings_security_screenshots_subtitle">Desactivado bloquea la grabación de pantalla y la vista previa en Recientes (recomendado).</string>
+    <string name="settings_security_changepw_title">Cambiar contraseña / PIN</string>
+    <string name="settings_security_changepw_subtitle">Reenvuelve la clave de la bóveda con un nuevo secreto. Tus fotos no se vuelven a cifrar.</string>
     <string name="settings_security_autolock_title">Bloquear al minimizar</string>
     <string name="settings_security_autolock_subtitle">Bloquea la app tras el tiempo de inactividad elegido. Los cambios breves no cuentan. Desactivado = sin bloqueo automático.</string>
     <string name="settings_security_autolock_off">Desactivado</string>
